@@ -15,6 +15,37 @@ const routes = [
   "projects/gamers_compete_with_ease/full/index.html",
 ];
 
+const expectedVideoSequences = {
+  "projects/gamers_compete_with_ease/index.html": [
+    "8L2fFWrYBME",
+    "xLGZ1q13lWo",
+    "UdX5fY6X9YE",
+    "H6nNnEXUurM",
+    "B3g1iGHn_rk",
+    "DRA2P3Yg23I",
+    "8L2fFWrYBME",
+    "xLGZ1q13lWo",
+  ],
+  "projects/gamers_compete_with_ease/full/index.html": [
+    "8L2fFWrYBME",
+    "xLGZ1q13lWo",
+    "rNqZAknCO0s",
+    "onGaygTqm08",
+    "oIfSLRmhK4I",
+    "tmBkZ9hlI2k",
+    "7oL-PLhGX9A",
+    "cJP_n_J35Ik",
+    "DRA2P3Yg23I",
+    "UdX5fY6X9YE",
+    "H6nNnEXUurM",
+    "B3g1iGHn_rk",
+    "lBzITMLD9tQ",
+    "8L2fFWrYBME",
+    "xLGZ1q13lWo",
+    "SuNqs28khqM",
+  ],
+};
+
 let failures = 0;
 let warnings = 0;
 
@@ -87,6 +118,16 @@ for (const route of routes) {
     if (!/\btitle="[^"]+"/.test(iframe)) report("error", route, "video iframe missing title");
     if (!/\bloading="lazy"/.test(iframe)) report("error", route, "video iframe missing lazy loading");
     if (!/youtube-nocookie\.com/.test(iframe)) report("warning", route, "video is not using privacy-enhanced YouTube");
+  }
+
+  if (expectedVideoSequences[route]) {
+    const actual = [...html.matchAll(/youtube-nocookie\.com\/embed\/([A-Za-z0-9_-]+)/g)].map(
+      (match) => match[1]
+    );
+    const expected = expectedVideoSequences[route];
+    if (actual.length !== expected.length || actual.some((id, index) => id !== expected[index])) {
+      report("error", route, "case-study video sequence does not match the verified media map");
+    }
   }
 
   const inlineLayouts = [...html.matchAll(/\bstyle="([^"]+)"/g)].filter((match) =>
