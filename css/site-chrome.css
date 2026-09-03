@@ -492,7 +492,7 @@ body .w-container {
     .casestudy-card,
     .tile-blog.dark-tile.recommendation-card
   ):hover,
-  .case-study-page :is(.cs-card, .cs-fact, .cs-measure, .cs-hero-metric, .cs-flow__step):hover {
+  .case-study-page .cs-card:hover {
     transform: none;
   }
 }
@@ -927,11 +927,7 @@ main {
     .cs-related-card,
     .casestudy-card,
     .tile-blog.dark-tile.recommendation-card,
-    .case-study-page .cs-card,
-    .case-study-page .cs-fact,
-    .case-study-page .cs-measure,
-    .case-study-page .cs-hero-metric,
-    .case-study-page .cs-flow__step
+    .case-study-page .cs-card
   ) {
     transition-duration: 0.01ms !important;
   }

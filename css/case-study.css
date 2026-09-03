@@ -1126,13 +1126,9 @@
   }
 }
 
-/* Card hover — same as .article-card (wins over editorial resets) */
+/* Interactive card hover — passive metrics and flow steps stay static */
 .case-study-page :is(
   .cs-card,
-  .cs-fact,
-  .cs-measure,
-  .cs-hero-metric,
-  .cs-flow__step,
   .cs-related-card,
   .cs-related .article-card
 ) {
@@ -1141,10 +1137,6 @@
 
 .case-study-page :is(
   .cs-card,
-  .cs-fact,
-  .cs-measure,
-  .cs-hero-metric,
-  .cs-flow__step,
   .cs-related-card,
   .cs-related .article-card
 ):hover {
@@ -1158,10 +1150,6 @@
 @media (prefers-reduced-motion: reduce) {
   .case-study-page :is(
     .cs-card,
-    .cs-fact,
-    .cs-measure,
-    .cs-hero-metric,
-    .cs-flow__step,
     .cs-related-card,
     .cs-related .article-card
   ):hover {
