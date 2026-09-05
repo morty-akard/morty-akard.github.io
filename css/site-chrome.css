@@ -491,8 +491,7 @@ body .w-container {
     .cs-related-card,
     .casestudy-card,
     .tile-blog.dark-tile.recommendation-card
-  ):hover,
-  .case-study-page .cs-card:hover {
+  ):hover {
     transform: none;
   }
 }
@@ -926,8 +925,7 @@ main {
     .article-card,
     .cs-related-card,
     .casestudy-card,
-    .tile-blog.dark-tile.recommendation-card,
-    .case-study-page .cs-card
+    .tile-blog.dark-tile.recommendation-card
   ) {
     transition-duration: 0.01ms !important;
   }

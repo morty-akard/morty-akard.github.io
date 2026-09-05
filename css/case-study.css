@@ -1126,9 +1126,8 @@
   }
 }
 
-/* Interactive card hover — passive metrics and flow steps stay static */
+/* Linked card hover — case-study content panels stay static. */
 .case-study-page :is(
-  .cs-card,
   .cs-related-card,
   .cs-related .article-card
 ) {
@@ -1136,7 +1135,6 @@
 }
 
 .case-study-page :is(
-  .cs-card,
   .cs-related-card,
   .cs-related .article-card
 ):hover {
@@ -1149,7 +1147,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .case-study-page :is(
-    .cs-card,
     .cs-related-card,
     .cs-related .article-card
   ):hover {
