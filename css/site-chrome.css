@@ -360,6 +360,15 @@ body .w-container {
   color: var(--color-copy-muted);
 }
 
+.homepage-writing-section {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.homepage-writing-section__header {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
 .article-grid {
   display: flex;
   flex-direction: column;
