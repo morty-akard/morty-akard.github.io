@@ -984,6 +984,182 @@
   color: var(--cs-teal);
 }
 
+/* Game Room ownership-transfer case study: warm copy for headings, muted copy for reading text. */
+.game-room-ownership-transfer-page .cs-lede,
+.game-room-ownership-transfer-page .cs-body {
+  color: var(--color-copy-muted, #aab1b8);
+}
+
+.game-room-ownership-transfer-page .cs-lede,
+.game-room-ownership-transfer-page .cs-body {
+  max-width: var(--content-reading, 760px);
+}
+
+.cs-figure {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cs-figure .cs-media {
+  margin: 0;
+}
+
+.cs-figure__caption {
+  margin: 12px 0 0;
+  color: var(--color-copy-muted, #aab1b8);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.cs-summary-card {
+  width: 100%;
+  padding: 28px 32px;
+  box-sizing: border-box;
+  background: var(--cs-card);
+  border: 1px solid var(--cs-border);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.cs-summary-card__title {
+  margin: 0 0 20px;
+  color: var(--color-copy, #fff1df);
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.cs-summary-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 32px;
+  margin: 0;
+}
+
+.cs-summary-list__item {
+  padding: 14px 0;
+  border-top: 1px solid var(--cs-border);
+}
+
+.cs-summary-list__item dt {
+  margin: 0 0 6px;
+  color: var(--color-action, #f47536);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.cs-summary-list__item dd {
+  margin: 0;
+  color: var(--color-copy-muted, #aab1b8);
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.cs-callout {
+  width: 100%;
+  padding: 24px 28px;
+  box-sizing: border-box;
+  background: rgba(244, 117, 54, 0.06);
+  border: 1px solid var(--cs-border);
+  border-left: 3px solid var(--color-action, #f47536);
+  border-radius: 0 12px 12px 0;
+}
+
+.cs-callout--insight {
+  background: rgba(67, 192, 189, 0.08);
+  border-left-color: var(--color-evidence, #43c0bd);
+}
+
+.cs-callout--quiet {
+  background: var(--cs-card-alt);
+  border-left-color: var(--color-copy-muted, #aab1b8);
+}
+
+.cs-callout__label {
+  margin: 0 0 10px;
+  color: var(--color-action, #f47536);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.cs-callout--insight .cs-callout__label {
+  color: var(--color-evidence, #43c0bd);
+}
+
+.cs-callout__text {
+  margin: 0;
+  color: var(--color-copy, #fff1df);
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.cs-callout--quiet .cs-callout__text {
+  color: var(--color-copy-muted, #aab1b8);
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.cs-sequence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.cs-sequence-card {
+  min-width: 0;
+  padding: 24px;
+  background: var(--cs-card-alt);
+  border: 1px solid var(--cs-border);
+  border-radius: 12px;
+}
+
+.cs-sequence-card .cs-media {
+  margin: 0 0 18px;
+  border-radius: 8px;
+}
+
+.cs-sequence-card__label {
+  margin: 0;
+  color: var(--color-copy, #fff1df);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.cs-result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.cs-result-cell {
+  padding-top: 16px;
+  border-top: 1px solid var(--cs-border);
+}
+
+.cs-result-cell__value {
+  margin: 0 0 4px;
+  color: var(--color-copy, #fff1df);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.cs-result-cell__label {
+  margin: 0;
+  color: var(--color-copy-muted, #aab1b8);
+  font-size: 15px;
+  line-height: 24px;
+}
+
 .cs-media,
 .cs-video {
   border-color: var(--cs-border-strong);
@@ -1080,6 +1256,25 @@
 
   .cs-decision-grid__row {
     flex-direction: column;
+  }
+
+  .cs-summary-card {
+    padding: 24px;
+  }
+
+  .cs-summary-list,
+  .cs-sequence-grid,
+  .cs-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-callout {
+    padding: 20px 22px;
+  }
+
+  .cs-callout__text {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 

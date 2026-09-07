@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>From Hidden Right-Click to Visible Action | Morty Akard</title>
+    <meta
+      content="Testing and revising ownership transfer in Arium's multiplayer Game Room — case study by Morty Akard."
+      name="description"
+    />
+    <meta content="From Hidden Right-Click to Visible Action | Morty Akard" property="og:title" />
+    <meta
+      content="Using Maze evidence to revise a hidden ownership-transfer action into a visible menu entry point."
+      property="og:description"
+    />
+    <meta
+      content="https://morty-akard.github.io/projects/game-room-ownership-transfer/assets/revised-desktop-player-menu.png"
+      property="og:image"
+    />
+    <meta property="og:type" content="article" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <link rel="canonical" href="https://morty-akard.github.io/projects/game-room-ownership-transfer/" />
+    <meta property="og:url" content="https://morty-akard.github.io/projects/game-room-ownership-transfer/" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="../../css/webflow-style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/site-chrome.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/case-study.css?v=20260907-game-room-refined" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://ajax.googleapis.com" rel="preconnect" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: ["Open Sans:300,400,600,700,800"],
+        },
+      });
+    </script>
+    <link rel="icon" href="../../images/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="../../images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png" sizes="180x180" />
+  </head>
+  <body class="body case-study-page game-room-ownership-transfer-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-nav-section">
+      <nav class="floating-nav" aria-label="Primary">
+        <a href="/" class="floating-nav__brand">
+          <span class="floating-nav__logo">Morty Akard</span>
+          <span class="floating-nav__divider" aria-hidden="true"></span>
+          <span class="floating-nav__badge">
+            <span class="floating-nav__badge-dot" aria-hidden="true"></span>
+            <span class="floating-nav__badge-text">Available</span>
+          </span>
+        </a>
+        <div class="floating-nav__links">
+          <a href="/" class="floating-nav__link"><span>Home</span><span class="floating-nav__link-underline" aria-hidden="true"></span></a>
+          <a href="/projects" class="floating-nav__link is-active" aria-current="page"><span>Projects</span><span class="floating-nav__link-underline" aria-hidden="true"></span></a>
+          <a href="/about" class="floating-nav__link"><span>About</span><span class="floating-nav__link-underline" aria-hidden="true"></span></a>
+        </div>
+        <a href="/contact" class="floating-nav__cta">Get in Touch <img class="floating-nav__cta-icon" src="../../images/site/nav-arrow-right.svg" alt="" width="12" height="12" /></a>
+        <button class="floating-nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span class="floating-nav__toggle-bars" aria-hidden="true"></span>
+        </button>
+        <div class="floating-nav__mobile-panel">
+          <a href="/" class="floating-nav__link">Home</a>
+          <a href="/projects" class="floating-nav__link is-active">Projects</a>
+          <a href="/about" class="floating-nav__link">About</a>
+          <a href="/contact" class="floating-nav__cta">Get in Touch</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="cs-section cs-section--hero">
+        <p class="cs-eyebrow">Arium · Product design case study</p>
+        <h1 class="cs-title">From Hidden Right-Click to Visible Action</h1>
+        <p class="cs-subtitle">Testing and revising ownership transfer in Arium's multiplayer Game Room</p>
+        <p class="cs-lede">
+          A Game Room administrator needed to transfer ownership before leaving. My first design put the action inside a right-click menu—but testing showed that people struggled to discover where to begin.
+        </p>
+        <p class="cs-body">
+          I responded by adding a visible menu trigger to the participant card and carrying the interaction into the mobile design. The preserved work stops at that revision, so this is a story about using evidence to change a design direction, not a claim of measured improvement.
+        </p>
+        <figure class="cs-figure">
+          <div class="cs-media">
+            <img src="assets/revised-desktop-player-menu.png" alt="Revised desktop Game Room with a visible ellipsis on a participant card and the ownership-transfer menu open." width="2094" height="1280" fetchpriority="high" decoding="async" />
+          </div>
+          <figcaption class="cs-figure__caption">Final design direction: the transfer action remains grouped with participant controls, but the menu now has a visible entry point.</figcaption>
+        </figure>
+        <aside class="cs-summary-card" aria-labelledby="at-a-glance-heading">
+          <h2 id="at-a-glance-heading" class="cs-summary-card__title">At a glance</h2>
+          <dl class="cs-summary-list">
+            <div class="cs-summary-list__item"><dt>Product</dt><dd>Arium cloud-gaming platform</dd></div>
+            <div class="cs-summary-list__item"><dt>My role</dt><dd>UX/UI Designer</dd></div>
+            <div class="cs-summary-list__item"><dt>Feature work</dt><dd>2023</dd></div>
+            <div class="cs-summary-list__item"><dt>Scope</dt><dd>Game Room ownership-transfer interaction</dd></div>
+            <div class="cs-summary-list__item"><dt>My contribution</dt><dd>Problem framing, rapid prototyping, Maze testing, analysis and responsive revision</dd></div>
+            <div class="cs-summary-list__item"><dt>Evidence outcome</dt><dd>The test exposed a hidden-action problem; the revised direction was not retested in the evidence I retained</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="cs-section cs-section--sm">
+        <p class="cs-eyebrow">01</p>
+        <h2 class="cs-h2">Ownership Transfer Had No Visible Starting Point</h2>
+        <p class="cs-body">
+          Arium's multiplayer Game Room placed participant controls beside the game. The Product Owner asked me to add a way for the current administrator to pass ownership to another player before leaving.
+        </p>
+        <p class="cs-body">
+          This was a focused interaction within an existing feature, rather than a redesign of the whole Game Room. I was responsible for framing and designing the transfer flow, testing it, interpreting the results, and revising the desktop and mobile designs.
+        </p>
+        <figure class="cs-figure">
+          <div class="cs-media">
+            <img src="assets/initial-game-room-context.png" alt="Initial Game Room showing participant cards beside the game." width="1440" height="810" loading="lazy" decoding="async" />
+          </div>
+          <figcaption class="cs-figure__caption">Before the revision, participant cards had no visible menu trigger.</figcaption>
+        </figure>
+        <p class="cs-body">
+          I framed the task around one question:
+        </p>
+        <aside class="cs-callout" aria-label="Design challenge">
+          <p class="cs-callout__label">Design challenge</p>
+          <p class="cs-callout__text">How could the administrator find the right participant and deliberately hand over their responsibilities and access?</p>
+        </aside>
+        <p class="cs-body">
+          The transfer also needed a deliberate confirmation. The design named the recipient, explained that they would receive owner rights, and let the administrator confirm or cancel. This reduced the chance of treating a meaningful permission change like an ordinary menu action.
+        </p>
+      </section>
+
+      <section class="cs-section">
+        <p class="cs-eyebrow">02</p>
+        <h2 class="cs-h2">My First Design Kept the Interface Clean—but Hid the Action</h2>
+        <p class="cs-body">
+          My initial flow used a participant's context menu. The administrator would right-click the player's card, choose “Transfer room ownership,” and confirm the change.
+        </p>
+        <p class="cs-body">
+          I assumed this would keep the busy Game Room uncluttered while grouping participant-management actions together. The weakness in that assumption was simple: people had to know that the right-click menu existed before they could see any of those actions.
+        </p>
+        <p class="cs-body">
+          I built the interaction quickly using the existing interface. The screens included familiar components and realistic imagery, but my goal at this stage was to test the path before spending more time refining components.
+        </p>
+        <div class="cs-sequence-grid" aria-label="Initial interaction sequence">
+          <figure class="cs-sequence-card cs-figure">
+            <div class="cs-media">
+              <img src="assets/initial-player-menu.png" alt="Initial context menu containing the ownership-transfer action." width="1440" height="810" loading="lazy" decoding="async" />
+            </div>
+            <figcaption class="cs-figure__caption">Step 1: right-clicking a participant card revealed the transfer action.</figcaption>
+          </figure>
+          <figure class="cs-sequence-card cs-figure">
+            <div class="cs-media">
+              <img src="assets/initial-transfer-confirmation.png" alt="Confirmation dialog naming the recipient and offering Change Owner and Cancel." width="1440" height="810" loading="lazy" decoding="async" />
+            </div>
+            <figcaption class="cs-figure__caption">Step 2: the confirmation made the change explicit before transferring owner rights.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <p class="cs-eyebrow">03</p>
+        <h2 class="cs-h2">Testing Challenged My Right-Click Assumption</h2>
+        <p class="cs-body">
+          I prepared and ran a task-based Maze test with 24 participants. The task asked them to transfer ownership to player 2 using a PC.
+        </p>
+        <figure class="cs-figure">
+          <div class="cs-media">
+            <img src="assets/maze-mission-summary.png" alt="Maze mission summary showing 24 participants, zero direct success, 64.3% misclick rate and 32.6-second average duration." width="2492" height="660" loading="lazy" decoding="async" />
+          </div>
+          <figcaption class="cs-figure__caption">The mission overview showed zero direct success, a 64.3% misclick rate and an average duration of 32.6 seconds.</figcaption>
+        </figure>
+        <div class="cs-callout" aria-label="Test result for 24 participants">
+          <p class="cs-callout__label">Test result — 24 participants</p>
+          <div class="cs-result-grid">
+            <div class="cs-result-cell"><p class="cs-result-cell__value">0</p><p class="cs-result-cell__label">direct successes</p></div>
+            <div class="cs-result-cell"><p class="cs-result-cell__value">20</p><p class="cs-result-cell__label">indirect successes</p></div>
+            <div class="cs-result-cell"><p class="cs-result-cell__value">4</p><p class="cs-result-cell__label">unfinished attempts</p></div>
+          </div>
+        </div>
+        <p class="cs-body">
+          Maze classified indirect successes as participants who completed the task through unexpected paths. Most people eventually finished, but nobody used the intended direct route. The result did not mean that the whole flow was unusable; it showed that the expected path was not clear.
+        </p>
+        <figure class="cs-figure">
+          <div class="cs-media">
+            <img src="assets/maze-completion-breakdown.png" alt="Maze report showing zero direct successes, twenty indirect successes and four unfinished attempts." width="1770" height="836" loading="lazy" decoding="async" />
+          </div>
+          <figcaption class="cs-figure__caption">Twenty participants completed the task through unexpected paths, while four did not finish.</figcaption>
+        </figure>
+        <p class="cs-body">
+          I reviewed the paths and heatmaps to locate the difficulty. The first-screen evidence showed participants moving away from the intended route, while another preserved view showed activity concentrating around the participant menu once it was open. Together, these views pointed back to the first action: discovering the right-click entry point.
+        </p>
+        <figure class="cs-figure">
+          <div class="cs-media">
+            <img src="assets/maze-initial-screen-paths.jpg" alt="First-screen heatmap and path report showing off-path interactions and exits." width="2330" height="1600" loading="lazy" decoding="async" />
+          </div>
+          <figcaption class="cs-figure__caption">The first-screen path report showed that participants were not beginning through the intended route.</figcaption>
+        </figure>
+        <figure class="cs-figure">
+          <div class="cs-media">
+            <img src="assets/maze-open-menu-heatmap.png" alt="Screen-level Maze heatmap showing concentrated interaction around the open participant menu." width="2736" height="1314" loading="lazy" decoding="async" />
+          </div>
+          <figcaption class="cs-figure__caption">Once the participant menu was visible, interaction concentrated around it. I treated this as supporting evidence rather than proof on its own.</figcaption>
+        </figure>
+        <aside class="cs-callout cs-callout--insight" aria-label="Key insight">
+          <p class="cs-callout__label">Key insight</p>
+          <p class="cs-callout__text">The action was available, but the interface gave people no visible clue about how to reach it.</p>
+        </aside>
+      </section>
+
+      <section class="cs-section">
+        <p class="cs-eyebrow">04</p>
+        <h2 class="cs-h2">A Visible Trigger Addressed the Failure Point</h2>
+        <p class="cs-body">
+          I added an ellipsis button to the desktop participant card. This gave the menu an explicit entry point while keeping ownership transfer grouped with the other participant actions.
+        </p>
+        <p class="cs-body">
+          The change responded directly to the test finding. It did not add the transfer action permanently to every card, and it no longer relied only on users knowing a desktop-specific right-click convention.
+        </p>
+        <p class="cs-body">
+          For the mobile landscape design, I carried the same participant menu and transfer action into the responsive Game Room layout.
+        </p>
+        <figure class="cs-figure">
+          <div class="cs-media">
+            <img src="assets/revised-mobile-landscape-menu.png" alt="Mobile landscape Game Room with the participant menu open and Transfer room ownership visible." width="1346" height="790" loading="lazy" decoding="async" />
+          </div>
+          <figcaption class="cs-figure__caption">The mobile landscape direction carries the transfer action into the participant menu. This image shows the open state, not how the menu is triggered.</figcaption>
+        </figure>
+      </section>
+
+      <section class="cs-section cs-section--sm">
+        <p class="cs-eyebrow">05</p>
+        <h2 class="cs-h2">The Design Changed; Validation Remained Open</h2>
+        <p class="cs-body">
+          Testing gave me a concrete reason to revise the interaction before carrying the hidden-only pattern into the final designs. I could trace the change from an initial assumption, through observed behaviour, to a more explicit design direction.
+        </p>
+        <aside class="cs-callout cs-callout--quiet" aria-label="Evidence boundary">
+          <p class="cs-callout__label">Evidence boundary</p>
+          <p class="cs-callout__text">I do not have a preserved retest of the revised interaction, so I present it as an evidence-informed revision—not a measured usability improvement.</p>
+        </aside>
+        <p class="cs-body">
+          This work changed how I think about visual simplicity. Removing visible controls can make an interface look quieter, but it can also make an important action harder to find. Testing the interaction early helped me see that trade-off before investing further in the components.
+        </p>
+        <p class="cs-body">
+          If I revisited the work today, I would retest the visible trigger against the original path, compare completion and error behaviour, and include touch, keyboard and accessibility checks.
+        </p>
+      </section>
+    </main>
+
+    <footer id="footer" class="site-footer">
+      <h2 class="site-footer__title">Let&#x27;s Work Together</h2>
+      <a class="site-footer__email" href="mailto:Morty.akard@gmail.com">Morty.akard@gmail.com</a>
+      <ul class="site-footer__social">
+        <li><a href="https://www.linkedin.com/in/morty-akard/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li class="site-footer__dot" aria-hidden="true"></li>
+        <li><a href="https://medium.com/@morty.akard" target="_blank" rel="noopener noreferrer">Medium</a></li>
+        <li class="site-footer__dot" aria-hidden="true"></li>
+        <li><a href="https://github.com/morty-akard" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <hr class="site-footer__rule" />
+      <p class="site-footer__copy">&copy; 2026 Morty Akard</p>
+    </footer>
+    <script src="../../js/site-chrome.js" type="text/javascript"></script>
+  </body>
+</html>

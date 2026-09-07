@@ -13,6 +13,7 @@ const routes = [
   "projects/creator-delight/full/index.html",
   "projects/gamers_compete_with_ease/index.html",
   "projects/gamers_compete_with_ease/full/index.html",
+  "projects/game-room-ownership-transfer/index.html",
 ];
 
 const expectedVideoSequences = {

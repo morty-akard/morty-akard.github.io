@@ -8,6 +8,7 @@ const PAGES = [
   "/projects/creator-delight/full/",
   "/projects/gamers_compete_with_ease/",
   "/projects/gamers_compete_with_ease/full/",
+  "/projects/game-room-ownership-transfer/",
 ];
 const WIDTHS = [1440, 2008];
 

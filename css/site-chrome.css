@@ -348,6 +348,18 @@ body .w-container {
   color: #fff;
 }
 
+.articles-page__header {
+  margin-bottom: 64px;
+}
+
+.articles-page__intro {
+  max-width: 640px;
+  margin: 24px 0 0;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--color-copy-muted);
+}
+
 .article-grid {
   display: flex;
   flex-direction: column;
@@ -518,6 +530,51 @@ body .w-container {
 }
 
 /* ---- Responsive ---- */
+
+/* Four primary links need the compact menu before the page reaches the
+   existing tablet breakpoint, otherwise the centered links can collide with
+   the brand and CTA at narrow desktop widths. */
+@media (max-width: 1199px) {
+  .floating-nav__links,
+  .floating-nav__cta {
+    display: none;
+  }
+
+  .floating-nav__toggle {
+    display: inline-flex;
+  }
+
+  .floating-nav.is-open .floating-nav__mobile-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 8px);
+    padding: 20px;
+    background: var(--bg-nav);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-card);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+    z-index: 20;
+  }
+
+  .floating-nav.is-open .floating-nav__mobile-panel .floating-nav__link {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    min-width: 0;
+    border-bottom: none;
+  }
+
+  .floating-nav.is-open .floating-nav__mobile-panel .floating-nav__cta {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    justify-content: flex-start;
+  }
+}
 
 @media (max-width: 991px) {
   :root {
