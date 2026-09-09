@@ -126,15 +126,15 @@
     <section
       data-copilot="true"
       data-record-id="021bbcbd-6ee7-fa3f-e2d5-f56c062b0a96"
-      class="section featured project-pages"
+      class="section featured project-pages legacy-projects"
     >
       <div
         class="w-layout-blockcontainer featured_case-studies projects w-container"
       >
         <div class="header-div projects-page">
-          <h1 class="section-headers">
+          <h2 class="section-headers">
             <span class="text-span-5">Featured</span> <br />Case studies
-          </h1>
+          </h2>
         </div>
         <div class="w-layout-grid grid featured-case-study projects-page">
           <a
@@ -303,7 +303,7 @@
     <section
       data-record-id="d72b874f-734c-dc1a-6bb0-a3931ce6dc1e"
       data-copilot="true"
-      class="section-projects"
+      class="section-projects legacy-projects"
     >
       <div class="main-container-projects">
         <div class="w-layout-blockcontainer container w-container">
@@ -756,7 +756,45 @@
         </div>
       </div>
     </section>
-</main>
+    <section class="project-archive" aria-labelledby="projects-title">
+      <div class="project-archive__intro">
+        <h1 id="projects-title">Projects</h1>
+        <p>Each collection brings together the product decisions, experiments, and systems that shaped one team&rsquo;s work.</p>
+      </div>
+
+      <div class="project-archive__layout">
+        <nav class="project-archive__tabs" aria-label="Project collections" role="tablist">
+          <button class="project-tab" id="tab-betatrends" type="button" role="tab" aria-selected="false" aria-controls="project-betatrends" data-project="betatrends"><span class="project-tab__number">01</span><span><strong>Betatrends</strong><small>Market research</small></span></button>
+          <button class="project-tab is-active" id="tab-arium" type="button" role="tab" aria-selected="true" aria-controls="project-arium" data-project="arium"><span class="project-tab__number">02</span><span><strong>Arium</strong><small>Cloud gaming</small></span></button>
+          <button class="project-tab" id="tab-artoan" type="button" role="tab" aria-selected="false" aria-controls="project-artoan" data-project="artoan"><span class="project-tab__number">03</span><span><strong>Artoan</strong><small>Social impact</small></span></button>
+        </nav>
+
+        <div class="project-archive__panels">
+          <article class="project-panel" id="project-betatrends" role="tabpanel" aria-labelledby="tab-betatrends" data-project-panel="betatrends" hidden>
+            <img class="project-panel__banner" src="images/betatrends-banner.jpeg" alt="Betatrends product experience" />
+            <header class="project-panel__heading"><p class="project-panel__meta">Market research platform · Product design</p><h2>Betatrends</h2><p>Helping businesses and creators validate ideas through interactive audience research and real-time feedback.</p></header>
+            <div class="project-stories"><a class="project-story" href="/projects/creator-delight/"><img src="images/interaction-20case-20stusy-banner.png" alt="Betatrends interaction creation workflow" /><span class="project-story__copy"><span class="project-story__index">01 / Case study</span><strong>Reducing effort for market research interaction creation by 47%</strong><small>Interaction design, prototyping, usability testing</small></span><img class="project-story__arrow" src="images/site/nav-arrow-right.svg" alt="" /></a></div>
+          </article>
+
+          <article class="project-panel is-active" id="project-arium" role="tabpanel" aria-labelledby="tab-arium" data-project-panel="arium">
+            <img class="project-panel__banner" src="images/arium-20-20banner.jpeg" alt="Arium cloud gaming platform" />
+            <header class="project-panel__heading"><p class="project-panel__meta">Cloud gaming platform · Product design</p><h2>Arium</h2><p>A collection of product work for a cloud gaming platform: competitive play, clearer ownership actions, and the foundations that kept the experience coherent.</p></header>
+            <div class="project-stories">
+              <a class="project-story" href="/projects/gamers_compete_with_ease/"><img src="images/banner.png" alt="Arium tournament experience" /><span class="project-story__copy"><span class="project-story__index">01 / Engagement</span><strong>Boosting tournament engagement with 35% player retention</strong><small>End-to-end product design, experiments, hand-off</small></span><img class="project-story__arrow" src="images/site/nav-arrow-right.svg" alt="" /></a>
+              <a class="project-story" href="/projects/game-room-ownership-transfer/"><img src="projects/game-room-ownership-transfer/assets/arium-maze-results-thumbnail.png" alt="Game Room ownership transfer testing results" /><span class="project-story__copy"><span class="project-story__index">02 / Core flow</span><strong>From hidden right-click to visible action</strong><small>Journey mapping, interaction design, usability testing</small></span><img class="project-story__arrow" src="images/site/nav-arrow-right.svg" alt="" /></a>
+              <a class="project-story" href="https://morty-akard.notion.site/Design-System-f28a45bb01b14304a15d2c1831c4a748" target="_blank" rel="noopener noreferrer"><img src="images/design_system_banner.png" alt="Arium design system" /><span class="project-story__copy"><span class="project-story__index">03 / Foundations</span><strong>Building the Arium design system</strong><small>Design system, documentation, team enablement</small></span><img class="project-story__arrow" src="images/site/nav-arrow-right.svg" alt="" /></a>
+            </div>
+          </article>
+
+          <article class="project-panel" id="project-artoan" role="tabpanel" aria-labelledby="tab-artoan" data-project-panel="artoan" hidden>
+            <img class="project-panel__banner" src="images/artoan-20banner.jpeg" alt="Artoan social impact campaign" />
+            <header class="project-panel__heading"><p class="project-panel__meta">Social impact initiative · Campaign design</p><h2>Artoan</h2><p>A grassroots campaign that turns collected plastic bottle caps into assistive devices, connecting environmental action with greater independence for people with disabilities.</p></header>
+            <div class="project-stories"><a class="project-story" href="/contact/"><img src="images/artoan-20banner-p-500.jpeg" alt="Artoan campaign detail" /><span class="project-story__copy"><span class="project-story__index">Case study / On request</span><strong>Campaign design and community activation</strong><small>Contact me for the full story and process.</small></span><img class="project-story__arrow" src="images/site/nav-arrow-right.svg" alt="" /></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 <footer id="footer" class="site-footer">
       <h2 class="site-footer__title">Let&#x27;s Work Together</h2>
       <a class="site-footer__email" href="mailto:Morty.akard@gmail.com">Morty.akard@gmail.com</a>
@@ -782,5 +820,20 @@
     ></script>
     <script src="js/webflow-script-1.js" type="text/javascript"></script>
       <script src="js/site-chrome.js" type="text/javascript"></script>
+    <script>
+      (() => {
+        const tabs = [...document.querySelectorAll('[data-project]')];
+        const panels = [...document.querySelectorAll('[data-project-panel]')];
+        const selectProject = (project, updateHash = true) => {
+          if (!panels.some((panel) => panel.dataset.projectPanel === project)) return;
+          tabs.forEach((tab) => { const active = tab.dataset.project === project; tab.classList.toggle('is-active', active); tab.setAttribute('aria-selected', String(active)); });
+          panels.forEach((panel) => { const active = panel.dataset.projectPanel === project; panel.hidden = !active; panel.classList.toggle('is-active', active); });
+          if (updateHash) history.replaceState(null, '', `#${project}`);
+        };
+        tabs.forEach((tab) => tab.addEventListener('click', () => selectProject(tab.dataset.project)));
+        if (location.hash) selectProject(location.hash.slice(1), false);
+        window.addEventListener('hashchange', () => selectProject(location.hash.slice(1), false));
+      })();
+    </script>
   </body>
 </html>
