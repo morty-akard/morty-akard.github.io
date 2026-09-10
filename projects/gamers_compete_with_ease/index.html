@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <title>Arium Tournament Redesign | Morty Akard</title>
     <meta
-      content="Making competitive cloud gaming easier to join, follow, and scale — Arium tournament redesign case study by Morty Akard."
+      content="Arium tournament redesign: helping players understand tournament actions, details, match progress, and rankings as conditions change."
       name="description"
     />
     <meta content="Arium Tournament Redesign | Morty Akard" property="og:title" />
     <meta
-      content="Making competitive cloud gaming easier to join, follow, and scale."
+      content="A tournament experience designed around changing player actions, match progress, and rankings."
       property="og:description"
     />
     <meta content="https://morty-akard.github.io/images/case-studies/arium-hero-mockups.png" property="og:image" />
@@ -57,7 +57,7 @@
       })(window, document, "clarity", "script", "yfsdf9k3dp");
     </script>
   </head>
-  <body class="body case-study-page">
+  <body class="body case-study-page arium-tournament-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-nav-section">
       <nav class="floating-nav" aria-label="Primary">
@@ -74,7 +74,7 @@
           <a href="/projects" class="floating-nav__link is-active" aria-current="page"><span>Projects</span><span class="floating-nav__link-underline" aria-hidden="true"></span></a>
           <a href="/about" class="floating-nav__link"><span>About</span><span class="floating-nav__link-underline" aria-hidden="true"></span></a>
         </div>
-          <a href="/contact" class="floating-nav__cta">Get in Touch <img class="floating-nav__cta-icon" src="../../images/site/nav-arrow-right.svg" alt="" width="12" height="12" /></a>
+          <a href="/contact" class="floating-nav__cta">Get in touch <img class="floating-nav__cta-icon" src="../../images/site/nav-arrow-right.svg" alt="" width="12" height="12" /></a>
         <button class="floating-nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">
           <span class="floating-nav__toggle-bars" aria-hidden="true"></span>
         </button>
@@ -82,14 +82,13 @@
           <a href="/" class="floating-nav__link">Home</a>
           <a href="/projects" class="floating-nav__link is-active">Projects</a>
           <a href="/about" class="floating-nav__link">About</a>
-          <a href="/contact" class="floating-nav__cta">Get in Touch</a>
+          <a href="/contact" class="floating-nav__cta">Get in touch</a>
         </div>
       </nav>
     </header>
 
     <main id="main-content">
       <section class="cs-section cs-section--hero">
-        <p class="cs-eyebrow">Arium · UX/UI Design · 3 months</p>
         <h1 class="cs-title">Arium Tournament Redesign</h1>
         <p class="cs-subtitle">Designing a tournament experience players could understand as it changed.</p>
         <p class="cs-lede">
@@ -128,7 +127,6 @@
 
       <section class="cs-section cs-section--sm">
         <div class="cs-heading-card">
-          <p class="cs-eyebrow">The problem</p>
           <h2 class="cs-h2">A tournament could change before a player finished reading it</h2>
           <p class="cs-body cs-body--muted">
             A review of the experience and directional prototype testing pointed to four moments that needed work: taking action, finding the terms of the tournament, following a match, and making sense of the standings.
@@ -144,7 +142,6 @@
 
       <section class="cs-section cs-section--sm">
         <div class="cs-heading-card">
-          <p class="cs-eyebrow">My role</p>
           <h2 class="cs-h2">My contribution ran from early structure to handoff</h2>
           <p class="cs-body cs-body--muted">
             I proposed a way to select and estimate the design work, helped refine the tournament flow, and contributed to the journey map and final UI. I also created early feature structures and interactive prototypes, then proposed and produced component-state documentation for the developer handoff.
@@ -163,7 +160,6 @@
       </section>
 
       <section class="cs-section">
-        <p class="cs-eyebrow">Key design decisions</p>
         <h2 class="cs-h2">Four decisions made the changing parts easier to follow</h2>
         <p class="cs-body cs-body--muted">
           Rather than treating the tournament as a single page, we focused on what a player needed at four points in the experience: action, context, match progress, and standings.
@@ -171,7 +167,6 @@
         <div class="cs-decision-grid">
           <div class="cs-decision-grid__row">
           <div class="cs-card cs-card--wide cs-decision">
-            <p class="cs-decision__num">01</p>
             <h3 class="cs-h3">Make the next action depend on the tournament state</h3>
             <p class="cs-teal">We treated the CTA area as a component with states, so the available action appeared with the condition that explained it.</p>
             <div class="cs-decision-demo">
@@ -198,7 +193,6 @@
             <p class="cs-caption cs-caption--source">The component shows how the available action changes with tournament status and participation.</p>
           </div>
           <div class="cs-card cs-card--wide cs-decision">
-            <p class="cs-decision__num">02</p>
             <h3 class="cs-h3">Put the terms of the tournament where players make decisions</h3>
             <p class="cs-teal">We brought rules, rewards, schedules, and other key details into the tournament flow instead of leaving them apart from it.</p>
             <div class="cs-decision-demo">
@@ -227,7 +221,6 @@
           </div>
           <div class="cs-decision-grid__row">
           <div class="cs-card cs-card--wide cs-decision">
-            <p class="cs-decision__num">03</p>
             <h3 class="cs-h3">Let schedules and results do more than list a time or score</h3>
             <p class="cs-teal">We used match rows to carry a summary and a direct route to an available stream.</p>
             <div class="cs-decision-demo">
@@ -254,7 +247,6 @@
             <p class="cs-caption cs-caption--source">Match rows combine tournament progress, a short summary, and stream access.</p>
           </div>
           <div class="cs-card cs-card--wide cs-decision">
-            <p class="cs-decision__num">04</p>
             <h3 class="cs-h3">Keep rankings recognisable while allowing for different formats</h3>
             <p class="cs-teal">We reorganised the ranking area so it could support different tournament types and show more about the players involved.</p>
             <div class="cs-decision-demo">
@@ -285,7 +277,6 @@
       </section>
 
       <section class="cs-section">
-        <p class="cs-eyebrow">Final direction</p>
         <h2 class="cs-h2">One flow, from finding a tournament to reading the standings</h2>
         <p class="cs-body cs-body--muted">
           The desktop and mobile designs connect discovery, tournament details, participation, match progress, and rankings. The handoff also makes the conditional behaviour behind those screens explicit.
@@ -293,7 +284,7 @@
         <div class="cs-flow">
           <div class="cs-flow__step"><p class="cs-fact__label">01</p><p class="cs-fact__value">Discover</p></div>
           <div class="cs-flow__step"><p class="cs-fact__label">02</p><p class="cs-fact__value">Review details</p></div>
-          <div class="cs-flow__step"><p class="cs-fact__label">03</p><p class="cs-fact__value">Join / status</p></div>
+          <div class="cs-flow__step"><p class="cs-fact__label">03</p><p class="cs-fact__value">Join or check status</p></div>
           <div class="cs-flow__step"><p class="cs-fact__label">04</p><p class="cs-fact__value">Follow schedule</p></div>
           <div class="cs-flow__step"><p class="cs-fact__label">05</p><p class="cs-fact__value">Open match</p></div>
           <div class="cs-flow__step"><p class="cs-fact__label">06</p><p class="cs-fact__value">Interpret ranking</p></div>
@@ -324,8 +315,7 @@
       </section>
 
       <section class="cs-section">
-        <p class="cs-eyebrow">Design output and learning</p>
-        <h2 class="cs-h2">What the work delivered—and what it did not measure</h2>
+        <h2 class="cs-h2">The final design and the evidence I retained</h2>
         <p class="cs-body cs-body--muted">
           Because tournament-specific post-launch metrics were not isolated, broader Arium growth figures are not attributed to this redesign.
         </p>
@@ -344,7 +334,6 @@
           </div>
         </div>
         <div class="cs-measure">
-          <p class="cs-eyebrow">Next validation step</p>
           <h3 class="cs-h2" style="font-size: clamp(28px, 3vw, 48px)">Validate with external players and tournament-specific measures</h3>
           <p class="cs-body" style="color: var(--cs-teal-dim); margin-bottom: 0">
             With more time, I would measure registration completion, repeat participation, schedule usage, and ranking comprehension.
@@ -353,14 +342,12 @@
       </section>
 
       <div class="cs-cta-full">
-        <p class="cs-eyebrow">Want the deeper narrative?</p>
         <h2 class="cs-h3">Read the full Arium case study</h2>
-        <a href="/projects/gamers_compete_with_ease/full/">Open full case study →</a>
+        <a href="/projects/gamers_compete_with_ease/full/">Read the full case study</a>
       </div>
 
       <section class="cs-related" aria-labelledby="related-heading">
-        <p class="cs-eyebrow">Related work</p>
-        <h2 id="related-heading" class="cs-h2">Explore more</h2>
+        <h2 id="related-heading" class="cs-h2">More product design work</h2>
         <div class="cs-related__grid">
           <a class="cs-related-card" href="/projects/creator-delight/">
             <div
@@ -377,7 +364,7 @@
                 <span class="cs-related-card__tag">Product design</span>
                 <span class="cs-related-card__tag">SaaS</span>
               </div>
-              <span class="cs-related-card__cta">View case study →</span>
+              <span class="cs-related-card__cta">Read the Betatrends case study</span>
             </div>
           </a>
           <a
@@ -388,14 +375,14 @@
           >
             <div class="article-card__cover" style="background-image: url('../../images/articles/book-card.png')"></div>
             <div class="article-card__body">
-              <p class="article-card__source">Medium · Design Systems Collective</p>
+              <p class="article-card__source">Design Systems Collective on Medium</p>
               <h3 class="article-card__title">Designing a Custom Book Card That Still Plays Nice With the System</h3>
               <p class="article-card__excerpt">Expressive, context-specific components that feel bespoke without breaking system consistency.</p>
               <div class="article-card__tags">
                 <span class="article-tag article-tag--meta">Article</span>
                 <span class="article-tag">Design Systems</span>
               </div>
-              <span class="article-card__cta">Read on Medium →</span>
+              <span class="article-card__cta">Read the article on Medium</span>
             </div>
           </a>
         </div>
@@ -403,7 +390,7 @@
     </main>
 
     <footer id="footer" class="site-footer">
-      <h2 class="site-footer__title">Let&#x27;s Work Together</h2>
+      <h2 class="site-footer__title">Let&#x27;s work together</h2>
       <a class="site-footer__email" href="mailto:Morty.akard@gmail.com">Morty.akard@gmail.com</a>
       <ul class="site-footer__social">
         <li><a href="https://www.linkedin.com/in/morty-akard/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>

@@ -64,6 +64,20 @@
     return iframe;
   }
 
+  // A poster click is the user's playback gesture. Start the player immediately
+  // so interactive embeds do not require a second click on YouTube's controls.
+  function playbackSource(source) {
+    var separator = source.indexOf("?") === -1 ? "?" : "&";
+    var next = source.replace(/([?&])autoplay=0(?:&|$)/, "$1autoplay=1&");
+    if (!/[?&]autoplay=1(?:&|$)/.test(next)) {
+      next += separator + "autoplay=1";
+    }
+    // Muted autoplay is permitted consistently across browsers; viewers can
+    // turn sound on with the YouTube controls after playback starts.
+    if (!/[?&]mute=1(?:&|$)/.test(next)) next += "&mute=1";
+    return next;
+  }
+
   document.querySelectorAll(".cs-video iframe").forEach(function (original, index) {
     var container = original.closest(".cs-video");
     var source = original.getAttribute("src") || original.getAttribute("data-src") || "";
@@ -95,7 +109,7 @@
       button.appendChild(poster);
       button.addEventListener("click", function () {
         container.classList.remove("is-poster-only");
-        container.replaceChildren(makePlayer(source.replace("autoplay=0", "autoplay=1"), title, {}));
+        container.replaceChildren(makePlayer(playbackSource(source), title, {}));
       });
       container.replaceChildren(button);
     }
