@@ -1321,8 +1321,11 @@
   line-height: 22px;
 }
 
-.cs-summary-card {
+.case-study-page .cs-summary-card {
   width: 100%;
+  max-width: var(--content-max, 1200px);
+  margin-left: auto;
+  margin-right: auto;
   padding: 28px 32px;
   box-sizing: border-box;
   background: var(--cs-card);
