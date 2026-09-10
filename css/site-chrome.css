@@ -630,6 +630,9 @@ body .w-container {
   object-fit: cover;
 }
 
+.about-life__photo--mist img { object-position: 72% center; }
+.about-life__photo--mountain img { object-position: 18% center; }
+
 .about-idea {
   padding: 80px var(--section-pad-x);
   background: var(--color--dark, #000);
