@@ -98,6 +98,14 @@
   color: var(--accent-orange, #f26122);
 }
 
+/* BetaTrends uses sentence-case navigation labels in line with the portfolio voice system. */
+.betatrends-case-study-page .cs-eyebrow,
+.betatrends-case-study-page .cs-summary-list__item dt,
+.betatrends-case-study-page .cs-callout__label {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .cs-title {
   margin: 0 0 24px;
   max-width: 1000px;
@@ -400,9 +408,49 @@
   background: #0d0f11;
 }
 
+/* Reserve media space before metadata loads, while preserving portrait evidence. */
+.cs-local-video {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.cs-section--hero .cs-local-video {
+  aspect-ratio: 2012 / 1440;
+}
+
+.cs-figure--portrait .cs-local-video {
+  aspect-ratio: 9 / 16;
+}
+
 .cs-media-link {
   display: block;
   transition: border-color 0.2s ease;
+  position: relative;
+}
+
+.cs-media-link::after {
+  content: "Open full size";
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 6px 10px;
+  color: var(--color-copy, #fff1df);
+  background: rgba(13, 15, 17, 0.86);
+  border: 1px solid var(--cs-border-strong);
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* The first-redesign clip is evidence, so give it the same insight-led caption treatment as the other media. */
+.cs-figure:has(.cs-local-video[poster*="08-first-redesign"])::after {
+  content: "Visible stages improved orientation, but preview and feedback remained separate.";
+  display: block;
+  margin-top: 10px;
+  color: var(--color-copy-muted, #aab1b8);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .cs-media-link:hover,
@@ -410,8 +458,60 @@
   border-color: var(--color-action, #f47536);
 }
 
+/* Keep the opening facts visible earlier on narrow screens without changing the source order. */
+@media (max-width: 767px) {
+  .betatrends-case-study-page .cs-section--hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .betatrends-case-study-page .cs-section--hero .cs-summary-list { order: 4; }
+  .betatrends-case-study-page .cs-section--hero .cs-lede { order: 5; }
+  .betatrends-case-study-page .cs-section--hero .cs-body--muted { order: 6; }
+  .betatrends-case-study-page .cs-section--hero .cs-figure { order: 7; }
+
+}
+
 .cs-figure--portrait {
   max-width: 360px;
+}
+
+.hotjar-evidence-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.hotjar-evidence-card {
+  min-height: 170px;
+  padding: 24px;
+  background: var(--cs-card, #202428);
+  border: 1px solid var(--cs-border-strong, rgba(255, 255, 255, 0.15));
+  border-top: 3px solid var(--color-action, #f47536);
+  border-radius: 12px;
+}
+
+.hotjar-evidence-card h3 {
+  margin: 0 0 14px;
+  color: var(--color-copy, #fff1df);
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.hotjar-evidence-card p {
+  margin: 0;
+  color: var(--color-copy-muted, #aab1b8);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.hotjar-evidence-panel__note {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--color-copy-muted, #aab1b8);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .journey-friction-diagram {
@@ -522,11 +622,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  overflow-x: auto;
-  padding: 16px;
-  background: var(--cs-card-alt, #181b1e);
-  border: 1px solid var(--cs-border, rgba(255, 255, 255, 0.1));
-  border-radius: 12px;
+  flex-wrap: wrap;
+  padding: 4px 0;
 }
 
 .flow-comparison__track span,
@@ -579,6 +676,7 @@
   .flow-comparison__track {
     align-items: stretch;
     flex-direction: column;
+    gap: 6px;
   }
 
   .flow-comparison__track i {
@@ -1474,7 +1572,8 @@
 
   .cs-summary-list,
   .cs-sequence-grid,
-  .cs-result-grid {
+  .cs-result-grid,
+  .hotjar-evidence-panel {
     grid-template-columns: 1fr;
   }
 
@@ -1556,5 +1655,222 @@
     .cs-related .article-card
   ):hover {
     transform: none;
+  }
+}
+
+/* Arium tournament: a quieter, evidence-led treatment for a changing system. */
+.arium-tournament-page .cs-section {
+  --cs-block-gap: clamp(24px, 3vw, 40px);
+}
+
+.arium-tournament-page .cs-section--hero {
+  gap: clamp(22px, 2.5vw, 32px);
+  padding-top: clamp(88px, 10vw, 144px);
+  padding-bottom: clamp(64px, 8vw, 112px);
+  background:
+    radial-gradient(circle at 78% 20%, rgba(67, 192, 189, 0.14), transparent 30rem),
+    linear-gradient(180deg, rgba(67, 192, 189, 0.04), transparent 55%);
+}
+
+.arium-tournament-page .cs-title {
+  max-width: 920px;
+}
+
+.arium-tournament-page .cs-subtitle {
+  max-width: 760px;
+  font-size: clamp(22px, 2.7vw, 32px);
+}
+
+.arium-tournament-page .cs-facts {
+  gap: 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--cs-border-strong);
+}
+
+.arium-tournament-page .cs-fact {
+  min-height: 0;
+  padding: 14px 20px;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--cs-border);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.arium-tournament-page .cs-fact:first-child {
+  padding-left: 0;
+}
+
+.arium-tournament-page .cs-fact:last-child {
+  border-right: 0;
+}
+
+.arium-tournament-page .cs-fact__label {
+  margin-bottom: 4px;
+  color: var(--color-copy-muted, #aab1b8);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.arium-tournament-page .cs-fact__value {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.arium-tournament-page .cs-heading-card {
+  max-width: 880px;
+}
+
+.arium-tournament-page .cs-section > .cs-h2 {
+  max-width: 920px;
+}
+
+.arium-tournament-page .cs-card-grid--four {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--cs-border);
+  border-bottom: 1px solid var(--cs-border);
+}
+
+.arium-tournament-page .cs-card-grid--four .cs-card {
+  min-width: 0;
+  padding: 28px 24px 30px;
+  border: 0;
+  border-right: 1px solid var(--cs-border);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.arium-tournament-page .cs-card-grid--four .cs-card:last-child {
+  border-right: 0;
+}
+
+.arium-tournament-page .cs-card-grid--four .cs-card::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin-bottom: 22px;
+  background: var(--cs-teal);
+}
+
+.arium-tournament-page .cs-card-grid--four .cs-h3 {
+  font-size: clamp(20px, 2vw, 26px);
+}
+
+.arium-tournament-page .cs-card-grid--four .cs-card p {
+  max-width: 28ch;
+}
+
+.arium-tournament-page .cs-decision-grid {
+  gap: 32px;
+}
+
+.arium-tournament-page .cs-decision-grid__row {
+  gap: 32px;
+}
+
+.arium-tournament-page .cs-decision {
+  padding: 32px;
+  background: linear-gradient(145deg, rgba(67, 192, 189, 0.055), transparent 46%), var(--cs-card-alt);
+  border-color: var(--cs-border-strong);
+  border-radius: 12px;
+}
+
+.arium-tournament-page .cs-decision > .cs-h3 {
+  max-width: 22ch;
+}
+
+.arium-tournament-page .cs-decision-demo {
+  margin-top: 8px;
+}
+
+.arium-tournament-page .cs-flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.arium-tournament-page .cs-flow__step {
+  max-width: none;
+  min-height: 94px;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.arium-tournament-page .cs-measure {
+  padding: clamp(28px, 4vw, 48px);
+  border-left: 3px solid var(--cs-teal);
+  border-radius: 0 12px 12px 0;
+}
+
+.arium-tournament-page .cs-cta-full {
+  padding: clamp(32px, 5vw, 56px);
+  text-align: center;
+  background: linear-gradient(135deg, rgba(67, 192, 189, 0.1), rgba(67, 192, 189, 0.02));
+}
+
+.arium-tournament-page .cs-cta-full .cs-h3 {
+  max-width: 36ch;
+  margin-inline: auto;
+  margin-bottom: 0;
+}
+
+.arium-tournament-page .cs-cta-full a {
+  margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+  .arium-tournament-page .cs-fact {
+    flex-basis: 33.333%;
+    border-bottom: 1px solid var(--cs-border);
+  }
+
+  .arium-tournament-page .cs-fact:nth-child(3n) {
+    border-right: 0;
+  }
+
+  .arium-tournament-page .cs-card-grid--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .arium-tournament-page .cs-card-grid--four .cs-card:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .arium-tournament-page .cs-card-grid--four .cs-card:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--cs-border);
+  }
+}
+
+@media (max-width: 767px) {
+  .arium-tournament-page .cs-section--hero {
+    padding-top: 88px;
+  }
+
+  .arium-tournament-page .cs-fact {
+    flex-basis: 50%;
+    padding: 14px 12px;
+  }
+
+  .arium-tournament-page .cs-fact:first-child {
+    padding-left: 0;
+  }
+
+  .arium-tournament-page .cs-fact:nth-child(3n) {
+    border-right: 1px solid var(--cs-border);
+  }
+
+  .arium-tournament-page .cs-fact:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .arium-tournament-page .cs-card-grid--four .cs-card {
+    padding: 24px 18px 26px;
+  }
+
+  .arium-tournament-page .cs-decision {
+    padding: 24px;
   }
 }

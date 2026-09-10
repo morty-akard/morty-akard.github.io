@@ -133,4 +133,43 @@
       field.removeAttribute("aria-invalid");
     });
   });
+
+  // Replace the dense Hotjar crop with readable, source-backed observation cards.
+  var hotjarImage = document.querySelector('.betatrends-case-study-page img[src*="hotjar-relevant-highlights"]');
+  if (hotjarImage) {
+    var hotjarFigure = hotjarImage.closest("figure");
+    if (hotjarFigure) {
+      var hotjarPanel = document.createElement("div");
+      hotjarPanel.className = "hotjar-evidence-panel";
+      hotjarPanel.setAttribute("role", "group");
+      hotjarPanel.setAttribute("aria-label", "Hotjar observations that shaped the redesign");
+      [
+        ["Question management took too long", "Creators spent too much time completing the question setup."],
+        ["Question types were unclear", "The distinction between standard questions and eligibility questions caused confusion."],
+        ["Important feedback arrived too late", "Price and incomplete-step messages appeared after the relevant work."],
+      ].forEach(function (observation) {
+        var card = document.createElement("article");
+        card.className = "hotjar-evidence-card";
+        var title = document.createElement("h3");
+        title.textContent = observation[0];
+        var detail = document.createElement("p");
+        detail.textContent = observation[1];
+        card.append(title, detail);
+        hotjarPanel.appendChild(card);
+      });
+      var note = document.createElement("p");
+      note.className = "hotjar-evidence-panel__note";
+      note.textContent = "These qualitative observations became the priorities we discussed as a team.";
+      hotjarPanel.appendChild(note);
+      hotjarFigure.replaceWith(hotjarPanel);
+    }
+  }
+
+  // Keep the mobile hero scan order aligned for keyboard and assistive-technology users.
+  var betatrendsHero = document.querySelector(".betatrends-case-study-page .cs-section--hero");
+  if (betatrendsHero) {
+    var heroFacts = betatrendsHero.querySelector(".cs-summary-list");
+    var heroLede = betatrendsHero.querySelector(".cs-lede");
+    if (heroFacts && heroLede) betatrendsHero.insertBefore(heroFacts, heroLede);
+  }
 })();
