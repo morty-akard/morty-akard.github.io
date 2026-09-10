@@ -522,17 +522,21 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-wrap: wrap;
-  padding: 4px 0;
+  overflow-x: auto;
+  padding: 16px;
+  background: var(--cs-card-alt, #181b1e);
+  border: 1px solid var(--cs-border, rgba(255, 255, 255, 0.1));
+  border-radius: 12px;
 }
 
 .flow-comparison__track span,
 .flow-comparison__track strong {
   flex: 0 0 auto;
-  padding: 10px 0;
+  padding: 14px 16px;
   color: var(--color-copy, #fff1df);
-  background: transparent;
-  border: 0;
+  background: var(--cs-card, #202428);
+  border: 1px solid var(--cs-border-strong, rgba(255, 255, 255, 0.15));
+  border-radius: 8px;
   font-size: 15px;
   line-height: 1.25;
   text-align: center;
@@ -540,7 +544,8 @@
 
 .flow-comparison__track span.is-friction {
   color: #ffc2b2;
-  border-bottom: 2px solid var(--color-action, #f47536);
+  border-color: rgba(244, 117, 54, 0.5);
+  background: rgba(244, 117, 54, 0.1);
 }
 
 .flow-comparison__track i {
@@ -553,7 +558,7 @@
 .flow-comparison__workspace {
   min-width: min(420px, 58vw);
   color: var(--color-evidence, #43c0bd) !important;
-  border-bottom: 2px solid var(--color-evidence, #43c0bd) !important;
+  border-color: var(--color-evidence, #43c0bd) !important;
 }
 
 .flow-comparison__workspace small {
@@ -565,15 +570,15 @@
 }
 
 .flow-comparison__track strong {
-  color: var(--color-evidence, #43c0bd);
-  background: transparent;
+  color: #17191b;
+  background: var(--color-evidence, #43c0bd);
+  border-color: var(--color-evidence, #43c0bd);
 }
 
 @media (max-width: 767px) {
   .flow-comparison__track {
     align-items: stretch;
     flex-direction: column;
-    gap: 4px;
   }
 
   .flow-comparison__track i {
