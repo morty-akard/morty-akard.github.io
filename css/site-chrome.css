@@ -729,7 +729,7 @@ body .w-container {
 
 .project-archive { max-width: 1320px; margin: 0 auto; padding: 9.5rem 3rem 8rem; }
 .project-archive__intro { max-width: 720px; margin-bottom: 4.5rem; }
-.project-archive__eyebrow, .project-story__index { color: var(--color--accent, #ffbb69); letter-spacing: .1em; text-transform: uppercase; font-size: .72rem; font-weight: 700; }
+.project-archive__eyebrow, .project-story__index { color: var(--color--accent, #ffbb69); letter-spacing: .02em; font-size: .78rem; font-weight: 700; }
 .project-panel__meta { color: var(--color--secondary-text, rgba(255,255,255,.7)); margin: 0; font-size: .9rem; font-weight: 600; line-height: 1.4; }
 .project-archive__intro h1 { color: var(--color--light-elevation, #ffeed8); margin: .5rem 0 1.25rem; font-size: clamp(2.9rem, 6vw, 5.75rem); line-height: .98; }
 .project-archive__intro > p:last-child { color: var(--color--secondary-text, rgba(255,255,255,.7)); max-width: 610px; margin: 0; font-size: clamp(1rem, 1.4vw, 1.2rem); line-height: 1.65; }
@@ -748,6 +748,11 @@ body .w-container {
 .project-panel__heading { max-width: 790px; padding: 2.6rem 1rem 2.8rem; }
 .project-panel__heading h2 { color: var(--color--light-elevation, #ffeed8); margin: .65rem 0 .9rem; font-size: clamp(2.25rem, 4.5vw, 4.25rem); line-height: 1; }
 .project-panel__heading > p:last-child { color: var(--color--secondary-text, rgba(255,255,255,.7)); max-width: 740px; margin: 0; line-height: 1.7; }
+.project-panel__facts { display: flex; flex-wrap: wrap; gap: 1.25rem 2rem; margin: 1.8rem 0 0; }
+.project-panel__facts div { min-width: 120px; }
+.project-panel__facts dt { color: var(--color--secondary-text, rgba(255,255,255,.7)); font-size: .72rem; }
+.project-panel__facts dd { color: var(--color--light-elevation, #ffeed8); margin: .28rem 0 0; font-size: .86rem; font-weight: 600; }
+.project-panel__empty { margin: 0; padding: 1.35rem; border: 1px solid var(--border-subtle, rgba(255,255,255,.18)); border-radius: 10px; color: var(--color--secondary-text, rgba(255,255,255,.7)); }
 
 .project-stories { display: grid; gap: 1rem; }
 .project-story { display: grid; grid-template-columns: minmax(155px, 25%) minmax(0, 1fr) 20px; gap: clamp(1rem, 2.4vw, 2rem); align-items: center; min-height: 148px; padding: .7rem; border: 1px solid var(--border-subtle, rgba(255,255,255,.18)); border-radius: 10px; color: inherit; text-decoration: none; transition: border-color .2s ease, transform .2s ease, background-color .2s ease; }

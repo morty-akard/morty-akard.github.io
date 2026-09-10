@@ -20,7 +20,7 @@ The left selector and Arium hero/story region were reviewed in the browser captu
 - Spacing and layout rhythm: the desktop grid aligns the selector with the hero, preserves a large content gutter, and uses compact, consistently spaced story rows. The selector becomes a horizontal scrollable tab list below 767 px to avoid a cramped sidebar.
 - Colors and visual tokens: the source is monochrome. The implementation intentionally uses the existing charcoal surface, cream display text, muted supporting text, and orange active state, matching the rest of the site.
 - Image quality and asset fidelity: all visible banners, thumbnails, and arrows are existing project assets. No placeholders, synthetic images, or code-drawn assets are used.
-- Copy and content: all visible project and case-study titles are drawn from the current site. Artoan is intentionally labelled “On request” because no standalone case-study route exists in the repository.
+- Copy and content: the project descriptions, roles, durations, titles, and routes now come from the published case studies. The unsupported tournament-retention claim was removed. Artoan explicitly states that it has no published case study rather than offering an invented contact-card destination.
 
 **Findings**
 
@@ -29,7 +29,7 @@ No actionable P0, P1, or P2 differences. The implementation purposefully diverge
 **Primary interactions tested**
 
 - Betatrends tab selects its panel and updates the URL to `#betatrends`.
-- Arium tab selects its panel and exposes three distinct case-study links.
+- Arium tab selects its panel and exposes two published local case studies plus the existing external design-system case study.
 - Artoan tab selects its panel and updates the URL to `#artoan`.
 - Hash-based initial selection is handled by the page script.
 
@@ -43,10 +43,11 @@ No actionable P0, P1, or P2 differences. The implementation purposefully diverge
 
 **Follow-up polish**
 
-- [P3] Add more Artoan case-study routes when the underlying content is ready; its current card accurately communicates that the detailed work is available on request.
+- [P3] Add Artoan case-study routes when the underlying content is ready; the page accurately states that no published case study is currently available.
 
 **Comparison history**
 
 1. First browser comparison: no P0/P1/P2 visual or interaction issues found, so no corrective iteration was required.
+2. Production-content pass: replaced generic and unsupported copy with source-backed case-study information; verified Betatrends, Arium, and Artoan selections in the browser. No P0/P1/P2 issues found.
 
 final result: passed

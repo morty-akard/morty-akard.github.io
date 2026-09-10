@@ -94,8 +94,7 @@
   font-weight: 700;
   font-size: 13px;
   line-height: 20px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--accent-orange, #f26122);
 }
 
@@ -210,7 +209,6 @@
   font-size: 13px;
   line-height: 20px;
   color: var(--accent-orange, #f26122);
-  text-transform: uppercase;
 }
 
 .cs-fact__value {
@@ -391,6 +389,216 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+.cs-local-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--cs-border-strong);
+  border-radius: 12px;
+  background: #0d0f11;
+}
+
+.cs-media-link {
+  display: block;
+  transition: border-color 0.2s ease;
+}
+
+.cs-media-link:hover,
+.cs-media-link:focus-visible {
+  border-color: var(--color-action, #f47536);
+}
+
+.cs-figure--portrait {
+  max-width: 360px;
+}
+
+.journey-friction-diagram {
+  width: 100%;
+  padding: clamp(32px, 5vw, 64px) 0;
+  box-sizing: border-box;
+  color: var(--color-copy, #fff1df);
+  background: transparent;
+  border: 0;
+}
+
+.journey-friction-diagram__intro h3 {
+  margin: 0 0 10px;
+  color: var(--color-copy, #fff1df);
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.15;
+}
+
+.journey-friction-diagram__intro p,
+.journey-friction-diagram__steps p {
+  margin: 0;
+  color: var(--color-copy-muted, #aab1b8);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.journey-friction-diagram__steps {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  margin: 34px 0 26px;
+}
+
+.journey-friction-diagram__steps article {
+  min-height: 180px;
+  padding: 20px;
+  background: var(--cs-card, #202428);
+  border: 1px solid var(--cs-border-strong, rgba(255, 255, 255, 0.15));
+  border-radius: 12px;
+}
+
+.journey-friction-diagram__steps span {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 12px;
+  color: #17191b;
+  background: var(--color-evidence, #43c0bd);
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.journey-friction-diagram__steps h4 {
+  margin: 0 0 14px;
+  color: var(--color-copy, #fff1df);
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.journey-friction-diagram__arrow {
+  color: var(--color-evidence, #43c0bd);
+  font-size: 38px;
+}
+
+.journey-friction-diagram__implication {
+  margin: 0;
+  padding: 12px 18px;
+  color: var(--color-copy, #fff1df);
+  background: rgba(244, 117, 54, 0.08);
+  border-left: 3px solid var(--color-action, #f47536);
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.flow-comparison {
+  width: 100%;
+  padding: clamp(28px, 4vw, 48px) 0;
+  color: var(--color-copy, #fff1df);
+}
+
+.flow-comparison > h3 {
+  margin: 0 0 32px;
+  color: var(--color-copy, #fff1df);
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.15;
+}
+
+.flow-comparison__row + .flow-comparison__row {
+  margin-top: 32px;
+}
+
+.flow-comparison__row h4 {
+  margin: 0 0 12px;
+  color: var(--color-action, #f47536);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.flow-comparison__row--new h4 {
+  color: var(--color-evidence, #43c0bd);
+}
+
+.flow-comparison__track {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 4px 0;
+}
+
+.flow-comparison__track span,
+.flow-comparison__track strong {
+  flex: 0 0 auto;
+  padding: 10px 0;
+  color: var(--color-copy, #fff1df);
+  background: transparent;
+  border: 0;
+  font-size: 15px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.flow-comparison__track span.is-friction {
+  color: #ffc2b2;
+  border-bottom: 2px solid var(--color-action, #f47536);
+}
+
+.flow-comparison__track i {
+  flex: 0 0 auto;
+  color: var(--color-copy-muted, #aab1b8);
+  font-size: 22px;
+  font-style: normal;
+}
+
+.flow-comparison__workspace {
+  min-width: min(420px, 58vw);
+  color: var(--color-evidence, #43c0bd) !important;
+  border-bottom: 2px solid var(--color-evidence, #43c0bd) !important;
+}
+
+.flow-comparison__workspace small {
+  display: block;
+  margin-top: 8px;
+  color: var(--color-copy-muted, #aab1b8);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.flow-comparison__track strong {
+  color: var(--color-evidence, #43c0bd);
+  background: transparent;
+}
+
+@media (max-width: 767px) {
+  .flow-comparison__track {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .flow-comparison__track i {
+    transform: rotate(90deg);
+    text-align: center;
+  }
+
+  .flow-comparison__workspace {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .journey-friction-diagram__steps {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-friction-diagram__steps article {
+    min-height: 0;
+  }
+
+  .journey-friction-diagram__arrow {
+    text-align: center;
+    transform: rotate(90deg);
+  }
 }
 
 .cs-media--card-leading {
@@ -707,8 +915,7 @@
   font-weight: 700;
   font-size: 10px;
   line-height: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--accent-orange, #f26122);
 }
 
@@ -1046,9 +1253,8 @@
   color: var(--color-action, #f47536);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
   line-height: 16px;
-  text-transform: uppercase;
 }
 
 .cs-summary-list__item dd {
@@ -1083,9 +1289,8 @@
   color: var(--color-action, #f47536);
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
   line-height: 18px;
-  text-transform: uppercase;
 }
 
 .cs-callout--insight .cs-callout__label {

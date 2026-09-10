@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="760" viewBox="0 0 1440 760" role="img" aria-labelledby="title desc">
+  <title id="title">Comparison of the inherited and redesigned Interaction creation flows</title>
+  <desc id="desc">The inherited flow repeatedly left creation for cost and preview. The redesigned flow keeps progress, price feedback, and preview in a shared workspace before finalisation.</desc>
+  <rect width="1440" height="760" rx="32" fill="#F6F8FC"/>
+  <text x="80" y="86" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#172033">The redesign removed repeated context switches</text>
+  <g font-family="Arial, sans-serif">
+    <text x="80" y="154" font-size="25" font-weight="700" fill="#B74848">INHERITED FLOW</text>
+    <rect x="80" y="185" width="1280" height="180" rx="24" fill="#FFF7F7" stroke="#F0C6C6" stroke-width="2"/>
+    <g font-size="21" text-anchor="middle" fill="#172033">
+      <rect x="120" y="238" width="180" height="70" rx="14" fill="#FFFFFF" stroke="#D6DCE7"/><text x="210" y="281">Create content</text>
+      <rect x="370" y="238" width="180" height="70" rx="14" fill="#FFE1E1" stroke="#EAA5A5"/><text x="460" y="268">Leave to request</text><text x="460" y="293">cost</text>
+      <rect x="620" y="238" width="180" height="70" rx="14" fill="#FFE1E1" stroke="#EAA5A5"/><text x="710" y="268">Leave to request</text><text x="710" y="293">preview</text>
+      <rect x="870" y="238" width="180" height="70" rx="14" fill="#FFFFFF" stroke="#D6DCE7"/><text x="960" y="281">Return and revise</text>
+      <rect x="1120" y="238" width="180" height="70" rx="14" fill="#FFFFFF" stroke="#D6DCE7"/><text x="1210" y="281">Pay and publish</text>
+    </g>
+    <g stroke="#8794AA" stroke-width="4" fill="none"><path d="M305 273 H355"/><path d="M555 273 H605"/><path d="M805 273 H855"/><path d="M1055 273 H1105"/></g>
+
+    <text x="80" y="445" font-size="25" font-weight="700" fill="#24715A">REDESIGNED FLOW</text>
+    <rect x="80" y="476" width="1280" height="205" rx="24" fill="#F1FBF7" stroke="#B9E1D1" stroke-width="2"/>
+    <rect x="120" y="525" width="850" height="105" rx="18" fill="#FFFFFF" stroke="#6CC5A4" stroke-width="3"/>
+    <text x="545" y="563" text-anchor="middle" font-size="25" font-weight="700" fill="#172033">One guided creation workspace</text>
+    <text x="545" y="600" text-anchor="middle" font-size="21" fill="#536079">visible steps · active editing · live preview · price context</text>
+    <path d="M990 578 H1050" stroke="#8794AA" stroke-width="4"/>
+    <path d="M1039 566 L1055 578 L1039 590" fill="none" stroke="#8794AA" stroke-width="4"/>
+    <rect x="1070" y="525" width="230" height="105" rx="18" fill="#3478DC"/>
+    <text x="1185" y="568" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">Review, confirm,</text>
+    <text x="1185" y="600" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">and finalise</text>
+  </g>
+</svg>

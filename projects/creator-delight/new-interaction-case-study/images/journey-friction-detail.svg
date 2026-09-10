@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="620" viewBox="0 0 1440 620" role="img" aria-labelledby="title desc">
+  <title id="title">Three connected problems across the original Interaction creation journey</title>
+  <desc id="desc">A sequence connects a long setup task, delayed cost and completion feedback, and a preview separated from creation.</desc>
+  <rect width="1440" height="620" rx="32" fill="#F6F8FC"/>
+  <text x="80" y="92" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#172033">The friction was connected across the journey</text>
+  <text x="80" y="137" font-family="Arial, sans-serif" font-size="22" fill="#536079">The map reframed several screen-level issues as one continuity problem.</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="80" y="205" width="360" height="260" rx="24" fill="#FFFFFF" stroke="#CED6E5" stroke-width="2"/>
+    <circle cx="128" cy="253" r="24" fill="#3478DC"/>
+    <text x="120" y="262" font-size="26" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="168" y="261" font-size="28" font-weight="700" fill="#172033">Weak orientation</text>
+    <text x="120" y="326" font-size="22" fill="#536079">A long setup task made it</text>
+    <text x="120" y="360" font-size="22" fill="#536079">hard to see progress or</text>
+    <text x="120" y="394" font-size="22" fill="#536079">understand what remained.</text>
+
+    <path d="M455 335 H505" stroke="#8794AA" stroke-width="4"/>
+    <path d="M494 323 L510 335 L494 347" fill="none" stroke="#8794AA" stroke-width="4"/>
+
+    <rect x="520" y="205" width="360" height="260" rx="24" fill="#FFFFFF" stroke="#CED6E5" stroke-width="2"/>
+    <circle cx="568" cy="253" r="24" fill="#3478DC"/>
+    <text x="560" y="262" font-size="26" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="608" y="251" font-size="27" font-weight="700" fill="#172033">Feedback arrived</text>
+    <text x="608" y="284" font-size="27" font-weight="700" fill="#172033">too late</text>
+    <text x="560" y="350" font-size="22" fill="#536079">Cost and incomplete-state</text>
+    <text x="560" y="384" font-size="22" fill="#536079">feedback appeared away from</text>
+    <text x="560" y="418" font-size="22" fill="#536079">the inputs that caused it.</text>
+
+    <path d="M895 335 H945" stroke="#8794AA" stroke-width="4"/>
+    <path d="M934 323 L950 335 L934 347" fill="none" stroke="#8794AA" stroke-width="4"/>
+
+    <rect x="960" y="205" width="400" height="260" rx="24" fill="#FFFFFF" stroke="#CED6E5" stroke-width="2"/>
+    <circle cx="1008" cy="253" r="24" fill="#3478DC"/>
+    <text x="1000" y="262" font-size="26" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="1048" y="251" font-size="27" font-weight="700" fill="#172033">Preview broke</text>
+    <text x="1048" y="284" font-size="27" font-weight="700" fill="#172033">the work context</text>
+    <text x="1000" y="350" font-size="22" fill="#536079">Creators had to leave creation</text>
+    <text x="1000" y="384" font-size="22" fill="#536079">to judge the audience-facing</text>
+    <text x="1000" y="418" font-size="22" fill="#536079">experience they were building.</text>
+  </g>
+  <rect x="80" y="505" width="1280" height="58" rx="16" fill="#E7F0FF"/>
+  <text x="720" y="542" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#245FAC">Design implication: keep progress, feedback, and preview visible in the creation context.</text>
+</svg>

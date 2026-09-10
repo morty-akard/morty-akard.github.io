@@ -91,9 +91,9 @@
       <section class="cs-section cs-section--hero">
         <p class="cs-eyebrow">Arium · UX/UI Design · 3 months</p>
         <h1 class="cs-title">Arium Tournament Redesign</h1>
-        <p class="cs-subtitle">Making competitive cloud gaming easier to join, follow, and scale.</p>
+        <p class="cs-subtitle">Designing a tournament experience players could understand as it changed.</p>
         <p class="cs-lede">
-          I worked within a three-person design team on Arium’s desktop and mobile tournament experience. The final direction turned a complex, state-heavy feature into clearer actions, accessible tournament details, stronger match context, and adaptable rankings.
+          I worked on Arium’s desktop and mobile tournament experience in a three-person design team. A tournament could change while a player was using it, so joining, checking results, and reading the rankings could not rely on one static screen. We designed the experience around those changing moments and documented the behaviour needed to build it.
         </p>
         <div class="cs-facts cs-facts--cols-5">
           <div class="cs-fact"><p class="cs-fact__label">Role</p><p class="cs-fact__value">UX/UI Designer</p></div>
@@ -129,31 +129,31 @@
       <section class="cs-section cs-section--sm">
         <div class="cs-heading-card">
           <p class="cs-eyebrow">The problem</p>
-          <h2 class="cs-h2">Players needed clarity across a changing tournament experience</h2>
+          <h2 class="cs-h2">A tournament could change before a player finished reading it</h2>
           <p class="cs-body cs-body--muted">
-            Review and directional prototype testing highlighted four priorities: actions, essential details, match context, and rankings.
+            A review of the experience and directional prototype testing pointed to four moments that needed work: taking action, finding the terms of the tournament, following a match, and making sense of the standings.
           </p>
         </div>
         <div class="cs-card-grid cs-card-grid--four">
-          <div class="cs-card"><h3 class="cs-h3">State-aware actions</h3><p>Pair tournament condition with the action available to the player.</p></div>
-          <div class="cs-card"><h3 class="cs-h3">Accessible details</h3><p>Place rules, rewards, and schedules near the moments where players need them.</p></div>
-          <div class="cs-card"><h3 class="cs-h3">Match context</h3><p>Add summaries and available stream access where players already look.</p></div>
-          <div class="cs-card"><h3 class="cs-h3">Adaptable rankings</h3><p>Support different tournament structures with more player context.</p></div>
+          <div class="cs-card"><h3 class="cs-h3">Actions that matched the state</h3><p>Show what a player could do alongside the tournament condition that made that action relevant.</p></div>
+          <div class="cs-card"><h3 class="cs-h3">Details at the decision point</h3><p>Bring rules, rewards, and schedules into the moments when a player was deciding whether to join or follow.</p></div>
+          <div class="cs-card"><h3 class="cs-h3">Useful match rows</h3><p>Give schedules and results enough context to help players follow a match or open an available stream.</p></div>
+          <div class="cs-card"><h3 class="cs-h3">Rankings that could flex</h3><p>Make room for different tournament structures while showing more about the players in the table.</p></div>
         </div>
       </section>
 
       <section class="cs-section cs-section--sm">
         <div class="cs-heading-card">
           <p class="cs-eyebrow">My role</p>
-          <h2 class="cs-h2">Bringing structure to a complex feature</h2>
+          <h2 class="cs-h2">My contribution ran from early structure to handoff</h2>
           <p class="cs-body cs-body--muted">
-            I proposed a structured way to select and estimate the design work, assisted with the tournament flow, contributed to journey mapping and final UI, created early feature structures and interactive prototypes, and proposed and created component-state documentation for developer handoff.
+            I proposed a way to select and estimate the design work, helped refine the tournament flow, and contributed to the journey map and final UI. I also created early feature structures and interactive prototypes, then proposed and produced component-state documentation for the developer handoff.
           </p>
         </div>
         <div class="cs-card-grid">
           <div class="cs-card cs-card--wide">
             <h3 class="cs-h3">Direct contribution</h3>
-            <p>Planning structure, flow assistance, early feature organization, interactive prototypes, UI contribution, and component-state documentation for handoff.</p>
+            <p>Planning structure, flow refinement, early feature organisation, interactive prototypes, UI contribution, and component-state documentation for handoff.</p>
           </div>
           <div class="cs-card cs-card--wide">
             <h3 class="cs-h3">Collaboration</h3>
@@ -164,21 +164,21 @@
 
       <section class="cs-section">
         <p class="cs-eyebrow">Key design decisions</p>
-        <h2 class="cs-h2">Four decisions shaped the final direction</h2>
+        <h2 class="cs-h2">Four decisions made the changing parts easier to follow</h2>
         <p class="cs-body cs-body--muted">
-          The redesign focused on the moments where players needed clarity most: taking action, finding tournament details, following matches, and interpreting rankings.
+          Rather than treating the tournament as a single page, we focused on what a player needed at four points in the experience: action, context, match progress, and standings.
         </p>
         <div class="cs-decision-grid">
           <div class="cs-decision-grid__row">
           <div class="cs-card cs-card--wide cs-decision">
             <p class="cs-decision__num">01</p>
-            <h3 class="cs-h3">State-aware tournament actions</h3>
-            <p class="cs-teal">We treated the CTA area as a state-aware component, pairing tournament condition with the action available to the player.</p>
+            <h3 class="cs-h3">Make the next action depend on the tournament state</h3>
+            <p class="cs-teal">We treated the CTA area as a component with states, so the available action appeared with the condition that explained it.</p>
             <div class="cs-decision-demo">
-              <h4 class="cs-decision-demo__title">State-aware actions</h4>
+              <h4 class="cs-decision-demo__title">Tournament action states</h4>
               <div class="cs-decision-demo__body">
                 <div class="cs-decision-demo__copy cs-decision-demo__copy--wide">
-                  <p>State-aware actions pair tournament condition with the action available to the player.</p>
+                  <p>Each variant pairs the action with the tournament condition a player needs to understand before acting.</p>
                 </div>
                 <div class="cs-decision-demo__media cs-decision-demo__media--portrait">
                   <div class="cs-video cs-video--decision-portrait">
@@ -191,18 +191,18 @@
                       referrerpolicy="strict-origin-when-cross-origin"
                     ></iframe>
                   </div>
-                  <p class="cs-decision-demo__caption">Feature behavior example</p>
+                  <p class="cs-decision-demo__caption">The CTA changes as the tournament does.</p>
                 </div>
               </div>
             </div>
-            <p class="cs-caption cs-caption--source">Source-backed Arium tournament interface.</p>
+            <p class="cs-caption cs-caption--source">The component shows how the available action changes with tournament status and participation.</p>
           </div>
           <div class="cs-card cs-card--wide cs-decision">
             <p class="cs-decision__num">02</p>
-            <h3 class="cs-h3">Accessible tournament details</h3>
-            <p class="cs-teal">Rules, rewards, schedules, and other key details were brought closer to the core tournament flow.</p>
+            <h3 class="cs-h3">Put the terms of the tournament where players make decisions</h3>
+            <p class="cs-teal">We brought rules, rewards, schedules, and other key details into the tournament flow instead of leaving them apart from it.</p>
             <div class="cs-decision-demo">
-              <h4 class="cs-decision-demo__title">Accessible tournament details</h4>
+              <h4 class="cs-decision-demo__title">Tournament details in context</h4>
               <div class="cs-decision-demo__body">
                 <div class="cs-decision-demo__media">
                   <div class="cs-video cs-video--decision-demo">
@@ -215,21 +215,21 @@
                       referrerpolicy="strict-origin-when-cross-origin"
                     ></iframe>
                   </div>
-                  <p class="cs-decision-demo__caption">Feature behavior example</p>
+                  <p class="cs-decision-demo__caption">Details are available without sending the player away from the tournament.</p>
                 </div>
                 <div class="cs-decision-demo__copy">
-                  <p>Rules, rewards, and schedules are grouped closer to the tournament flow.</p>
+                  <p>The grouping keeps the information needed to understand the tournament alongside the experience itself.</p>
                 </div>
               </div>
             </div>
-            <p class="cs-caption cs-caption--source">Source-backed Arium tournament interface.</p>
+            <p class="cs-caption cs-caption--source">Rules, rewards, and schedules sit within the tournament experience.</p>
           </div>
           </div>
           <div class="cs-decision-grid__row">
           <div class="cs-card cs-card--wide cs-decision">
             <p class="cs-decision__num">03</p>
-            <h3 class="cs-h3">Match context where players already looked</h3>
-            <p class="cs-teal">Results and schedule rows were designed to include match summaries and direct access to available streams.</p>
+            <h3 class="cs-h3">Let schedules and results do more than list a time or score</h3>
+            <p class="cs-teal">We used match rows to carry a summary and a direct route to an available stream.</p>
             <div class="cs-decision-demo">
               <h4 class="cs-decision-demo__title">Match context and stream access</h4>
               <div class="cs-decision-demo__body">
@@ -244,24 +244,24 @@
                       referrerpolicy="strict-origin-when-cross-origin"
                     ></iframe>
                   </div>
-                  <p class="cs-decision-demo__caption">Feature behavior example</p>
+                  <p class="cs-decision-demo__caption">A match row carries both progress and a route to watch.</p>
                 </div>
                 <div class="cs-decision-demo__copy">
-                  <p>Results and schedule rows include match summaries and direct stream access.</p>
+                  <p>Players can use the same row to understand what happened and, when available, open the match content.</p>
                 </div>
               </div>
             </div>
-            <p class="cs-caption cs-caption--source">Source-backed Arium tournament interface.</p>
+            <p class="cs-caption cs-caption--source">Match rows combine tournament progress, a short summary, and stream access.</p>
           </div>
           <div class="cs-card cs-card--wide cs-decision">
             <p class="cs-decision__num">04</p>
-            <h3 class="cs-h3">Adaptable rankings with more player context</h3>
-            <p class="cs-teal">The ranking area was reorganized to support different tournament types and show more player information.</p>
+            <h3 class="cs-h3">Keep rankings recognisable while allowing for different formats</h3>
+            <p class="cs-teal">We reorganised the ranking area so it could support different tournament types and show more about the players involved.</p>
             <div class="cs-decision-demo">
               <h4 class="cs-decision-demo__title">Adaptable ranking display</h4>
               <div class="cs-decision-demo__body">
                 <div class="cs-decision-demo__copy">
-                  <p>The ranking section differentiates tournament types and adds more player context.</p>
+                  <p>The ranking pattern differentiates tournament types while giving players more context for interpreting a position.</p>
                 </div>
                 <div class="cs-decision-demo__media">
                   <div class="cs-video cs-video--decision-demo">
@@ -274,11 +274,11 @@
                       referrerpolicy="strict-origin-when-cross-origin"
                     ></iframe>
                   </div>
-                  <p class="cs-decision-demo__caption">Feature behavior example</p>
+                  <p class="cs-decision-demo__caption">The structure develops from an early sketch into a flexible ranking pattern.</p>
                 </div>
               </div>
             </div>
-            <p class="cs-caption cs-caption--source">Source-backed Arium tournament interface.</p>
+            <p class="cs-caption cs-caption--source">The ranking design adapts to different tournament formats without becoming a different experience each time.</p>
           </div>
           </div>
         </div>
@@ -286,9 +286,9 @@
 
       <section class="cs-section">
         <p class="cs-eyebrow">Final direction</p>
-        <h2 class="cs-h2">One connected tournament experience</h2>
+        <h2 class="cs-h2">One flow, from finding a tournament to reading the standings</h2>
         <p class="cs-body cs-body--muted">
-          Across desktop and mobile, the final direction connected tournament action, essential details, match progress, and rankings while keeping conditional behavior explicit for implementation.
+          The desktop and mobile designs connect discovery, tournament details, participation, match progress, and rankings. The handoff also makes the conditional behaviour behind those screens explicit.
         </p>
         <div class="cs-flow">
           <div class="cs-flow__step"><p class="cs-fact__label">01</p><p class="cs-fact__value">Discover</p></div>
@@ -325,14 +325,14 @@
 
       <section class="cs-section">
         <p class="cs-eyebrow">Design output and learning</p>
-        <h2 class="cs-h2">A clear design outcome, without overstating impact</h2>
+        <h2 class="cs-h2">What the work delivered—and what it did not measure</h2>
         <p class="cs-body cs-body--muted">
           Because tournament-specific post-launch metrics were not isolated, broader Arium growth figures are not attributed to this redesign.
         </p>
         <div class="cs-card-grid">
           <div class="cs-card">
             <h3 class="cs-h3">Design output</h3>
-            <p>The final direction connected tournament action, essential details, match context, and rankings. Component documentation clarified intended behavior for implementation.</p>
+            <p>The completed direction connected tournament actions, details, match context, and rankings. The component documentation captured the intended behaviour for implementation.</p>
           </div>
           <div class="cs-card">
             <h3 class="cs-h3">Evidence limit</h3>
@@ -340,7 +340,7 @@
           </div>
           <div class="cs-card">
             <h3 class="cs-h3">Learning</h3>
-            <p>State-heavy features need explicit behavior, information timed to the right moment, and a shared model that design and engineering can use.</p>
+            <p>I learned that complex features need more than polished screens: they need explicit behaviour, information at the right moment, and a shared model that design and engineering can work from.</p>
           </div>
         </div>
         <div class="cs-measure">
