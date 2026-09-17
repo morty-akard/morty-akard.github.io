@@ -1,12 +1,10 @@
 /* Shared redesign chrome: tokens, floating nav, footer, writing cards */
 
 :root {
-  --accent-orange: #f26122;
+  --accent-orange: #ffbb69;
   --bg-nav: #171a1c;
   --border-subtle: #2e3338;
   --color--accent: #ffbb69;
-  --status-available: #10b981;
-  --status-available-bg: #10b98114;
   --radius-card: 16px;
   --text-muted: #99a3b0;
   --text-warm: #ffeed8;
@@ -94,36 +92,6 @@ body .w-container {
   white-space: nowrap;
 }
 
-.floating-nav__divider {
-  width: 1px;
-  height: 16px;
-  background: var(--border-subtle);
-}
-
-.floating-nav__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: 6px;
-  background: var(--status-available-bg);
-}
-
-.floating-nav__badge-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: var(--status-available);
-}
-
-.floating-nav__badge-text {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1;
-  color: var(--status-available);
-}
-
 .floating-nav__link {
   display: inline-flex;
   flex-direction: row;
@@ -150,7 +118,7 @@ body .w-container {
 }
 
 .floating-nav__links .floating-nav__link.is-active {
-  border-bottom-color: var(--accent-orange);
+  border-bottom-color: var(--color--accent);
 }
 
 .floating-nav__links .floating-nav__link-underline {
@@ -170,7 +138,7 @@ body .w-container {
 }
 
 .floating-nav__link.is-active .floating-nav__link-underline {
-  background: var(--accent-orange);
+  background: var(--color--accent);
 }
 
 .floating-nav__cta {
@@ -179,13 +147,14 @@ body .w-container {
   justify-content: center;
   gap: 8px;
   padding: 10px 20px;
-  border: 1.5px solid var(--accent-orange);
+  border: 1.5px solid var(--color--accent);
   border-radius: 8px;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 22px;
-  color: var(--accent-orange);
+  background: transparent;
+  color: var(--color--accent);
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
@@ -193,14 +162,19 @@ body .w-container {
 }
 
 .floating-nav__cta:hover {
-  background: var(--accent-orange);
-  color: #fff;
+  background: var(--text-warm);
+  border-color: var(--text-warm);
+  color: #17191b;
 }
 
 .floating-nav__cta-icon {
   width: 12px;
   height: 12px;
   display: block;
+}
+
+.floating-nav__cta:hover .floating-nav__cta-icon {
+  filter: brightness(0) saturate(100%);
 }
 
 .floating-nav__toggle {
@@ -464,6 +438,46 @@ body .w-container {
   color: var(--accent-purple);
   background: var(--bg-card-purple);
   border: none;
+}
+
+/* Project-card tags use the same readable type scale as article-card tags. */
+.casestudy-card .tag.utility-margin-tag-1rem-copy.text-dark-mood-muted-purple {
+  min-height: 32px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* Industry icons match the 2rem company-logo container beside them. */
+.casestudy-card .industry .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* Keep the Material icon and location copy optically centered as one line. */
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.location-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.location .heading {
+  margin: 0;
+  line-height: 1.2;
 }
 
 .article-card__cta {
@@ -940,10 +954,6 @@ body .w-container {
     font-size: 22px;
   }
 
-  .floating-nav__badge {
-    display: none;
-  }
-
   .site-footer {
     padding-top: var(--section-pad-y);
   }
@@ -1090,17 +1100,15 @@ main {
 }
 
 .floating-nav__cta {
-  border-color: var(--color-action);
-  color: var(--color-action);
+  border-color: var(--color--accent);
+  background: transparent;
+  color: var(--color--accent);
 }
 
 .floating-nav__cta:hover {
-  background: var(--color-action);
+  background: var(--text-warm);
+  border-color: var(--text-warm);
   color: #17191b;
-}
-
-.floating-nav__badge {
-  border: 1px solid rgba(16, 185, 129, 0.22);
 }
 
 .site-footer {
@@ -1237,14 +1245,6 @@ main {
     font-size: 19px;
   }
 
-  .floating-nav__badge {
-    display: inline-flex;
-    padding: 4px 7px;
-  }
-
-  .floating-nav__badge-text {
-    font-size: 9px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

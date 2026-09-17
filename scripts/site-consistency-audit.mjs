@@ -81,8 +81,8 @@ for (const route of routes) {
   if (!/<a\b[^>]*class="skip-link"[^>]*href="#main-content"/.test(html)) {
     report("error", route, "missing skip link");
   }
-  if (!/floating-nav__badge-text">Available</.test(html)) {
-    report("error", route, "missing availability badge");
+  if (/floating-nav__badge/.test(html)) {
+    report("error", route, "contains retired availability badge");
   }
 
   const ids = [...html.matchAll(/(?<!\bdata-w-)id="([^"]+)"/g)].map((m) => m[1]);
