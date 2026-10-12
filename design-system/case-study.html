@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Case-study reading template | Morty Akard</title>
+    <meta name="description" content="A working reference for the reusable case-study reading layout, section navigation, evidence, and margin notes.">
+    <!-- Keep draft pages out of search. Remove this only when the page is ready to publish. -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://morty-akard.github.io/design-system/case-study.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Case-study reading template | Morty Akard">
+    <meta property="og:description" content="A working reference for the reusable case-study reading layout, section navigation, evidence, and margin notes.">
+    <meta property="og:url" content="https://morty-akard.github.io/design-system/case-study.html">
+    <!-- Paths assume deployment at the site root, matching the current portfolio. -->
+    <link rel="stylesheet" href="../css/webflow-style.css">
+    <link rel="stylesheet" href="../css/design-tokens.css">
+    <link rel="stylesheet" href="../css/site-chrome.css?v=20261012-centred-mobile-menu">
+    <link rel="stylesheet" href="../css/case-study-editorial.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+    <link rel="icon" href="../images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" sizes="180x180">
+  </head>
+  <body class="body case-study-editorial">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-nav-section">
+      <nav class="floating-nav" aria-label="Primary">
+        <a href="../" class="floating-nav__brand"><span class="floating-nav__logo">Morty Akard</span></a>
+        <!-- Add is-active and aria-current="page" only to an actual current-page link. -->
+        <div class="floating-nav__links">
+          <a href="../" class="floating-nav__link">Home</a>
+          <a href="../projects.html" class="floating-nav__link">Projects</a>
+          <a href="../articles.html" class="floating-nav__link">Articles</a>
+          <a href="../about.html" class="floating-nav__link">About</a>
+        </div>
+        <a href="../contact.html" class="floating-nav__cta">Get in touch</a>
+        <button class="floating-nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span class="floating-nav__toggle-bars" aria-hidden="true"></span>
+        </button>
+        <div class="floating-nav__mobile-panel">
+          <a href="../" class="floating-nav__link">Home</a>
+          <a href="../projects.html" class="floating-nav__link">Projects</a>
+          <a href="../articles.html" class="floating-nav__link">Articles</a>
+          <a href="../about.html" class="floating-nav__link">About</a>
+          <a href="../contact.html" class="floating-nav__cta">Get in touch</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content" class="cse-layout">
+      <details class="cse-toc" open>
+        <summary aria-label="Case study sections"><span class="cse-toc-current" aria-hidden="true">Explore this study</span><span class="cse-toc-chevron" aria-hidden="true"></span><span class="cse-toc-progress" aria-hidden="true"></span></summary>
+        <nav aria-label="Case study sections"><ul>
+          <li><a href="#overview"><span class="cse-nav-marker" aria-hidden="true"></span><span class="cse-nav-label">Overview</span></a></li>
+          <li><a href="#context"><span class="cse-nav-marker" aria-hidden="true"></span><span class="cse-nav-label">The creator journey</span></a></li>
+          <li><a href="#directions"><span class="cse-nav-marker" aria-hidden="true"></span><span class="cse-nav-label">Comparing the directions</span></a></li>
+          <li><a href="#evidence"><span class="cse-nav-marker" aria-hidden="true"></span><span class="cse-nav-label">Research evidence</span></a></li>
+          <li><a href="#treatments"><span class="cse-nav-marker" aria-hidden="true"></span><span class="cse-nav-label">Reading and supporting details</span></a></li>
+          <li><a href="#devices"><span class="cse-nav-marker" aria-hidden="true"></span><span class="cse-nav-label">Device mockups</span></a></li>
+          <li><a href="#results"><span class="cse-nav-marker" aria-hidden="true"></span><span class="cse-nav-label">Results and evidence</span></a></li>
+        </ul></nav>
+      </details>
+      <article class="cse-article" aria-labelledby="page-title">
+        <header class="cse-section" data-cse-opening id="overview" aria-labelledby="page-title">
+          <h1 class="cse-title" id="page-title">Case-study reading template</h1>
+          <div class="cse-prose cse-lede"><p>A reading layout for future case studies, with section navigation and optional supporting material in the margins.</p></div>
+          <div class="cse-prose"><p>The examples below use excerpts and images from the existing BetaTrends case study. They demonstrate presentation patterns; the current project pages remain unchanged.</p><p><a href="./">Back to design foundations</a></p></div>
+          <dl class="cse-facts">
+            <div><dt>Example project</dt><dd>BetaTrends New Interaction</dd></div>
+            <div><dt>Role</dt><dd>Product Designer</dd></div>
+            <div><dt>Period</dt><dd>2023–2024</dd></div>
+            <div><dt>Collaborator</dt><dd>Pieter, founder and product owner</dd></div>
+          </dl>
+        </header>
+        <section class="cse-section" id="context" aria-labelledby="context-title">
+          <h2 class="cse-heading" id="context-title">The problem was bigger than one screen</h2>
+          <div class="cse-prose"><p>Creators had to find where to start, complete a long form, request a cost calculation, find the preview, move through modals, pay, and publish. An eight-step journey map showed three connected problems: weak orientation, delayed feedback, and preview separated from creation.</p></div>
+          <figure class="cse-figure">
+            <a class="cse-media" href="../projects/creator-delight/new-interaction-case-study/images/02-creator-journey-map.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size creator journey map">
+              <img src="../projects/creator-delight/new-interaction-case-study/images/02-creator-journey-map.jpg" width="8464" height="3765" loading="lazy" alt="An eight-step creator journey mapping friction around the entry point, long form, cost calculation, preview, modals, payment, and publication.">
+            </a>
+            <figcaption class="cse-caption">The map reframed long form, price, and preview as one continuity problem. This figure uses the reading width.</figcaption>
+          </figure>
+        </section>
+        <section class="cse-section" id="directions" aria-labelledby="directions-title">
+          <h2 class="cse-heading" id="directions-title">I created three options so we could compare the ideas</h2>
+          <div class="cse-prose"><p>I ran workshops and created three options. Pieter and I compared step placement, preview space, price information, and question types, then chose the direction that kept steps, editing, and preview visible together.</p></div>
+          <div class="cse-pair">
+            <div class="cse-support-main">
+              <figure class="cse-figure cse-wide">
+                <a class="cse-media" href="../projects/creator-delight/new-interaction-case-study/images/concept-options-comparison.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size comparison of the three design options">
+                  <img src="../projects/creator-delight/new-interaction-case-study/images/concept-options-comparison.png" width="2380" height="630" loading="lazy" alt="Three New Interaction concepts shown at equal scale: a three-column workspace, a left-hand step navigator, and a hybrid layout.">
+                </a>
+                <figcaption class="cse-caption">Options A, B, and C made the trade-offs visible before the joint decision. This example explicitly uses the wider evidence column to compare three layouts.</figcaption>
+              </figure>
+              <h3 class="cse-subheading">The selected workspace</h3>
+              <figure class="cse-figure">
+                <a class="cse-media" href="../projects/creator-delight/new-interaction-case-study/images/hero-selected-workspace.png" target="_blank" rel="noopener noreferrer" aria-label="Open the selected workspace at full size">
+                  <img src="../projects/creator-delight/new-interaction-case-study/images/hero-selected-workspace.png" width="2012" height="1440" loading="lazy" alt="The selected New Interaction concept places creation steps, the active editing form, price context, and an audience-facing preview in one workspace.">
+                </a>
+                <figcaption class="cse-caption">The released workspace kept creation steps, active work, price context, and preview visible together. The article stays centred when a figure has no margin note.</figcaption>
+              </figure>
+            </div>
+            <aside class="cse-note cse-support" id="directions-support" aria-labelledby="directions-note-title">
+              <details class="cse-support-disclosure" open>
+                <summary class="cse-support-summary" id="directions-note-title"><span class="cse-note-title">Illustrated discussion: comparing the options</span><span class="cse-support-chevron" aria-hidden="true"></span></summary>
+                <div class="cse-support-content">
+                  <p>Illustrative dialogue</p>
+                  <div class="cse-support-gallery">
+                  <figure class="cse-figure"><a class="cse-media" href="../projects/creator-delight/refined-assets/image-20.png" target="_blank" rel="noopener noreferrer" aria-label="Open the workshop illustration at full size"><img src="../projects/creator-delight/refined-assets/image-20.png" width="565" height="429" loading="lazy" alt="An illustrated workshop discussing the New Interaction problems."></a><figcaption class="cse-caption">The workshops helped turn findings into alternative layouts.</figcaption></figure>
+                  <figure class="cse-figure"><a class="cse-media" href="../projects/creator-delight/refined-assets/image-21.png" target="_blank" rel="noopener noreferrer" aria-label="Open the illustrated design review at full size"><img src="../projects/creator-delight/refined-assets/image-21.png" width="673" height="519" loading="lazy" alt="An illustrated design review comparing layout directions."></a><figcaption class="cse-caption">I presented the alternatives; Pieter and I selected the direction together.</figcaption></figure>
+                  </div>
+                </div>
+              </details>
+            </aside>
+          </div>
+        </section>
+        <section class="cse-section" id="evidence" aria-labelledby="evidence-title">
+          <h2 class="cse-heading" id="evidence-title">Hotjar helped me find where people were getting stuck</h2>
+          <div class="cse-pair">
+            <div class="cse-prose"><p>Before the first limited launch, I recommended a user-insight tool. We chose Hotjar, and I reviewed recordings for the <code>/newTrend</code> page. Managing questions took time, question types were unclear, and price and incomplete-step feedback appeared too late.</p></div>
+            <aside class="cse-note cse-support" id="evidence-support" aria-labelledby="evidence-note-title">
+              <details class="cse-support-disclosure" open>
+                <summary class="cse-support-summary" id="evidence-note-title"><span class="cse-note-title">Source of these examples</span><span class="cse-support-chevron" aria-hidden="true"></span></summary>
+                <div class="cse-support-content">
+                  <p>Text and media come from the current BetaTrends page. Reference explanations describe this template, rather than additional project findings.</p>
+                  <p><a href="../projects/creator-delight/">Read the BetaTrends case study</a></p>
+                </div>
+              </details>
+            </aside>
+          </div>
+          <div class="cse-comparison">
+            <figure class="cse-figure"><div class="cse-media"><img src="../projects/creator-delight/new-interaction-case-study/images/hotjar-relevant-highlights-redacted.png" width="1800" height="204" loading="lazy" alt="A cropped research synthesis listing New Interaction observations about preview, draft continuity, incomplete-state feedback, price visibility, and question types."></div><figcaption class="cse-caption">This problem list connected recordings to the priorities we discussed as a team.</figcaption></figure>
+            <figure class="cse-figure"><a class="cse-media" href="../projects/creator-delight/new-interaction-case-study/images/hero-selected-workspace.png" target="_blank" rel="noopener noreferrer" aria-label="Open the selected workspace at full size"><img src="../projects/creator-delight/new-interaction-case-study/images/hero-selected-workspace.png" width="2012" height="1440" loading="lazy" alt="The selected New Interaction workspace, with editing, creation steps, preview, and price visible together."></a><figcaption class="cse-caption">The selected workspace. These two figures demonstrate paired evidence; they are not a before-and-after measurement.</figcaption></figure>
+          </div>
+        </section>
+        <section class="cse-section" id="treatments" aria-labelledby="treatments-title">
+          <h2 class="cse-heading" id="treatments-title">Reading and supporting details</h2>
+          <div class="cse-prose cse-callout"><h3 class="cse-subheading">Creators needed feedback while working</h3><p>Creators needed progress, feedback, and preview while working.</p></div>
+          <div class="cse-prose"><p>A callout highlights a supported point. Keep essential explanation in the reading flow. Optional notes stay beside their related fragment on wide screens and become expandable rows below 1440px. Longer illustrated stories appear together at the end of their section on smaller screens.</p><p>The template uses the website’s current dark colours. It inherits the shared semantic roles so future global theme changes can reach the article and side areas together.</p></div>
+          <p class="cse-caption">The section navigator appears when the main story begins. It shows the current section beside quiet markers. Hover over it or use the keyboard to reveal all section names. On smaller screens, a slim row attached to the header shows your location and opens the full list.</p>
+        </section>
+        <section class="cse-section" id="devices" aria-labelledby="devices-title">
+          <h2 class="cse-heading" id="devices-title">Device mockups</h2>
+          <div class="cse-prose"><p>Use a device frame when it helps explain where an interface is used. Images and videos keep their original proportions; the frame adds no controls or content over the screen.</p></div>
+          <h3 class="cse-subheading">Phone</h3>
+          <figure class="cse-figure">
+            <div class="cse-device cse-device--phone"><div class="cse-device-shell">
+              <a class="cse-media" href="assets/mobile-screen-example.svg" target="_blank" rel="noopener noreferrer" aria-label="Open the illustrative mobile screen at full size"><img src="assets/mobile-screen-example.svg" width="390" height="780" loading="lazy" alt="An illustrative mobile screen with neutral placeholder blocks for a header, a feature, and three list items."></a>
+            </div></div>
+            <figcaption class="cse-caption">An illustrative screen for the phone frame, not project evidence. Replace it with a real mobile screenshot or recording.</figcaption>
+          </figure>
+          <h3 class="cse-subheading">Desktop screen</h3>
+          <figure class="cse-figure">
+            <div class="cse-device cse-device--desktop"><div class="cse-device-shell">
+              <div class="cse-media"><video controls playsinline preload="none" width="1600" height="1254" poster="../projects/creator-delight/new-interaction-case-study/images/10-selected-direction-poster.jpg" aria-label="Watch the selected BetaTrends workspace">
+                <source src="assets/desktop-workspace-example.webm" type="video/webm">
+                <source src="../projects/creator-delight/new-interaction-case-study/images/hero-workspace-loop.mp4" type="video/mp4">
+                <a href="../projects/creator-delight/new-interaction-case-study/images/hero-workspace-loop.mp4">Open the selected-workspace video</a>
+              </video></div>
+            </div></div>
+            <figcaption class="cse-caption">The existing BetaTrends workspace recording inside the desktop frame. <a href="../projects/creator-delight/new-interaction-case-study/images/hero-workspace-loop.mp4">Open the video separately</a>.</figcaption>
+          </figure>
+        </section>
+        <section class="cse-section" id="results" aria-labelledby="results-title">
+          <h2 class="cse-heading" id="results-title">Results and evidence</h2>
+          <div class="cse-prose"><p>Use this result block for measured changes or reported outcomes. The headline is optional; each value stays paired with its label.</p></div>
+          <div class="cse-result" role="group" aria-labelledby="evaluation-example-title">
+            <h3 class="cse-result-title" id="evaluation-example-title">Creation-time usability evaluation</h3>
+            <p class="cse-result-headline">47% less time to create an Interaction</p>
+            <dl class="cse-results-grid">
+              <div><dt>Before the redesign</dt><dd class="cse-result-value">21 min 52 sec</dd></div>
+              <div><dt>After the redesign</dt><dd class="cse-result-value">11 min 38 sec</dd></div>
+            </dl>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer id="footer" class="site-footer">
+      <h2 class="site-footer__title">Let’s work together</h2>
+      <a class="site-footer__email" href="mailto:Morty.akard@gmail.com">Morty.akard@gmail.com</a>
+      <ul class="site-footer__social">
+        <li><a href="https://www.linkedin.com/in/morty-akard/">LinkedIn</a></li>
+        <li><a href="https://medium.com/@morty.akard">Medium</a></li>
+        <li><a href="https://github.com/morty-akard">GitHub</a></li>
+      </ul>
+      <hr class="site-footer__rule">
+      <p class="site-footer__copy">© 2026 Morty Akard</p>
+    </footer>
+    <script src="../js/site-chrome.js"></script>
+    <script src="../js/case-study-editorial.js"></script>
+  </body>
+</html>

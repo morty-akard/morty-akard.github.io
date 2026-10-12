@@ -1,0 +1,29 @@
+/* Reference-page layout only; component styling comes from production CSS. */
+.ds-reference .ds-main { max-width: var(--ds-width-content); margin: auto; padding: var(--ds-space-64) var(--ds-space-24); }
+.ds-reference .ds-section { margin-bottom: var(--ds-space-80); }
+.ds-reference .ds-intro { max-width: var(--ds-width-reading); }
+.ds-reference .ds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: var(--ds-space-16); }
+.ds-reference .ds-swatch { padding: var(--ds-space-16); background: var(--ds-surface); border: 1px solid var(--ds-border); border-radius: var(--ds-radius-control); }
+.ds-reference .ds-swatch-color { height: 64px; background: var(--sample-color); border: 1px solid var(--ds-border); border-radius: var(--ds-radius-control); margin-bottom: var(--ds-space-12); }
+.ds-reference code { overflow-wrap: anywhere; color: var(--ds-text-muted); font-size: 14px; }
+.ds-reference .ds-swatch p { margin: 0; }
+.ds-reference .ds-space-list { display: flex; flex-wrap: wrap; align-items: end; gap: var(--ds-space-16); }
+.ds-reference .ds-space-bar { width: 32px; height: var(--sample-space); background: var(--ds-accent-primary); }
+.ds-reference .ds-space-list figure { margin: 0; }
+.ds-reference .ds-measure { padding: var(--ds-space-16); border: 1px solid var(--ds-border); margin-bottom: var(--ds-space-16); }
+.ds-reference .ds-reading { max-width: var(--ds-width-reading); }
+.ds-reference .ds-treatments > div { padding: var(--ds-space-24); background: var(--ds-surface-raised); border: 1px solid var(--ds-border); border-radius: var(--ds-radius-card); box-shadow: var(--ds-shadow-card); }
+.ds-reference .ds-actions { display: flex; flex-wrap: wrap; gap: var(--ds-space-16); margin: var(--ds-space-24) 0; }
+.ds-reference .ds-actions .floating-nav__cta { margin-left: 0; }
+.ds-reference .ds-media { max-width: var(--ds-width-reading); }
+.ds-reference .ds-section > h2 { margin-bottom: var(--ds-space-24); }
+.ds-reference .ds-note { color: var(--ds-text-muted); max-width: var(--ds-width-reading); }
+.ds-reference .ds-table-wrap { overflow-x: auto; }
+.ds-reference table { width: 100%; border-collapse: collapse; font-size: var(--ds-type-caption-size); line-height: var(--ds-type-caption-line); }
+.ds-reference th, .ds-reference td { text-align: left; padding: var(--ds-space-12); border-bottom: 1px solid var(--ds-border); }
+.ds-reference .ds-focus-example { outline: 3px solid var(--ds-focus); outline-offset: 4px; }
+.ds-reference .ds-selected-example { border-bottom: 2px solid var(--ds-accent-primary); }
+@media (max-width: 479px) { .ds-reference .ds-main { padding-inline: var(--ds-space-20); } }
+@media (prefers-reduced-motion: reduce) { .ds-reference *, .ds-reference *::before, .ds-reference *::after { transition-duration: var(--ds-motion-reduced) !important; } }
+
+.ds-reference .ds-section > a { color: var(--ds-accent-primary); }

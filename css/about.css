@@ -1,0 +1,39 @@
+/* About reading layout; retain the shared page chrome and illustration. */
+.about-page .about-story__copy {
+  max-width: var(--content-reading);
+}
+
+.about-page .about-story__copy,
+.about-page .about-life__header,
+.about-page .about-idea__content {
+  color: var(--color-copy);
+}
+
+.about-page .about-life h2,
+.about-page .about-idea h2 {
+  color: var(--color-heading);
+}
+
+.about-page .about-story__subheading {
+  clear: both;
+  margin: var(--ds-space-48) 0 var(--ds-space-20);
+  color: var(--color-heading);
+  font-size: var(--ds-type-subheading-size);
+  font-weight: var(--ds-weight-bold);
+  line-height: var(--ds-type-subheading-line);
+}
+
+.about-page .about-story__turning-point {
+  font-weight: var(--ds-weight-medium);
+}
+
+.about-page .about-story__closing {
+  margin-top: var(--ds-space-32);
+}
+
+@media (max-width: 767px) {
+  .about-page .about-story__subheading {
+    margin-top: var(--ds-space-32);
+    margin-bottom: var(--ds-space-16);
+  }
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{PAGE_TITLE}} | Morty Akard</title>
+    <meta name="description" content="{{PAGE_DESCRIPTION}}">
+    <!-- Keep draft pages out of search. Remove this only when the page is ready to publish. -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{PAGE_TITLE}} | Morty Akard">
+    <meta property="og:description" content="{{PAGE_DESCRIPTION}}">
+    <meta property="og:url" content="{{CANONICAL_URL}}">
+    <!-- Paths assume deployment at the site root, matching the current portfolio. -->
+    <link rel="stylesheet" href="/css/webflow-style.css">
+    <link rel="stylesheet" href="/css/design-tokens.css">
+    <link rel="stylesheet" href="/css/site-chrome.css?v=20261012-centred-mobile-menu">
+    <link rel="stylesheet" href="/css/case-study.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+    <link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">
+  </head>
+  <body class="body case-study-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-nav-section">
+      <nav class="floating-nav" aria-label="Primary">
+        <a href="/" class="floating-nav__brand"><span class="floating-nav__logo">Morty Akard</span></a>
+        <!-- Add is-active and aria-current="page" only to an actual current-page link. -->
+        <div class="floating-nav__links">
+          <a href="/" class="floating-nav__link">Home</a>
+          <a href="/projects.html" class="floating-nav__link">Projects</a>
+          <a href="/articles.html" class="floating-nav__link">Articles</a>
+          <a href="/about.html" class="floating-nav__link">About</a>
+        </div>
+        <a href="/contact.html" class="floating-nav__cta">Get in touch</a>
+        <button class="floating-nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span class="floating-nav__toggle-bars" aria-hidden="true"></span>
+        </button>
+        <div class="floating-nav__mobile-panel">
+          <a href="/" class="floating-nav__link">Home</a>
+          <a href="/projects.html" class="floating-nav__link">Projects</a>
+          <a href="/articles.html" class="floating-nav__link">Articles</a>
+          <a href="/about.html" class="floating-nav__link">About</a>
+          <a href="/contact.html" class="floating-nav__cta">Get in touch</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content">
+      <!-- Reuse the existing editorial section pattern; add a page class for justified variations. -->
+      <section class="cs-section cs-section--hero" aria-labelledby="page-title">
+        <h1 class="cs-title" id="page-title">{{PAGE_TITLE}}</h1>
+        <p class="cs-lede">{{PAGE_INTRO}}</p>
+      </section>
+      <section class="cs-section" aria-labelledby="section-title">
+        <h2 class="cs-h2" id="section-title">{{SECTION_HEADING}}</h2>
+        <p class="cs-body">{{BODY_COPY}}</p>
+      </section>
+    </main>
+    <footer id="footer" class="site-footer">
+      <h2 class="site-footer__title">Let’s work together</h2>
+      <a class="site-footer__email" href="mailto:Morty.akard@gmail.com">Morty.akard@gmail.com</a>
+      <ul class="site-footer__social">
+        <li><a href="https://www.linkedin.com/in/morty-akard/">LinkedIn</a></li>
+        <li><a href="https://medium.com/@morty.akard">Medium</a></li>
+        <li><a href="https://github.com/morty-akard">GitHub</a></li>
+      </ul>
+      <hr class="site-footer__rule">
+      <p class="site-footer__copy">© {{YEAR}} Morty Akard</p>
+    </footer>
+    <script src="/js/site-chrome.js"></script>
+  </body>
+</html>

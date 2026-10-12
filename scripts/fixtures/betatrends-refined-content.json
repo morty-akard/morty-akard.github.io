@@ -1,0 +1,467 @@
+{
+  "sourceSha256": "f97b629bd34811160dd6aa06c4632d5894f5893ba87936d0771ad7929d3522c8",
+  "textNodes": [
+    "Making market research easier to create",
+    "47% less time to set up market research in a usability evaluation",
+    "As Product Designer, I redesigned BetaTrends’ creation flow to bring editing, preview and pricing together in one workspace, then refined it through two rounds of usability testing.",
+    "The transformation: from a long creation form to a workspace that brings steps, editing and the audience-facing preview together. The detail views below explain the decisions behind it.",
+    "Project",
+    "BetaTrends New Interaction",
+    "Role",
+    "Product Designer",
+    "Period",
+    "2023–2024",
+    "Collaborator",
+    "Pieter, founder and product owner",
+    "I was responsible for the creation-flow redesign, usability testing and design handoff.",
+    "I worked with Pieter, BetaTrends’ founder and product owner, and the design and development team. Pieter and I selected the structural direction together.",
+    "BetaTrends helped creators collect audience feedback on their products. To launch a research activity, they had to work through a long form and move between editing, preview and pricing.",
+    "Context:",
+    "An early-stage market-research platform in Australia. The team needed a practical creation experience for a soft launch while the product and its shared design system were developing.",
+    "Watch the redesign evolution · 1 min 9 sec",
+    "See the inherited form, staged redesign, connected workspace and later interaction refinements in one continuous overview.",
+    "Your browser does not support inline video playback.",
+    "Turning audience feedback into product decisions",
+    "BetaTrends let creators ask an audience questions and receive reports of their responses. Each research activity was called an",
+    "Interaction",
+    ".",
+    "My work focused on setting up an Interaction: preparing content and questions, defining the audience, reviewing cost and checking the preview.",
+    "How an audience answers an Interaction · 23 sec",
+    "Which design should Pardis develop?",
+    "Illustrative scenario",
+    "Fashion designer Pardis wants to know which design her customers prefer.",
+    "Their responses help her choose a design to develop further.",
+    "A long form with disconnected preview and pricing",
+    "Creators entered their research details in one long form, then opened separate windows to check the cost and preview. The flow gave them little guidance about where they were or what remained.",
+    "Preview and cost calculation were separate actions below the form.",
+    "I mapped the journey using existing user information and assumptions to validate. This helped identify two priorities: make progress clearer and keep preview and pricing closer to the editing task.",
+    "The journey map connected cost and preview interruptions to opportunities for keeping the work together. The map combines existing information and assumptions.",
+    "Explore the full journey map and starting-point detail",
+    "The full map brings the creation journey together. Emotion labels are interpretations in the map.",
+    "The map identifies opportunities to make the starting point and progress clearer.",
+    "Why setup felt fragmented",
+    "Illustrative scenario",
+    "A long form made progress hard to judge.",
+    "Checking cost and preview interrupted editing.",
+    "Breaking the long form into steps before the soft launch",
+    "With the soft launch approaching, we needed a practical first redesign. I discussed the setup problems with Pieter and the team, then reorganised the form into stages with visible progress and Back/Continue navigation.",
+    "Visible steps show creators where they are and what remains. Preview and Finalise are still separate phases.",
+    "I reorganised the long form into creation steps, with separate Preview and Finalise phases and routes back to editing.",
+    "Diagram retrospectively corrected to match the original design walkthrough.",
+    "We also wanted creators to see how their choices affected cost. To fit the launch schedule, we placed the price estimate at Finalise and deferred live pricing during creation.",
+    "The early sketch places the price estimate at Finalise, after creation and preview. Cropped from the original pricing graphic.",
+    "View the early sketches and staged-flow walkthrough",
+    "An early sketch of the change from one long form to visible steps. Cropped from the original planning graphic.",
+    "The original planning graphic connects the pricing need to the scope decision.",
+    "Watch the initial staged redesign · 38 sec",
+    "Notice the creation-step navigator and how preview and finalisation remain separate phases.",
+    "The staged flow made the sequence visible, but checking preview and pricing still meant leaving the editing task.",
+    "Choosing what to deliver first",
+    "Illustrative dialogue",
+    "The first redesign had to fit the soft-launch schedule.",
+    "We discussed how to reorganise the setup task.",
+    "Visible steps did not solve the loss of context",
+    "Before the soft launch, I recommended reviewing product usage through Hotjar. After the limited launch, I reviewed recordings and analysed user and customer feedback with the team.",
+    "I collected observations from session recordings in Hotjar, then reviewed them alongside user and customer feedback.",
+    "The findings pointed to three needs: seeing the audience-facing preview while creating, understanding how choices affected cost, and distinguishing research questions from eligibility questions.",
+    "The insight report records needs around preview, pricing, unfinished work and question types.",
+    "I grouped the findings around effort, clarity and continuity, then discussed them with Pieter and the team and facilitated workshops to explore another structure.",
+    "The next design needed to keep steps, editing, preview and estimated cost together.",
+    "Looking beyond visible steps",
+    "Illustrative dialogue",
+    "I recommended reviewing product usage to test our assumptions.",
+    "The findings led us to revisit the structure.",
+    "Bringing editing, preview and pricing into one workspace",
+    "I explored comparable products and developed three layouts that combined editing, preview and pricing. Pieter and I chose the layout shown below, considering familiar navigation, clear progress, working space and feedback from our workshops. We accepted a denser layout to keep progress, editing, preview and pricing visible together.",
+    "Selected direction",
+    "The selected layout keeps progress, editing, preview and estimated cost visible together.",
+    "Compact phase navigation",
+    "Horizontal and vertical steps",
+    "What changed and why",
+    "Preview and pricing during editing.",
+    "Creators could check the audience-facing result and estimated cost without leaving their work.",
+    "Space for editing and preview.",
+    "I moved the creation steps to the left, adjusted spacing and made the main sidebar expand on hover.",
+    "Distinct question sections.",
+    "I separated research questions from eligibility screening so creators could distinguish what they wanted to learn from who could participate.",
+    "Watch the redesigned creation flow · 42 sec",
+    "Follow the sidebar expansion, the preview and price estimate during editing, and the separate Questions and Eligibility sections.",
+    "View the design priorities and draft-saving proposal",
+    "The planning diagram connects creator needs to proposed responses, including draft saving for returning to unfinished work.",
+    "Proposed: draft saving.",
+    "I proposed saving unfinished Interactions so creators could return without losing their work.",
+    "Comparing the directions",
+    "Illustrative dialogue",
+    "The workshops helped turn findings into alternative layouts.",
+    "I presented the alternatives; Pieter and I selected the direction together.",
+    "Testing revealed three usability problems",
+    "I chose a Figma prototype to avoid adding load to the live product, then conducted a usability test through Maze before development. I wanted to understand whether creators could follow the flow, manage questions and complete the setup.",
+    "We recruited through BetaTrends’ existing user network. Some participants completed the test independently; I supported and observed others remotely, combining those observations with Maze’s recorded results.",
+    "Watch a Maze task · 59 sec",
+    "Task instructions appear alongside the interactive prototype.",
+    "Watch the first Maze results · 31 sec",
+    "The report records task paths, duration and misclicks.",
+    "What the first test revealed",
+    "Difficulty navigating between questions, editing them and adding another.",
+    "Similar buttons made the next action unclear.",
+    "Missing required information could be discovered only at Finalise.",
+    "Problems found in the first test",
+    "Illustrative summary",
+    "The three difficulties that informed the next iteration. Dialogue is illustrative.",
+    "Making questions easier to manage",
+    "I changed the question forms to an accordion so creators could open a question for editing and collapse it when reviewing the set. I also designed drag-to-reorder. Pieter initially deferred reordering; it was eventually released.",
+    "I adapted the accordion within our shared MUI-based design system and documented the component changes for developers.",
+    "Watch question management · 25 sec",
+    "Follow the accordion editing and question-reordering demonstration.",
+    "Open the original video",
+    "Making the next action clearer",
+    "I made Continue the clear next action by regrouping controls in the Preview area and reducing Back’s emphasis. I removed the separate Finalise button; creators could still reach Finalise from the last step or the phase icon above.",
+    "Watch action refinements · 36 sec",
+    "Compare action placement, Finalise access and the Continue/Back treatments.",
+    "Open the original video",
+    "Showing unfinished work earlier",
+    "I added distinct icons, labels and colours for incomplete steps. I specified that a step should show as complete only when required information was provided, and that Finalise should remain unavailable while required information was missing.",
+    "Watch completion feedback · 24 sec",
+    "Watch the misleading tick, late validation and revised incomplete-step indicator.",
+    "Open the original video",
+    "I updated the prototype and conducted a second Maze round to evaluate the refinements.",
+    "Retesting showed fewer misclicks",
+    "After refining question management, actions and completion feedback, I tested the updated prototype again. The second Maze report recorded fewer misclicks and shorter average task times across the same seven task areas.",
+    "Task area",
+    "Measure",
+    "First round",
+    "Second round",
+    "Questions and Eligibility Questions",
+    "Misclick rate",
+    "77%",
+    "21.1%",
+    "Preview and Finalise",
+    "Misclick rate",
+    "56.8%",
+    "2.3%",
+    "Preview and Finalise",
+    "Average task time",
+    "121.7 sec",
+    "15.7 sec",
+    "The first Maze round had 10 participants and the second had 22. Samples and test conditions differed, so these comparisons do not isolate the effect of the design changes.",
+    "Watch the second Maze results · 41 sec",
+    "Look at Questions and Eligibility Questions, then Preview and Finalise—the two task areas compared above.",
+    "Open the original video",
+    "Creation-time usability evaluation",
+    "47% less time to create an Interaction",
+    "Before the redesign",
+    "21 min 52 sec",
+    "After the redesign",
+    "11 min 38 sec",
+    "This separate usability evaluation drew on Hotjar and Maze evidence; the 47% is not calculated from the Maze task comparisons above.",
+    "From retesting to release",
+    "After the second Maze round, I handed the final Figma screens and end-to-end prototype to developers, including question editing, incomplete-step states and the rules for entering Finalise. The redesigns were released.",
+    "After release, we continued reviewing Hotjar recordings and in-person feedback.",
+    "What I learned",
+    "Simplifying a complex workflow does not always mean removing steps.",
+    "Visible progress, timely feedback and an in-context preview mattered alongside the sequence. I learned the value of testing early and revisiting a direction when evidence challenged it.",
+    "Back to projects",
+    "Back to top"
+  ],
+  "emphasis": [
+    [
+      "strong",
+      "Context:"
+    ],
+    [
+      "strong",
+      "Interaction"
+    ],
+    [
+      "strong",
+      "How an audience answers an Interaction · 23 sec"
+    ],
+    [
+      "strong",
+      "Watch the initial staged redesign · 38 sec"
+    ],
+    [
+      "em",
+      "Notice the creation-step navigator and how preview and finalisation remain separate phases."
+    ],
+    [
+      "strong",
+      "Preview and pricing during editing."
+    ],
+    [
+      "strong",
+      "Space for editing and preview."
+    ],
+    [
+      "strong",
+      "Distinct question sections."
+    ],
+    [
+      "strong",
+      "Watch the redesigned creation flow · 42 sec"
+    ],
+    [
+      "em",
+      "Follow the sidebar expansion, the preview and price estimate during editing, and the separate Questions and Eligibility sections."
+    ],
+    [
+      "strong",
+      "Proposed: draft saving."
+    ],
+    [
+      "strong",
+      "Watch a Maze task · 59 sec"
+    ],
+    [
+      "strong",
+      "Watch the first Maze results · 31 sec"
+    ],
+    [
+      "strong",
+      "Watch question management · 25 sec"
+    ],
+    [
+      "strong",
+      "Watch action refinements · 36 sec"
+    ],
+    [
+      "strong",
+      "Watch completion feedback · 24 sec"
+    ],
+    [
+      "strong",
+      "Watch the second Maze results · 41 sec"
+    ],
+    [
+      "strong",
+      "47% less time to create an Interaction"
+    ],
+    [
+      "strong",
+      "Simplifying a complex workflow does not always mean removing steps."
+    ]
+  ],
+  "assets": [
+    {
+      "asset": "banner-for-all-simple.png",
+      "sha256": "6cc66ab2aa4cd4793e3e205203817c6a3235b70dd9d4e7165041fce964005363"
+    },
+    {
+      "asset": "all-prototype.mp4",
+      "sha256": "32ce98d46cc147669be80ca58243ec66081bb6bc2669db184e9060eed4754ac8"
+    },
+    {
+      "asset": "audience-interaction-poster.png",
+      "sha256": "c14fbc2a140122bbe6ac9e820d737d12163c0bfb79d9f3be0845155c158ef5ba"
+    },
+    {
+      "asset": "02-interacting-new.mp4",
+      "sha256": "401b58a0b319977911aa1d71ea69284a5911196e42a1b4dd457db6f0f52205bf"
+    },
+    {
+      "asset": "image-2.png",
+      "sha256": "1be830615c8db359a391ebbdd0ac888db2d137fc9316c9abadb83c6532d9c940"
+    },
+    {
+      "asset": "image-3.png",
+      "sha256": "79004f1f7d3e64c9275e2af2ef9ea64cb2036abdfc070725f069921f4d91db49"
+    },
+    {
+      "asset": "19-inherited-interface-detail.png",
+      "sha256": "6e90e9d504f63141dc813c4d899c29d90e1e333a52a152ba62df29e83b27ba4a"
+    },
+    {
+      "asset": "03-journey-price-preview-modals.png",
+      "sha256": "8de002585163bf7542ab1029ea87787449ae0d43033b1dd9145a8a6a93bc1420"
+    },
+    {
+      "asset": "create-a-interaction-user-journey-map.jpg",
+      "sha256": "fe91ae6b2bcfc8413780f2bb4a4c4e71eb290306e3ff40e445fe6b448e4b1823"
+    },
+    {
+      "asset": "02-journey-start-and-form.png",
+      "sha256": "655ba063f420c198e03452c3f6df098d4a4fc5bde352c12383921f79502df19d"
+    },
+    {
+      "asset": "old-design-long-form.gif",
+      "sha256": "4c4f7669b264eee2a2b0032c4f9afff98dfa454aa1902e23352a666e8098c384"
+    },
+    {
+      "asset": "old-design-modals--.gif",
+      "sha256": "40bf165e7f4a4e892bf60f0fc3319919684ae66fc18ec0d1723865b77f77cddc"
+    },
+    {
+      "asset": "staged-interface.png",
+      "sha256": "39fc3aa42621c30d6ff61961321b3b66d23f171062bf827ebe1d99bf5d025041"
+    },
+    {
+      "asset": "corrected-creation-user-flow.png",
+      "sha256": "3f750f62d4d48e4c9396a35fb1b630134eaff81d9f82dd8a2b76ed62f7b54e77"
+    },
+    {
+      "asset": "finalise-pricing-sketch.png",
+      "sha256": "ac7006c9e98034703086a9a21cd0d0e6c5fe726aa8fc507f3c2616d4f19e1569"
+    },
+    {
+      "asset": "staged-flow-hand-sketch.png",
+      "sha256": "3dbe490da8750b1d8c3ff5b45ac8b60e3d393649bdb5794aca0796e76e9b6085"
+    },
+    {
+      "asset": "image-9.png",
+      "sha256": "68a74ea1b4e2387e2f5b45e200dfa66033d95a403544f2920462974e1efcb963"
+    },
+    {
+      "asset": "first-redesign-betatrends.mp4",
+      "sha256": "1bbde0568ba53ccb1e339b4619744d6bbbde2686937428ba68b212a28f5089e9"
+    },
+    {
+      "asset": "image-5.png",
+      "sha256": "f15a26e505e2de450ce621a0b4458d058e6fd591447df35bfa33ef77cceb9738"
+    },
+    {
+      "asset": "image-7.png",
+      "sha256": "78d5f8f31c35a2b512b583bb6cfc471ee64d5e4ad4d39f6d632d32ff03301a66"
+    },
+    {
+      "asset": "hotjar-highlights-dashboard.png",
+      "sha256": "ac157b4f973b3338a0df6b824a0ecd1e49cf0da2c5bb0a50d6d1bfd89386f1d3"
+    },
+    {
+      "asset": "04-insight-new-interaction-rows.png",
+      "sha256": "f3cc036aea911f1d55cffdeb129546aa73af6d3238fe439d09d7fe82c810a74d"
+    },
+    {
+      "asset": "image-12.png",
+      "sha256": "c78b08789739c0f6c67868300e8aae37bd3a38874fcc341f46268b04353c0879"
+    },
+    {
+      "asset": "image-15.png",
+      "sha256": "6824941b57417201a6c66676b744731b18262d5555db4389d86befc93bbf74de"
+    },
+    {
+      "asset": "image-16.png",
+      "sha256": "f39a481b618863f9d4d3a3b0908345b73c32a170bd2b003363be1902bff4d53c"
+    },
+    {
+      "asset": "image-17.png",
+      "sha256": "804fd59c595f3de875ec2f9fd338b1be9000aa4abd9e53fdc296d1438473f067"
+    },
+    {
+      "asset": "image-18.png",
+      "sha256": "94599ca9841ecf310ba21349e35ae40b33125b8cb51205c5de4f0485902ebc89"
+    },
+    {
+      "asset": "second-attempt-redesigning-new-interaction-feature--betatrends.mp4",
+      "sha256": "ec0718d7195ec0016a6f029856473fed4f179a1391fb1e065a5c5d6c58481c4d"
+    },
+    {
+      "asset": "image-19.png",
+      "sha256": "f03ec6dcb71ff164cc543a75f67954c6baea21bf355d43584b36f3c6da567b50"
+    },
+    {
+      "asset": "image-20.png",
+      "sha256": "81300ce9e0fba5d6e2360f3dc07f84755bdbc3226bee10b2a5c78fe8cb0313e6"
+    },
+    {
+      "asset": "image-21.png",
+      "sha256": "535f99fbdf68e239cc77ea4fcefa87494a396e8ad632643e1cbb5d2beca5777b"
+    },
+    {
+      "asset": "maze-task-poster.png",
+      "sha256": "a3815eb72aabb1760baa57f645ce4e3617e11140897fab945b1f515f4f960b59"
+    },
+    {
+      "asset": "part-of-doing-the-maze-test---new-interaction.mp4",
+      "sha256": "902b74f7e65bdd390b7d6cc430e5006e88024ac4ab2b8a4b08be53a254102a31"
+    },
+    {
+      "asset": "maze-first-report-poster.png",
+      "sha256": "5e0b06246dc633c4b7490eb996988b8711779338866b3793c6b0dd5502d01e28"
+    },
+    {
+      "asset": "report-maze-of-new-interaction-design-summary-decreased-size.mp4",
+      "sha256": "27b8ff98322be0a9a93e5c35edae9cfdb4cc4d65e6f6e65f3098b7fd9a5cbfab"
+    },
+    {
+      "asset": "image-23.png",
+      "sha256": "adbbdd2c26e6c0edc40ab7fbb9edab69bf876d88d386f4b4eb2c82b9d8cc36aa"
+    },
+    {
+      "asset": "questions-poster.png",
+      "sha256": "c18e3e1f33d67e81fa28c435e7f807a75016179102893da3145d1b210896ed56"
+    },
+    {
+      "asset": "06-attempt-3-questions.mp4",
+      "sha256": "1eb1f4326e05fafe749aa5f2c50eee613d136186feca91f6a895b3035cab8024"
+    },
+    {
+      "asset": "attempt-3-questions.mov",
+      "sha256": "8cc0240e233062b029abd9e5fad822c9be1ed203f3aa70370aebb85d17796c4f"
+    },
+    {
+      "asset": "actions-poster.png",
+      "sha256": "41839fe7a5bf3bc3fc95b916e5bd1c69761adc68461fa776cc19e4829cc88bf9"
+    },
+    {
+      "asset": "07-attemp-3-buttoms.mp4",
+      "sha256": "b2e450e43e2314095fa48ed4ef1451e0e93f163899d6c8998e928aaa55e00456"
+    },
+    {
+      "asset": "attemp-3-buttoms.mov",
+      "sha256": "8c040ddeff84fc46c019ae37ac38e71a532797eb115e24dec28b8c1d29497c05"
+    },
+    {
+      "asset": "completion-poster.png",
+      "sha256": "0d54f52b31cb9ca89035a39332ba049aa981b7c329a4d615c8b7b31ac58d3f85"
+    },
+    {
+      "asset": "08-attempt-3-incomplete-steps.mp4",
+      "sha256": "1b8338035e1665a37d000b7bcb614a9da5121efb32565a44e9ed726447b56079"
+    },
+    {
+      "asset": "attempt-3-incomplete-steps.mov",
+      "sha256": "0ca9caa3de22d9a40f50005cbcb52be2074c4e000ad6f2f617823e5cc90a0b34"
+    },
+    {
+      "asset": "maze-second-report-poster.png",
+      "sha256": "06d2851bb4236232e32cdcca0f60e1d12667ad51e5dbb6d616539e65f692288a"
+    },
+    {
+      "asset": "13-betetrends-new-interaction-test-2.mp4",
+      "sha256": "bb6e07931760953e0f92219aac6611fb0cde128fae6735cdf75e2affa090c6bc"
+    },
+    {
+      "asset": "betetrends-new-interaction-test-2.mov",
+      "sha256": "5b4e6403fb6de74bfc1dd26890c0f93ce71984931c38748cbec914589eef8958"
+    },
+    {
+      "asset": "old-design-long-form.png",
+      "sha256": "8fc18e1795665db5c532fb3e3be8f59d3c13b7b6d85a2303f2b06385681d6668",
+      "derivative": "First frame of old-design-long-form.gif for reduced-motion preference; supplied GIF unchanged."
+    },
+    {
+      "asset": "old-design-modals--.png",
+      "sha256": "2aa4c9d8b45e8b50f9a881039ae7f12ebf681d67b569764cd5083bf680f8858a",
+      "derivative": "First frame of old-design-modals--.gif for reduced-motion preference; supplied GIF unchanged."
+    }
+  ],
+  "approvedAdaptations": [
+    {
+      "component": "Overview facts",
+      "change": "Four fields match the approved reference. Responsibility and collaboration prose retain original scope and joint-decision attribution.",
+      "additionalEvidence": "projects/creator-delight/new-interaction-case-study/case-study.md project-detail table confirms 2023–2024."
+    },
+    {
+      "component": "Opening scan path",
+      "change": "Transformation figure and optional walkthrough precede project facts and detailed contribution, following UX Case Study Studio architecture. Text and media are unchanged."
+    },
+    {
+      "component": "Studio review and rebuild",
+      "change": "Role and product named in opening contribution sentence; original problem paragraph moves into opening context; optional evolution recording follows facts/context. Six supporting recordings use their original labels as native disclosure summaries. Two interface figures omit decorative desktop frames and use deliberate cse-wide for legibility. Original-video links become visible outside video fallback. Back to projects added. No findings, metrics, qualifications, media, or body story sequence removed."
+    },
+    {
+      "component": "Reduced-motion evidence",
+      "change": "Two supplied animated GIFs retain full-size links and normal playback; reduced-motion readers receive static first-frame PNG derivatives through picture media sources. No story wording changes."
+    }
+  ]
+}

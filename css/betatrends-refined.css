@@ -1,0 +1,48 @@
+/* Project-specific media, disclosures and result tables; editorial foundations remain shared. */
+.betatrends-refined .bt-subtitle { color: var(--cse-evidence); font-weight: var(--ds-weight-medium); }
+.betatrends-refined .bt-disclosure {
+  padding: var(--ds-space-24);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-control);
+  background: var(--cse-surface);
+}
+.betatrends-refined .bt-disclosure summary { cursor: pointer; color: var(--cse-accent); }
+.betatrends-refined .bt-disclosure[open] summary { margin-bottom: var(--ds-space-24); }
+.betatrends-refined .bt-disclosure > :not(summary) { margin-top: var(--ds-space-24); }
+.betatrends-refined .bt-video video { width: 100%; height: auto; display: block; }
+.betatrends-refined .bt-portrait {
+  width: 100%;
+  max-width: 320px;
+  margin-inline: auto;
+  /* Follow the recording's existing phone silhouette rather than adding another frame. */
+  border: 0;
+  border-radius: var(--ds-space-64);
+  overflow: hidden;
+  background: transparent;
+}
+.betatrends-refined .bt-video-evidence > * { margin-bottom: var(--ds-space-12); }
+.betatrends-refined .bt-video-evidence > :last-child { margin-bottom: 0; }
+.betatrends-refined .video-cue,
+.betatrends-refined .scenario-label { color: var(--cse-muted); font-size: var(--ds-type-caption-size); line-height: var(--ds-type-caption-line); }
+.betatrends-refined .bt-table-scroll { overflow-x: auto; }
+.betatrends-refined table { width: 100%; border-collapse: collapse; font: inherit; }
+.betatrends-refined th,
+.betatrends-refined td { padding: var(--ds-space-12); text-align: left; border-bottom: 1px solid var(--ds-border); vertical-align: top; }
+.betatrends-refined th { font-weight: var(--ds-weight-bold); }
+.betatrends-refined .bt-back-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ds-space-24);
+  max-width: var(--cse-reading);
+  margin-inline: auto;
+}
+.betatrends-refined summary:focus-visible,
+.betatrends-refined .bt-table-scroll:focus-visible { outline: 3px solid var(--cse-focus); outline-offset: var(--ds-space-4); }
+@media (max-width: 767px) {
+  .betatrends-refined table { font-size: var(--ds-type-caption-size); line-height: var(--ds-type-caption-line); }
+  .betatrends-refined th,
+  .betatrends-refined td { padding: var(--ds-space-8); }
+  .betatrends-refined .bt-disclosure { padding: var(--ds-space-16); }
+}
+/* Preserve the approved source's strong emphasis despite the exported reset. */
+.betatrends-refined .cse-article strong { font-weight: var(--ds-weight-bold); }

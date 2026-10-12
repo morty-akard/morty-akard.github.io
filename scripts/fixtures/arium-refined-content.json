@@ -1,0 +1,1033 @@
+{
+  "sourceSha256": "ca3efc1938cb58f0c6f91eeb380831b9251d27f39db0b67f91dee13688bc6ff5",
+  "blocks": [
+    {
+      "id": "0",
+      "text": "Arium · UX/UI design"
+    },
+    {
+      "id": "1",
+      "text": "Making Tournaments Easier to Join and Follow"
+    },
+    {
+      "id": "2",
+      "text": "Redesigning Arium’s tournament experience across desktop and mobile, contributing to a platform reporting a 35% monthly return rate."
+    },
+    {
+      "id": "6",
+      "text": "Desktop and mobile support the same journey: assess a tournament, join, and follow matches and results."
+    },
+    {
+      "id": "3",
+      "text": "Arium was a cloud-gaming platform where people could play across devices, join tournaments and watch streams. Players needed to know whether they could join, when their next match started and what to do next. Viewers needed to follow the competition without entering it."
+    },
+    {
+      "id": "4",
+      "text": "I proposed and facilitated journey mapping, created the initial information architecture, and designed responsive search and participation states. I also prepared developer documentation covering components, interface elements, interactions and states. We developed the overall interface together as a three-designer team."
+    },
+    {
+      "id": "7",
+      "text": "Watch Arium’s product introduction · 92 seconds"
+    },
+    {
+      "id": "8",
+      "text": "My role"
+    },
+    {
+      "id": "9",
+      "text": "UX/UI Designer"
+    },
+    {
+      "id": "10",
+      "text": "Team"
+    },
+    {
+      "id": "11",
+      "text": "Three designers, with product and engineering"
+    },
+    {
+      "id": "12",
+      "text": "Scope"
+    },
+    {
+      "id": "13",
+      "text": "Tournament journeys across desktop and mobile"
+    },
+    {
+      "id": "14",
+      "text": "Delivery"
+    },
+    {
+      "id": "15",
+      "text": "Implemented and released."
+    },
+    {
+      "id": "16",
+      "text": "The experience had to stay clear as the competition changed"
+    },
+    {
+      "id": "17",
+      "text": "We were rebuilding much of the tournament feature and designing many features from scratch. It needed to support players and viewers from registration through final results."
+    },
+    {
+      "id": "18",
+      "text": "Eligibility, available places and deadlines determined whether someone could join. After joining, match progress changed what they needed to see and do. Our challenge was to organise the information and make the next action clear at each stage."
+    },
+    {
+      "id": "19",
+      "text": "I created a checklist to choose UX methods"
+    },
+    {
+      "id": "20",
+      "text": "To work within tight deadlines, I created a UX-method checklist. For each feature, we selected the methods we needed and estimated the time together. This helped us plan the work and move faster."
+    },
+    {
+      "id": "21",
+      "text": "Players and viewers needed different information"
+    },
+    {
+      "id": "22",
+      "text": "I proposed journey mapping to understand what different users needed throughout a competition. I facilitated a workshop with the designers and Product Manager. We created a separate journey for each of four user types. I created one of the maps, and we reviewed them together."
+    },
+    {
+      "id": "38",
+      "text": "Each map follows one user type through the competition, helping us compare their needs at different stages. View full-size board."
+    },
+    {
+      "id": "23",
+      "text": "Four user groups, different needs"
+    },
+    {
+      "id": "24",
+      "text": "Viewers"
+    },
+    {
+      "id": "25",
+      "text": "Schedules, results, player details and streams."
+    },
+    {
+      "id": "26",
+      "text": "Players seeking enjoyment"
+    },
+    {
+      "id": "27",
+      "text": "Joining, match timing and progress."
+    },
+    {
+      "id": "28",
+      "text": "Players seeking recognition"
+    },
+    {
+      "id": "29",
+      "text": "Opponents, rankings and position."
+    },
+    {
+      "id": "30",
+      "text": "Players seeking rewards"
+    },
+    {
+      "id": "31",
+      "text": "Prizes, eligibility and entry requirements."
+    },
+    {
+      "id": "32",
+      "text": "I analysed the competing platforms assigned to me as part of our team comparison. Dense text and weak grouping made important details difficult to scan. Clear schedules, rules and rankings offered useful references."
+    },
+    {
+      "id": "33",
+      "text": "Viewer needs and early ideas"
+    },
+    {
+      "id": "34",
+      "text": "We used affinity mapping to group related needs, challenges and ideas from the discovery work. Across the four journeys, we distinguished the information needed to assess a competition from the information needed while playing or watching."
+    },
+    {
+      "id": "35",
+      "text": "Viewers needed up-to-date schedules and results, clearer participant information, and ways to follow their favourite players or teams."
+    },
+    {
+      "id": "36",
+      "text": "The viewer example groups needs and challenges alongside early proposals. View full-size board."
+    },
+    {
+      "id": "37",
+      "text": "Research evidence: competitor comparisons"
+    },
+    {
+      "id": "39",
+      "text": "The board gathers examples of schedules, ranking tables, brackets and card structures. View full-size board."
+    },
+    {
+      "id": "40",
+      "text": "We compared competitors’ strengths and weaknesses to discuss what could inform our design. View full-size board."
+    },
+    {
+      "id": "41",
+      "text": "I separated entry information from match progress"
+    },
+    {
+      "id": "42",
+      "text": "Using those different needs as a starting point, I proposed organising the content with sticky notes and created the initial information architecture in FigJam. We reviewed the groups together before developing sketches and interface designs."
+    },
+    {
+      "id": "43",
+      "text": "Players deciding whether to join needed timing, eligibility, rules and prizes. People already participating—or watching—needed schedules, results, rankings and streams. Separating these tasks gave us a structure to build on."
+    },
+    {
+      "id": "44",
+      "text": "30 seconds"
+    },
+    {
+      "id": "45",
+      "text": "The content groups become separate interface sections for deciding whether to enter and following the competition."
+    },
+    {
+      "id": "46",
+      "text": "The content groups became page layouts"
+    },
+    {
+      "id": "47",
+      "text": "Paper sketches explored how to arrange the content on a tournament page. Low-fidelity wireframes developed layouts for information, match progress, rankings, rules and streams before detailed interface design."
+    },
+    {
+      "id": "48",
+      "text": "The sketch explores where to place the title, primary action, screenshots and streams. View full-size sketch."
+    },
+    {
+      "id": "49",
+      "text": "The screens also needed to follow competition rules"
+    },
+    {
+      "id": "50",
+      "text": "I helped the Product Manager refine registration and match flows. These connected the interface to capacity checks, match timing and progression through the competition."
+    },
+    {
+      "id": "51",
+      "text": "The capacity check branches the registration route before the flow continues through match rounds and rewards. View the complete flowchart."
+    },
+    {
+      "id": "52",
+      "text": "Supporting design exploration: wireframes and information architecture"
+    },
+    {
+      "id": "53",
+      "text": "14 seconds"
+    },
+    {
+      "id": "54",
+      "text": "These low-fidelity wireframes explored layouts for information, match progress, rankings, rules and streams."
+    },
+    {
+      "id": "55",
+      "text": "The sticky notes let us review content groups and navigation before designing the screens. View full-size board."
+    },
+    {
+      "id": "56",
+      "text": "Testing showed where the designs needed to change"
+    },
+    {
+      "id": "57",
+      "text": "Stakeholder review established requirements for different game formats, mobile participation and exceptions such as disconnections."
+    },
+    {
+      "id": "58",
+      "text": "I created interactive Figma prototypes, and we asked gamer colleagues to complete specific tasks. Observing their actions and gathering feedback revealed unclear information and interactions. The four examples below show the findings and design responses."
+    },
+    {
+      "id": "59",
+      "text": "Rules and rewards were hard to find"
+    },
+    {
+      "id": "60",
+      "text": "Users struggled to find key tournament details, making rules and rewards difficult to understand when deciding whether to join."
+    },
+    {
+      "id": "61",
+      "text": "We revised the Info view to bring timing, prizes and registration details together, with rewards broken down by finishing position."
+    },
+    {
+      "id": "62",
+      "text": "13 seconds · silent demonstration"
+    },
+    {
+      "id": "63",
+      "text": "The prize breakdown connects each finishing position to its reward."
+    },
+    {
+      "id": "64",
+      "text": "Players needed to know whether to join, wait or start"
+    },
+    {
+      "id": "65",
+      "text": "Users found actions and supporting information unclear after joining or when a tournament’s status changed."
+    },
+    {
+      "id": "66",
+      "text": "I designed participation states and checked them against the requirements. Buttons and messages reflected both tournament stage and whether the player had joined."
+    },
+    {
+      "id": "67",
+      "text": "Closed registration prevented new entries, but registered players still needed their next action. Opponent details and countdowns showed when their next match could start."
+    },
+    {
+      "id": "68",
+      "text": "24 seconds · silent demonstration"
+    },
+    {
+      "id": "69",
+      "text": "Buttons and messages change from joining to starting a match."
+    },
+    {
+      "id": "70",
+      "text": "Match summaries and streams belonged beside results"
+    },
+    {
+      "id": "71",
+      "text": "Users wanted easier access to match summaries and live streams from Results and Schedule."
+    },
+    {
+      "id": "72",
+      "text": "We added expandable summaries and stream access within each match row, so users could open those details alongside the score."
+    },
+    {
+      "id": "73",
+      "text": "9 seconds · silent demonstration"
+    },
+    {
+      "id": "74",
+      "text": "Expanded match rows place statistics and stream access beside the score."
+    },
+    {
+      "id": "75",
+      "text": "Different formats needed different ranking views"
+    },
+    {
+      "id": "76",
+      "text": "Testing revealed unclear rankings across competition formats and a need for more player information."
+    },
+    {
+      "id": "77",
+      "text": "We revised the views: tables showed standings, brackets showed progression, and expandable rows provided player details. A highlight marked the current player’s position."
+    },
+    {
+      "id": "78",
+      "text": "On mobile, players could navigate rounds and return to their latest match."
+    },
+    {
+      "id": "79",
+      "text": "19 seconds · silent demonstration"
+    },
+    {
+      "id": "80",
+      "text": "Table and bracket views include player details and a current-player highlight."
+    },
+    {
+      "id": "81",
+      "text": "Watch the full mobile walkthrough · 64 seconds"
+    },
+    {
+      "id": "82",
+      "text": "We repeated prototyping, testing and refinement across the feature, then gathered stakeholder feedback and made final adjustments before developer handoff."
+    },
+    {
+      "id": "83",
+      "text": "I prepared the designs for development"
+    },
+    {
+      "id": "84",
+      "text": "Handoff discussions often required repeated explanations of the designs. I proposed documenting components and features alongside the screens, and the team asked me to prepare the Figma documentation."
+    },
+    {
+      "id": "85",
+      "text": "I brought together the designs, interactive prototypes and written explanations developers needed. The documentation covered components and individual interface elements, including their information, interactions and behaviour in different conditions."
+    },
+    {
+      "id": "86",
+      "text": "Component details and controls"
+    },
+    {
+      "id": "87",
+      "text": "The ranking specification describes the information shown, the controls for switching views and the different row states. It gives developers a reference for both the component’s parts and how they work together."
+    },
+    {
+      "id": "88",
+      "text": "Notes identify the view controls and explain the ranked row. View the complete component specification."
+    },
+    {
+      "id": "89",
+      "text": "Match states and countdown rules"
+    },
+    {
+      "id": "90",
+      "text": "For a registered player waiting for a match, I documented the conditions behind the countdown, match time and opponent information."
+    },
+    {
+      "id": "91",
+      "text": "Conditions Player and match status"
+    },
+    {
+      "id": "92",
+      "text": "Design Countdown and match details"
+    },
+    {
+      "id": "93",
+      "text": "Explanation What each element shows"
+    },
+    {
+      "id": "94",
+      "text": "Conditions and explanations sit beside the countdown and match details. View the complete state specification."
+    },
+    {
+      "id": "95",
+      "text": "I checked the Product Manager’s user stories against the designs and tracked requirement changes. I also proposed an “update in handoff” step to keep the developer reference aligned with design changes."
+    },
+    {
+      "id": "96",
+      "text": "I created and refined components in our shared Figma library. We held developer review sessions to discuss implementation questions."
+    },
+    {
+      "id": "97",
+      "text": "The documentation also covered the cancellation, reporting and result-objection flows I designed."
+    },
+    {
+      "id": "98",
+      "text": "Explore the full documentation walkthrough and specifications"
+    },
+    {
+      "id": "99",
+      "text": "98 seconds"
+    },
+    {
+      "id": "100",
+      "text": "Explore the component and screen explanations, including interactions, states and exceptions."
+    },
+    {
+      "id": "101",
+      "text": "The table specification describes standings, expanded player details and how to highlight the current player. View complete specification."
+    },
+    {
+      "id": "102",
+      "text": "The bracket notes pair interface examples with rules for view switching, round navigation and match spacing. View complete specification."
+    },
+    {
+      "id": "103",
+      "text": "The redesigned tournament experience went live"
+    },
+    {
+      "id": "104",
+      "text": "The designs I worked on were implemented and released, supporting players as they assessed competitions, joined and followed matches across desktop and mobile."
+    },
+    {
+      "id": "105",
+      "text": "Arium’s reported results"
+    },
+    {
+      "id": "106",
+      "text": "40,000"
+    },
+    {
+      "id": "107",
+      "text": "Monthly active users reported in Arium’s month-two update"
+    },
+    {
+      "id": "108",
+      "text": "35%"
+    },
+    {
+      "id": "109",
+      "text": "Monthly return rate reported in Arium’s December update"
+    },
+    {
+      "id": "110",
+      "text": "What I learned"
+    },
+    {
+      "id": "111",
+      "text": "Organise around different needs. Players deciding whether to join needed different information from people already playing or watching. Mapping those journeys helped me establish the information architecture before refining the screens."
+    },
+    {
+      "id": "112",
+      "text": "Define states alongside screens. Competition availability and individual participation status needed separate rules. I carried that distinction through the interface and developer documentation to explain what each player could do next."
+    }
+  ],
+  "emphasis": [
+    [
+      "strong",
+      "Conditions"
+    ],
+    [
+      "strong",
+      "Design"
+    ],
+    [
+      "strong",
+      "Explanation"
+    ],
+    [
+      "strong",
+      "Organise around different needs."
+    ],
+    [
+      "strong",
+      "Define states alongside screens."
+    ]
+  ],
+  "links": [
+    {
+      "id": "0",
+      "text": "Open desktop preview",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/desktop-preview.mp4"
+    },
+    {
+      "id": "1",
+      "text": "Open mobile preview",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/mobile-preview.mp4"
+    },
+    {
+      "id": "2",
+      "text": "Watch Arium’s product introduction · 92 seconds",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/product.mp4"
+    },
+    {
+      "id": "5",
+      "text": "",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/journeys.png"
+    },
+    {
+      "id": "6",
+      "text": "View full-size board",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/journeys.png"
+    },
+    {
+      "id": "3",
+      "text": "",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/research-synthesis-updated-2026-10-05.png"
+    },
+    {
+      "id": "4",
+      "text": "View full-size board",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/research-synthesis-updated-2026-10-05.png"
+    },
+    {
+      "id": "7",
+      "text": "",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/competitor-patterns.jpg"
+    },
+    {
+      "id": "8",
+      "text": "View full-size board",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/competitor-patterns.jpg"
+    },
+    {
+      "id": "9",
+      "text": "",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/competitor-comparison.jpg"
+    },
+    {
+      "id": "10",
+      "text": "View full-size board",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/competitor-comparison.jpg"
+    },
+    {
+      "id": "11",
+      "text": "Open sticky-note structure becoming an interface",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/architecture.mp4"
+    },
+    {
+      "id": "12",
+      "text": "",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/paper-sketch.jpg"
+    },
+    {
+      "id": "13",
+      "text": "View full-size sketch",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/paper-sketch.jpg"
+    },
+    {
+      "id": "14",
+      "text": "",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/tournament-flow.png"
+    },
+    {
+      "id": "15",
+      "text": "View the complete flowchart",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/tournament-flow.png"
+    },
+    {
+      "id": "16",
+      "text": "Open early tournament wireframe walkthrough",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/wireframes.mp4"
+    },
+    {
+      "id": "17",
+      "text": "",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/architecture-board.png"
+    },
+    {
+      "id": "18",
+      "text": "View full-size board",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/architecture-board.png"
+    },
+    {
+      "id": "19",
+      "text": "Open essential tournament information",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/information.mp4"
+    },
+    {
+      "id": "20",
+      "text": "Open participation actions and countdowns",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/actions.mp4"
+    },
+    {
+      "id": "21",
+      "text": "Open match summaries and stream access",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/matches.mp4"
+    },
+    {
+      "id": "22",
+      "text": "Open rankings and competition brackets",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/rankings.mp4"
+    },
+    {
+      "id": "23",
+      "text": "Watch the full mobile walkthrough · 64 seconds",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/mobile.mp4"
+    },
+    {
+      "id": "24",
+      "text": "",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/handoff-table.png"
+    },
+    {
+      "id": "25",
+      "text": "View the complete component specification",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/handoff-table.png"
+    },
+    {
+      "id": "26",
+      "text": "",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/handoff-match-countdown.png"
+    },
+    {
+      "id": "27",
+      "text": "View the complete state specification",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/handoff-match-countdown.png"
+    },
+    {
+      "id": "28",
+      "text": "Open developer documentation walkthrough",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/handoff.mp4"
+    },
+    {
+      "id": "29",
+      "text": "",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/handoff-table.png"
+    },
+    {
+      "id": "30",
+      "text": "View complete specification",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/handoff-table.png"
+    },
+    {
+      "id": "31",
+      "text": "",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/handoff-bracket.png"
+    },
+    {
+      "id": "32",
+      "text": "View complete specification",
+      "href": "/projects/gamers_compete_with_ease/refined-assets/originals/handoff-bracket.png"
+    },
+    {
+      "id": "33",
+      "text": "month-two update",
+      "href": "https://www.linkedin.com/posts/cloudgaming-p2e-web3gaming-share-7265222562249383936-0tdr/"
+    },
+    {
+      "id": "34",
+      "text": "December update",
+      "href": "https://www.linkedin.com/posts/cloudgaming-p2e-web3gaming-share-7281328740503048192-t8kJ/"
+    }
+  ],
+  "media": [
+    {
+      "id": "0",
+      "tag": "video",
+      "attributes": {
+        "width": "1600",
+        "height": "1038",
+        "aria-label": "Desktop preview",
+        "aria-describedby": "caption-opening-previews",
+        "poster": "/projects/gamers_compete_with_ease/refined-assets/desktop-poster.jpg"
+      }
+    },
+    {
+      "id": "1",
+      "tag": "video",
+      "attributes": {
+        "width": "784",
+        "height": "1690",
+        "aria-label": "Mobile preview",
+        "aria-describedby": "caption-opening-previews",
+        "poster": "/projects/gamers_compete_with_ease/refined-assets/mobile-poster.jpg"
+      }
+    },
+    {
+      "id": "3",
+      "tag": "img",
+      "attributes": {
+        "width": "2000",
+        "height": "1602",
+        "alt": "Four collaboratively reviewed Tournament journey maps",
+        "src": "/projects/gamers_compete_with_ease/refined-assets/journeys.jpg"
+      }
+    },
+    {
+      "id": "2",
+      "tag": "img",
+      "attributes": {
+        "width": "2200",
+        "height": "1537",
+        "alt": "Affinity map grouping user needs, current challenges and proposed improvements",
+        "src": "/projects/gamers_compete_with_ease/refined-assets/research-synthesis-updated-2026-10-05.jpg"
+      }
+    },
+    {
+      "id": "4",
+      "tag": "img",
+      "attributes": {
+        "width": "2000",
+        "height": "804",
+        "alt": "Competitor interface patterns grouped by information and competition views",
+        "src": "/projects/gamers_compete_with_ease/refined-assets/competitor-patterns.jpg"
+      }
+    },
+    {
+      "id": "5",
+      "tag": "img",
+      "attributes": {
+        "width": "2000",
+        "height": "1001",
+        "alt": "Competitor comparisons with strengths, weaknesses and interface references",
+        "src": "/projects/gamers_compete_with_ease/refined-assets/competitor-comparison.jpg"
+      }
+    },
+    {
+      "id": "6",
+      "tag": "video",
+      "attributes": {
+        "width": "1538",
+        "height": "1080",
+        "aria-label": "Sticky-note structure becoming an interface",
+        "aria-describedby": "caption-architecture",
+        "poster": "/projects/gamers_compete_with_ease/refined-assets/architecture-poster.jpg"
+      }
+    },
+    {
+      "id": "7",
+      "tag": "img",
+      "attributes": {
+        "width": "1896",
+        "height": "2000",
+        "alt": "Paper layout sketch with a title, button and content regions",
+        "src": "/projects/gamers_compete_with_ease/refined-assets/paper-sketch.jpg"
+      }
+    },
+    {
+      "id": "8",
+      "tag": "img",
+      "attributes": {
+        "width": "2200",
+        "height": "486",
+        "alt": "Tournament flow from registration and capacity checks through match rounds, rewards and the end of the competition.",
+        "src": "/projects/gamers_compete_with_ease/refined-assets/tournament-flow.jpg"
+      }
+    },
+    {
+      "id": "9",
+      "tag": "video",
+      "attributes": {
+        "width": "1600",
+        "height": "1046",
+        "aria-label": "Early tournament wireframe walkthrough",
+        "aria-describedby": "caption-wireframes",
+        "poster": "/projects/gamers_compete_with_ease/refined-assets/wireframes-poster.jpg"
+      }
+    },
+    {
+      "id": "10",
+      "tag": "img",
+      "attributes": {
+        "width": "2000",
+        "height": "1474",
+        "alt": "Sticky-note information architecture with overview, information, results, rules and streams",
+        "src": "/projects/gamers_compete_with_ease/refined-assets/architecture-board.jpg"
+      }
+    },
+    {
+      "id": "11",
+      "tag": "video",
+      "attributes": {
+        "width": "1600",
+        "height": "1478",
+        "aria-label": "Essential tournament information",
+        "aria-describedby": "caption-information",
+        "poster": "/projects/gamers_compete_with_ease/refined-assets/information-decision-poster-2026-10-11.jpg"
+      }
+    },
+    {
+      "id": "12",
+      "tag": "video",
+      "attributes": {
+        "width": "778",
+        "height": "1686",
+        "aria-label": "Participation actions and countdowns",
+        "aria-describedby": "caption-actions",
+        "poster": "/projects/gamers_compete_with_ease/refined-assets/actions-poster.jpg"
+      }
+    },
+    {
+      "id": "13",
+      "tag": "video",
+      "attributes": {
+        "width": "1346",
+        "height": "1026",
+        "aria-label": "Match summaries and stream access",
+        "aria-describedby": "caption-matches",
+        "poster": "/projects/gamers_compete_with_ease/refined-assets/matches-decision-poster-2026-10-11.jpg"
+      }
+    },
+    {
+      "id": "14",
+      "tag": "video",
+      "attributes": {
+        "width": "1600",
+        "height": "1478",
+        "aria-label": "Rankings and competition brackets",
+        "aria-describedby": "caption-rankings",
+        "poster": "/projects/gamers_compete_with_ease/refined-assets/rankings-decision-poster-2026-10-11.jpg"
+      }
+    },
+    {
+      "id": "15",
+      "tag": "img",
+      "attributes": {
+        "width": "2200",
+        "height": "2082",
+        "alt": "Original ranking specification excerpt showing the displayed player information, table and bracket controls, and ranked rows with explanatory notes",
+        "src": "/projects/gamers_compete_with_ease/refined-assets/handoff-table.jpg"
+      }
+    },
+    {
+      "id": "16",
+      "tag": "img",
+      "attributes": {
+        "width": "2006",
+        "height": "2648",
+        "alt": "Original specification pairing registered-player and match conditions with countdown, match time and opponent information, plus written explanations",
+        "src": "/projects/gamers_compete_with_ease/refined-assets/originals/handoff-match-countdown.png"
+      }
+    },
+    {
+      "id": "17",
+      "tag": "video",
+      "attributes": {
+        "width": "1600",
+        "height": "1238",
+        "aria-label": "Developer documentation walkthrough",
+        "aria-describedby": "caption-handoff",
+        "poster": "/projects/gamers_compete_with_ease/refined-assets/handoff-poster.jpg"
+      }
+    },
+    {
+      "id": "18",
+      "tag": "img",
+      "attributes": {
+        "width": "2200",
+        "height": "2082",
+        "alt": "Ranking-table documentation showing standings, expanded player details and current-player highlight",
+        "src": "/projects/gamers_compete_with_ease/refined-assets/handoff-table.jpg"
+      }
+    },
+    {
+      "id": "19",
+      "tag": "img",
+      "attributes": {
+        "width": "2200",
+        "height": "1415",
+        "alt": "Bracket documentation showing view switching, round navigation and match spacing",
+        "src": "/projects/gamers_compete_with_ease/refined-assets/handoff-bracket.jpg"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "asset": "actions-poster.jpg",
+      "sha256": "c4ce279b7a98c920082b9d33c4427bcfa428a4257f68db5d2821504aa7fa4ea2"
+    },
+    {
+      "asset": "actions.mp4",
+      "sha256": "97c2980832ba3c3ea4dbd1576755e35373d03e3e7a838b9f0c698a633f52a3ec"
+    },
+    {
+      "asset": "architecture-board.jpg",
+      "sha256": "fc7aee2d757dfd447763dc3a9f85140f35e4f59816d74b0220b04e89e6e80925"
+    },
+    {
+      "asset": "architecture-poster.jpg",
+      "sha256": "847b555f629c3e12d34e9482a70c1f7ebca902b9482a60e8f77358f1c79bd839"
+    },
+    {
+      "asset": "architecture.mp4",
+      "sha256": "486d6f2bfea9ee7301cb344280596c588a6d0d2ca7180c740efba03eaec362ad"
+    },
+    {
+      "asset": "competitor-comparison.jpg",
+      "sha256": "acc1af34994dadefa21834f04aa52d743ceff28e5bcb4acc63d5ddd1be574213"
+    },
+    {
+      "asset": "competitor-patterns.jpg",
+      "sha256": "c099e4d561c6af1c1026e65574f2f33127eff03d9b687471a7bfe379c72bd418"
+    },
+    {
+      "asset": "desktop-poster.jpg",
+      "sha256": "f2873d4eed54ef58dcbb8b67d86dfb667b532e49165769542f336b550d18b612"
+    },
+    {
+      "asset": "desktop-preview.mp4",
+      "sha256": "be06ad8b9eb4f4c8065de7677c05d8267a311eabfbcadec7b30c6af8cf8f6590"
+    },
+    {
+      "asset": "handoff-bracket.jpg",
+      "sha256": "4880d0b7259536c9fff6a46478bd69800f6a55a7f2d944962b45a8f6c6e06f94"
+    },
+    {
+      "asset": "handoff-poster.jpg",
+      "sha256": "1da49769646d3e801460eb2249cbcdddab43122ed6c77234c5a16ecb36cda741"
+    },
+    {
+      "asset": "handoff-table.jpg",
+      "sha256": "b3b2ac43e5f778796958e75c311693f773c6ae17c3edca658f63a919f4d97fe6"
+    },
+    {
+      "asset": "handoff.mp4",
+      "sha256": "e9632b0bdb7b1d165426df4cc5676262375a50e8e8a453b6e34bc8613f15bb38"
+    },
+    {
+      "asset": "information-decision-poster-2026-10-11.jpg",
+      "sha256": "a9b068023ae1aa2325c0d188097b73d97f2c8e0aaf4e3b0d11170319c990805a"
+    },
+    {
+      "asset": "information.mp4",
+      "sha256": "f64a36c0dbe6e22df8c9fe5023c69a98f0141bc2e3dfb78e7225fa9942ea163b"
+    },
+    {
+      "asset": "journeys.jpg",
+      "sha256": "55744f33bbcb7399239875e94f7d0ede20a53d072822c964a78d47c4789c4f4b"
+    },
+    {
+      "asset": "matches-decision-poster-2026-10-11.jpg",
+      "sha256": "d58ebecd153ba2ef14ecd1df42f2e863ea1b0b95e57e6107e2f89209d538a95e"
+    },
+    {
+      "asset": "matches.mp4",
+      "sha256": "7b2aec5f40b650dfd45b525102dcfbfa9bd7a1addc8f41c097000efd575861f3"
+    },
+    {
+      "asset": "mobile-poster.jpg",
+      "sha256": "1dc67e3357eef694160dec4f237a7ba01d108572f280a08926ad359a8fca5581"
+    },
+    {
+      "asset": "mobile-preview.mp4",
+      "sha256": "6e199dfaa0a0f0d8640817b991b66ef01f759a5b798bb41070642eea0cb3cf20"
+    },
+    {
+      "asset": "mobile.mp4",
+      "sha256": "af223ca873b8dadbe6a4a0b24fbf456bc0fef7022f96a450a576512844e68d53"
+    },
+    {
+      "asset": "originals/architecture-board.png",
+      "sha256": "111b9f3893f4a5ee3a4be17c66b55440a1ac708a2a1fb33a4cee7ff5a33f717d"
+    },
+    {
+      "asset": "originals/competitor-comparison.jpg",
+      "sha256": "d27fcaed0d236a652d4570f804bc408df1ef02897d1bf22800e84c7374c33e45"
+    },
+    {
+      "asset": "originals/competitor-patterns.jpg",
+      "sha256": "934c6c67d06f9372e70b12b8f296a850a98c359d66dfbbb1c038a68b20de2b4b"
+    },
+    {
+      "asset": "originals/handoff-bracket.png",
+      "sha256": "db9ef644b069aa879da904f2fb03395b079831bafb9930f0a478c8aa284adbec"
+    },
+    {
+      "asset": "originals/handoff-match-countdown.png",
+      "sha256": "877c8bd2d454e4a0817561e6453eaa8373222fe2210b13afd110c4e19e464942"
+    },
+    {
+      "asset": "originals/handoff-table.png",
+      "sha256": "50c3d8abff955f48e971f664a527b3f4bd833f3c5f07fc0a85b61afa12c4c5cb"
+    },
+    {
+      "asset": "originals/journeys.png",
+      "sha256": "b031b88b785a2d3b9fb51dd54841d0700b18345771ad3274f8c7532ef4c086e2"
+    },
+    {
+      "asset": "originals/paper-sketch.jpg",
+      "sha256": "d1a0633660bf9b38b8fadf0cd57ab9d0a01e58f2e879df6c569331eef8d37bbe"
+    },
+    {
+      "asset": "originals/research-synthesis-updated-2026-10-05.png",
+      "sha256": "7fb98c257d4b2eea604a58d395bb82f04bc91a0ef8bbcbcb79a2faa1afa6b836"
+    },
+    {
+      "asset": "originals/tournament-flow.png",
+      "sha256": "a808b7084acd9dcdb99e2c5637f2b21e27220fede74f00eff55ca10ddea3f406"
+    },
+    {
+      "asset": "paper-sketch.jpg",
+      "sha256": "af9b10a27f48837d6d70d579b4be6efa83e4c154b3f2e0bee4354cef9e365bbc"
+    },
+    {
+      "asset": "product.mp4",
+      "sha256": "c39dd0dd30b15aff704b9e0981649e0fba8e20e71584c5d4053326c61d6dec31"
+    },
+    {
+      "asset": "rankings-decision-poster-2026-10-11.jpg",
+      "sha256": "7c24ac67564b511c6f6c4549390fd22aaa22125c74d6b4f2d356cb194504db2e"
+    },
+    {
+      "asset": "rankings.mp4",
+      "sha256": "601e487d08b3678d24dc38557762d82050bb67152991acf518ccd502c25dbd6f"
+    },
+    {
+      "asset": "research-synthesis-updated-2026-10-05.jpg",
+      "sha256": "3fef1ed9a7b7f6ca4a0c62e50626863ea3bb8e2642a9018739e845e42efdf0eb"
+    },
+    {
+      "asset": "tournament-flow.jpg",
+      "sha256": "f21456adbbf6872065b613c1d49c140fd65c5dd030091f5c2ae765f7ba5b4cb7"
+    },
+    {
+      "asset": "wireframes-poster.jpg",
+      "sha256": "2445918c45d95c7386c65bbb5d5db77244269a53c862cab3cfe9863b9dcf135c"
+    },
+    {
+      "asset": "wireframes.mp4",
+      "sha256": "6bf32111e20d6e2a9b64ee0a0df0d803973380dc5c326265dcfe53cc09c60173"
+    }
+  ],
+  "sections": [
+    "opening",
+    "context",
+    "discovery",
+    "structure",
+    "refinement",
+    "finding",
+    "participation",
+    "matches",
+    "handoff",
+    "outcomes"
+  ]
+}

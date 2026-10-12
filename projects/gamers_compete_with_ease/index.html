@@ -1,404 +1,421 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Arium Tournament Redesign | Morty Akard</title>
-    <meta
-      content="Arium tournament redesign: helping players understand tournament actions, details, match progress, and rankings as conditions change."
-      name="description"
-    />
-    <meta content="Arium Tournament Redesign | Morty Akard" property="og:title" />
-    <meta
-      content="A tournament experience designed around changing player actions, match progress, and rankings."
-      property="og:description"
-    />
-    <meta content="https://morty-akard.github.io/images/case-studies/arium-hero-mockups.png" property="og:image" />
-    <meta property="og:type" content="article" />
-    <meta content="summary_large_image" name="twitter:card" />
-    <link rel="canonical" href="https://morty-akard.github.io/projects/gamers_compete_with_ease/" />
-    <meta property="og:url" content="https://morty-akard.github.io/projects/gamers_compete_with_ease/" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link href="../../css/webflow-style.css" rel="stylesheet" type="text/css" />
-    <link href="../../css/site-chrome.css?v=20260917-yellow-outline" rel="stylesheet" type="text/css" />
-    <link href="../../css/case-study.css?v=20260905-static-panels" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link
-      href="https://fonts.gstatic.com"
-      rel="preconnect"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
-      type="text/javascript"
-    ></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5X9NBK5WT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-P5X9NBK5WT');
-    </script>
-    <script type="text/javascript">
-      WebFont.load({
-        google: {
-          families: ["Open Sans:300,400,600,700,800"],
-        },
-      });
-    </script>
-    <link rel="icon" href="../../images/favicon-32.png" sizes="32x32" type="image/png" />
-    <link rel="icon" href="../../images/favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png" sizes="180x180" />
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "yfsdf9k3dp");
-    </script>
-  </head>
-  <body class="body case-study-page arium-tournament-page">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Making Tournaments Easier to Join and Follow | Morty Akard</title>
+    <meta name="description" content="Morty Akard’s design work on Arium’s tournament experience across desktop and mobile, from journey mapping to developer handoff.">
+    <link rel="canonical" href="https://morty-akard.github.io/projects/gamers_compete_with_ease/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Making Tournaments Easier to Join and Follow | Morty Akard">
+    <meta property="og:description" content="Morty Akard’s design work on Arium’s tournament experience across desktop and mobile, from journey mapping to developer handoff.">
+    <meta property="og:url" content="https://morty-akard.github.io/projects/gamers_compete_with_ease/">
+    <link rel="stylesheet" href="/css/webflow-style.css">
+    <link rel="stylesheet" href="/css/design-tokens.css">
+    <link rel="stylesheet" href="/css/site-chrome.css?v=20261012-centred-mobile-menu">
+    <link rel="stylesheet" href="/css/case-study-editorial.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap">
+    <link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/css/arium-refined.css">
+<meta property="og:image" content="https://morty-akard.github.io/projects/gamers_compete_with_ease/refined-assets/desktop-poster.jpg">
+</head>
+  <body class="body case-study-editorial arium-refined">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-nav-section">
       <nav class="floating-nav" aria-label="Primary">
-        <a href="/" class="floating-nav__brand">
-          <span class="floating-nav__logo">Morty Akard</span>
-        </a>
+        <a href="/" class="floating-nav__brand"><span class="floating-nav__logo">Morty Akard</span></a>
         <div class="floating-nav__links">
-          <a href="/" class="floating-nav__link"><span>Home</span><span class="floating-nav__link-underline" aria-hidden="true"></span></a>
-          <a href="/projects" class="floating-nav__link is-active" aria-current="page"><span>Projects</span><span class="floating-nav__link-underline" aria-hidden="true"></span></a>
-          <a href="/articles" class="floating-nav__link"><span>Articles</span><span class="floating-nav__link-underline" aria-hidden="true"></span></a>
-          <a href="/about" class="floating-nav__link"><span>About</span><span class="floating-nav__link-underline" aria-hidden="true"></span></a>
+          <a href="/" class="floating-nav__link">Home</a>
+          <a href="/projects.html" class="floating-nav__link">Projects</a>
+          <a href="/articles.html" class="floating-nav__link">Articles</a>
+          <a href="/about.html" class="floating-nav__link">About</a>
         </div>
-          <a href="/contact" class="floating-nav__cta">Get in touch</a>
+        <a href="/contact.html" class="floating-nav__cta">Get in touch</a>
         <button class="floating-nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">
           <span class="floating-nav__toggle-bars" aria-hidden="true"></span>
         </button>
         <div class="floating-nav__mobile-panel">
           <a href="/" class="floating-nav__link">Home</a>
-          <a href="/projects" class="floating-nav__link is-active">Projects</a>
-          <a href="/articles" class="floating-nav__link">Articles</a>
-          <a href="/about" class="floating-nav__link">About</a>
-          <a href="/contact" class="floating-nav__cta">Get in touch</a>
+          <a href="/projects.html" class="floating-nav__link">Projects</a>
+          <a href="/articles.html" class="floating-nav__link">Articles</a>
+          <a href="/about.html" class="floating-nav__link">About</a>
+          <a href="/contact.html" class="floating-nav__cta">Get in touch</a>
         </div>
       </nav>
     </header>
-
-    <main id="main-content">
-      <section class="cs-section cs-section--hero">
-        <h1 class="cs-title">Arium Tournament Redesign</h1>
-        <p class="cs-subtitle">Designing a tournament experience players could understand as it changed.</p>
-        <p class="cs-lede">
-          I worked on Arium’s desktop and mobile tournament experience in a three-person design team. A tournament could change while a player was using it, so joining, checking results, and reading the rankings could not rely on one static screen. We designed the experience around those changing moments and documented the behaviour needed to build it.
-        </p>
-        <div class="cs-facts cs-facts--cols-5">
-          <div class="cs-fact"><p class="cs-fact__label">Role</p><p class="cs-fact__value">UX/UI Designer</p></div>
-          <div class="cs-fact"><p class="cs-fact__label">Duration</p><p class="cs-fact__value">3 months</p></div>
-          <div class="cs-fact"><p class="cs-fact__label">Team</p><p class="cs-fact__value">Three designers</p></div>
-          <div class="cs-fact"><p class="cs-fact__label">Platforms</p><p class="cs-fact__value">Desktop and mobile</p></div>
-          <div class="cs-fact"><p class="cs-fact__label">Scope</p><p class="cs-fact__value">Tournament experience</p></div>
-        </div>
-<div class="cs-video-duo">
-  <div class="cs-video-duo__main"><div class="cs-video cs-video--duo-landscape">
-  <iframe
-    src="https://www.youtube-nocookie.com/embed/8L2fFWrYBME?autoplay=1&mute=1&loop=1&playlist=8L2fFWrYBME&controls=0&modestbranding=1&rel=0&playsinline=1"
-    title="Tournament whole desktop"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen
-    loading="lazy"
-    referrerpolicy="strict-origin-when-cross-origin"
-  ></iframe>
-</div></div>
-  <div class="cs-video-duo__side"><div class="cs-video cs-video--duo-portrait">
-  <iframe
-    src="https://www.youtube-nocookie.com/embed/xLGZ1q13lWo?autoplay=1&mute=1&loop=1&playlist=xLGZ1q13lWo&controls=0&modestbranding=1&rel=0&playsinline=1"
-    title="Tournament whole mobile"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen
-    loading="lazy"
-    referrerpolicy="strict-origin-when-cross-origin"
-  ></iframe>
-</div></div>
+    <main id="main-content" class="cse-layout">
+      <details class="cse-toc" open>
+        <summary aria-label="Case study sections"><span class="cse-toc-current" aria-hidden="true">Explore this study</span><span class="cse-toc-chevron" aria-hidden="true"></span><span class="cse-toc-progress" aria-hidden="true"></span></summary>
+        <nav aria-label="Case study sections"><ul>
+          <li><a href="#opening" aria-label="Overview"><span aria-hidden="true" class="cse-nav-marker"></span><span class="cse-nav-label">Overview</span></a></li>
+<li><a href="#context" aria-label="The challenge"><span aria-hidden="true" class="cse-nav-marker"></span><span class="cse-nav-label">The challenge</span></a></li>
+<li><a href="#discovery" aria-label="Player needs"><span aria-hidden="true" class="cse-nav-marker"></span><span class="cse-nav-label">Player needs</span></a></li>
+<li><a href="#structure" aria-label="Information architecture"><span aria-hidden="true" class="cse-nav-marker"></span><span class="cse-nav-label">Information architecture</span></a></li>
+<li><a href="#refinement" aria-label="Review and testing"><span aria-hidden="true" class="cse-nav-marker"></span><span class="cse-nav-label">Review and testing</span></a></li>
+<li><a href="#finding" aria-label="Competition details"><span aria-hidden="true" class="cse-nav-marker"></span><span class="cse-nav-label">Competition details</span></a></li>
+<li><a href="#participation" aria-label="Participation"><span aria-hidden="true" class="cse-nav-marker"></span><span class="cse-nav-label">Participation</span></a></li>
+<li><a href="#matches" aria-label="Matches and rankings"><span aria-hidden="true" class="cse-nav-marker"></span><span class="cse-nav-label">Matches and rankings</span></a></li>
+<li><a href="#handoff" aria-label="Handoff"><span aria-hidden="true" class="cse-nav-marker"></span><span class="cse-nav-label">Handoff</span></a></li>
+<li><a href="#outcomes" aria-label="Outcomes"><span aria-hidden="true" class="cse-nav-marker"></span><span class="cse-nav-label">Outcomes</span></a></li>
+</ul></nav>
+      </details>
+      <article class="cse-article" aria-labelledby="title">
+        <header id="opening" class="cse-section" aria-labelledby="title" data-cse-opening="">
+<p class="cse-caption" data-arium-source="0">Arium · UX/UI design</p>
+<h1 id="title" data-arium-source="1" class="cse-title">Making Tournaments Easier to Join and Follow</h1>
+<p class="cse-prose cse-lede" data-arium-source="2">Redesigning Arium’s tournament experience across desktop and mobile, contributing to a platform reporting a 35% monthly return rate.</p>
+<figure class="cse-figure" aria-label="Desktop and mobile Tournament previews">
+<div class="arium-previews">
+<div data-media="desktop-preview" class="cse-device cse-device--desktop arium-preview-device">
+<div class="cse-device-shell">
+<div class="cse-media arium-preview-screen">
+<video id="video-desktop-preview" data-arium-autoplay loop width="1600" height="1038" poster="/projects/gamers_compete_with_ease/refined-assets/desktop-poster.jpg" preload="none" controls="" playsinline="" muted aria-label="Desktop preview" aria-describedby="caption-opening-previews" data-arium-media="0">
+<source src="/projects/gamers_compete_with_ease/refined-assets/desktop-preview.mp4" type="video/mp4">
+<a href="/projects/gamers_compete_with_ease/refined-assets/desktop-preview.mp4" data-arium-link="0">Open desktop preview</a>.</video>
+<button class="arium-preview-play" type="button" data-arium-fullscreen="video-desktop-preview" aria-label="Watch desktop preview fullscreen" hidden></button>
 </div>
-      </section>
-
-      <section class="cs-section cs-section--sm">
-        <div class="cs-heading-card">
-          <h2 class="cs-h2">A tournament could change before a player finished reading it</h2>
-          <p class="cs-body cs-body--muted">
-            A review of the experience and directional prototype testing pointed to four moments that needed work: taking action, finding the terms of the tournament, following a match, and making sense of the standings.
-          </p>
-        </div>
-        <div class="cs-card-grid cs-card-grid--four">
-          <div class="cs-card"><h3 class="cs-h3">Actions that matched the state</h3><p>Show what a player could do alongside the tournament condition that made that action relevant.</p></div>
-          <div class="cs-card"><h3 class="cs-h3">Details at the decision point</h3><p>Bring rules, rewards, and schedules into the moments when a player was deciding whether to join or follow.</p></div>
-          <div class="cs-card"><h3 class="cs-h3">Useful match rows</h3><p>Give schedules and results enough context to help players follow a match or open an available stream.</p></div>
-          <div class="cs-card"><h3 class="cs-h3">Rankings that could flex</h3><p>Make room for different tournament structures while showing more about the players in the table.</p></div>
-        </div>
-      </section>
-
-      <section class="cs-section cs-section--sm">
-        <div class="cs-heading-card">
-          <h2 class="cs-h2">My contribution ran from early structure to handoff</h2>
-          <p class="cs-body cs-body--muted">
-            I proposed a way to select and estimate the design work, helped refine the tournament flow, and contributed to the journey map and final UI. I also created early feature structures and interactive prototypes, then proposed and produced component-state documentation for the developer handoff.
-          </p>
-        </div>
-        <div class="cs-card-grid">
-          <div class="cs-card cs-card--wide">
-            <h3 class="cs-h3">Direct contribution</h3>
-            <p>Planning structure, flow refinement, early feature organisation, interactive prototypes, UI contribution, and component-state documentation for handoff.</p>
-          </div>
-          <div class="cs-card cs-card--wide">
-            <h3 class="cs-h3">Collaboration</h3>
-            <p>Three-person design team, with input from product, leadership, technical stakeholders, and developers.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="cs-section">
-        <h2 class="cs-h2">Four decisions made the changing parts easier to follow</h2>
-        <p class="cs-body cs-body--muted">
-          Rather than treating the tournament as a single page, we focused on what a player needed at four points in the experience: action, context, match progress, and standings.
-        </p>
-        <div class="cs-decision-grid">
-          <div class="cs-decision-grid__row">
-          <div class="cs-card cs-card--wide cs-decision">
-            <h3 class="cs-h3">Make the next action depend on the tournament state</h3>
-            <p class="cs-teal">We treated the CTA area as a component with states, so the available action appeared with the condition that explained it.</p>
-            <div class="cs-decision-demo">
-              <h4 class="cs-decision-demo__title">Tournament action states</h4>
-              <div class="cs-decision-demo__body">
-                <div class="cs-decision-demo__copy cs-decision-demo__copy--wide">
-                  <p>Each variant pairs the action with the tournament condition a player needs to understand before acting.</p>
-                </div>
-                <div class="cs-decision-demo__media cs-decision-demo__media--portrait">
-                  <div class="cs-video cs-video--decision-portrait">
-                    <iframe
-                      src="https://www.youtube-nocookie.com/embed/UdX5fY6X9YE?autoplay=1&mute=1&loop=1&playlist=UdX5fY6X9YE&controls=0&modestbranding=1&rel=0&playsinline=1"
-                      title="Updated buttons and labels — tournament CTA variants"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                      loading="lazy"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                    ></iframe>
-                  </div>
-                  <p class="cs-decision-demo__caption">The CTA changes as the tournament does.</p>
-                </div>
-              </div>
-            </div>
-            <p class="cs-caption cs-caption--source">The component shows how the available action changes with tournament status and participation.</p>
-          </div>
-          <div class="cs-card cs-card--wide cs-decision">
-            <h3 class="cs-h3">Put the terms of the tournament where players make decisions</h3>
-            <p class="cs-teal">We brought rules, rewards, schedules, and other key details into the tournament flow instead of leaving them apart from it.</p>
-            <div class="cs-decision-demo">
-              <h4 class="cs-decision-demo__title">Tournament details in context</h4>
-              <div class="cs-decision-demo__body">
-                <div class="cs-decision-demo__media">
-                  <div class="cs-video cs-video--decision-demo">
-                    <iframe
-                      src="https://www.youtube-nocookie.com/embed/H6nNnEXUurM?autoplay=1&mute=1&loop=1&playlist=H6nNnEXUurM&controls=0&modestbranding=1&rel=0&playsinline=1"
-                      title="Made tournament info accessible"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                      loading="lazy"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                    ></iframe>
-                  </div>
-                  <p class="cs-decision-demo__caption">Details are available without sending the player away from the tournament.</p>
-                </div>
-                <div class="cs-decision-demo__copy">
-                  <p>The grouping keeps the information needed to understand the tournament alongside the experience itself.</p>
-                </div>
-              </div>
-            </div>
-            <p class="cs-caption cs-caption--source">Rules, rewards, and schedules sit within the tournament experience.</p>
-          </div>
-          </div>
-          <div class="cs-decision-grid__row">
-          <div class="cs-card cs-card--wide cs-decision">
-            <h3 class="cs-h3">Let schedules and results do more than list a time or score</h3>
-            <p class="cs-teal">We used match rows to carry a summary and a direct route to an available stream.</p>
-            <div class="cs-decision-demo">
-              <h4 class="cs-decision-demo__title">Match context and stream access</h4>
-              <div class="cs-decision-demo__body">
-                <div class="cs-decision-demo__media">
-                  <div class="cs-video cs-video--decision-demo">
-                    <iframe
-                      src="https://www.youtube-nocookie.com/embed/B3g1iGHn_rk?autoplay=1&mute=1&loop=1&playlist=B3g1iGHn_rk&controls=0&modestbranding=1&rel=0&playsinline=1"
-                      title="Tournament added match info and stream links"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                      loading="lazy"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                    ></iframe>
-                  </div>
-                  <p class="cs-decision-demo__caption">A match row carries both progress and a route to watch.</p>
-                </div>
-                <div class="cs-decision-demo__copy">
-                  <p>Players can use the same row to understand what happened and, when available, open the match content.</p>
-                </div>
-              </div>
-            </div>
-            <p class="cs-caption cs-caption--source">Match rows combine tournament progress, a short summary, and stream access.</p>
-          </div>
-          <div class="cs-card cs-card--wide cs-decision">
-            <h3 class="cs-h3">Keep rankings recognisable while allowing for different formats</h3>
-            <p class="cs-teal">We reorganised the ranking area so it could support different tournament types and show more about the players involved.</p>
-            <div class="cs-decision-demo">
-              <h4 class="cs-decision-demo__title">Adaptable ranking display</h4>
-              <div class="cs-decision-demo__body">
-                <div class="cs-decision-demo__copy">
-                  <p>The ranking pattern differentiates tournament types while giving players more context for interpreting a position.</p>
-                </div>
-                <div class="cs-decision-demo__media">
-                  <div class="cs-video cs-video--decision-demo">
-                    <iframe
-                      src="https://www.youtube-nocookie.com/embed/DRA2P3Yg23I?autoplay=1&mute=1&loop=1&playlist=DRA2P3Yg23I&controls=0&modestbranding=1&rel=0&playsinline=1"
-                      title="Sketch to design — ranking and structure evolution"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                      loading="lazy"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                    ></iframe>
-                  </div>
-                  <p class="cs-decision-demo__caption">The structure develops from an early sketch into a flexible ranking pattern.</p>
-                </div>
-              </div>
-            </div>
-            <p class="cs-caption cs-caption--source">The ranking design adapts to different tournament formats without becoming a different experience each time.</p>
-          </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="cs-section">
-        <h2 class="cs-h2">One flow, from finding a tournament to reading the standings</h2>
-        <p class="cs-body cs-body--muted">
-          The desktop and mobile designs connect discovery, tournament details, participation, match progress, and rankings. The handoff also makes the conditional behaviour behind those screens explicit.
-        </p>
-        <div class="cs-flow">
-          <div class="cs-flow__step"><p class="cs-fact__label">01</p><p class="cs-fact__value">Discover</p></div>
-          <div class="cs-flow__step"><p class="cs-fact__label">02</p><p class="cs-fact__value">Review details</p></div>
-          <div class="cs-flow__step"><p class="cs-fact__label">03</p><p class="cs-fact__value">Join or check status</p></div>
-          <div class="cs-flow__step"><p class="cs-fact__label">04</p><p class="cs-fact__value">Follow schedule</p></div>
-          <div class="cs-flow__step"><p class="cs-fact__label">05</p><p class="cs-fact__value">Open match</p></div>
-          <div class="cs-flow__step"><p class="cs-fact__label">06</p><p class="cs-fact__value">Interpret ranking</p></div>
-        </div>
-<div class="cs-video-duo">
-  <div class="cs-video-duo__main"><div class="cs-video cs-video--duo-landscape">
-  <iframe
-    src="https://www.youtube-nocookie.com/embed/8L2fFWrYBME?autoplay=1&mute=1&loop=1&playlist=8L2fFWrYBME&controls=0&modestbranding=1&rel=0&playsinline=1"
-    title="Tournament whole desktop"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen
-    loading="lazy"
-    referrerpolicy="strict-origin-when-cross-origin"
-  ></iframe>
-</div></div>
-  <div class="cs-video-duo__side"><div class="cs-video cs-video--duo-portrait">
-  <iframe
-    src="https://www.youtube-nocookie.com/embed/xLGZ1q13lWo?autoplay=1&mute=1&loop=1&playlist=xLGZ1q13lWo&controls=0&modestbranding=1&rel=0&playsinline=1"
-    title="Tournament whole mobile"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen
-    loading="lazy"
-    referrerpolicy="strict-origin-when-cross-origin"
-  ></iframe>
-</div></div>
 </div>
-        <p class="cs-caption">Final desktop and mobile tournament direction, captured from the original Arium case study.</p>
-      </section>
+</div>
+<div data-media="mobile-preview" class="cse-device cse-device--phone arium-preview-device">
+<div class="cse-device-shell">
+<div class="cse-media arium-preview-screen">
+<video id="video-mobile-preview" data-arium-autoplay loop width="784" height="1690" poster="/projects/gamers_compete_with_ease/refined-assets/mobile-poster.jpg" preload="none" controls="" playsinline="" muted aria-label="Mobile preview" aria-describedby="caption-opening-previews" data-arium-media="1">
+<source src="/projects/gamers_compete_with_ease/refined-assets/mobile-preview.mp4" type="video/mp4">
+<a href="/projects/gamers_compete_with_ease/refined-assets/mobile-preview.mp4" data-arium-link="1">Open mobile preview</a>.</video>
+<button class="arium-preview-play" type="button" data-arium-fullscreen="video-mobile-preview" aria-label="Watch mobile preview fullscreen" hidden></button>
+</div>
+</div>
+</div>
+</div>
+<figcaption id="caption-opening-previews" class="cse-caption"><span data-arium-source="6">Desktop and mobile support the same journey: assess a tournament, join, and follow matches and results.</span>
+</figcaption>
+</figure>
+<p class="cse-prose" data-arium-source="3">Arium was a cloud-gaming platform where people could play across devices, join tournaments and watch streams. Players needed to know whether they could join, when their next match started and what to do next. Viewers needed to follow the competition without entering it.</p>
 
-      <section class="cs-section">
-        <h2 class="cs-h2">The final design and the evidence I retained</h2>
-        <p class="cs-body cs-body--muted">
-          Because tournament-specific post-launch metrics were not isolated, broader Arium growth figures are not attributed to this redesign.
-        </p>
-        <div class="cs-card-grid">
-          <div class="cs-card">
-            <h3 class="cs-h3">Design output</h3>
-            <p>The completed direction connected tournament actions, details, match context, and rankings. The component documentation captured the intended behaviour for implementation.</p>
-          </div>
-          <div class="cs-card">
-            <h3 class="cs-h3">Evidence limit</h3>
-            <p>The project record does not isolate a tournament-specific post-launch metric, so broader Arium growth figures are excluded from this case study.</p>
-          </div>
-          <div class="cs-card">
-            <h3 class="cs-h3">Learning</h3>
-            <p>I learned that complex features need more than polished screens: they need explicit behaviour, information at the right moment, and a shared model that design and engineering can work from.</p>
-          </div>
-        </div>
-        <div class="cs-measure">
-          <h3 class="cs-h2" style="font-size: clamp(28px, 3vw, 48px)">Validate with external players and tournament-specific measures</h3>
-          <p class="cs-body" style="color: var(--cs-teal-dim); margin-bottom: 0">
-            With more time, I would measure registration completion, repeat participation, schedule usage, and ranking comprehension.
-          </p>
-        </div>
-      </section>
+<p class="cse-prose" data-arium-source="4">I proposed and facilitated journey mapping, created the initial information architecture, and designed responsive search and participation states. I also prepared developer documentation covering components, interface elements, interactions and states. We developed the overall interface together as a three-designer team.</p>
 
-      <div class="cs-cta-full">
-        <h2 class="cs-h3">Read the full Arium case study</h2>
-        <a href="/projects/gamers_compete_with_ease/full/">Read the full case study</a>
-      </div>
 
-      <section class="cs-related" aria-labelledby="related-heading">
-        <h2 id="related-heading" class="cs-h2">More product design work</h2>
-        <div class="cs-related__grid">
-          <a class="cs-related-card" href="/projects/creator-delight/">
-            <div
-              class="cs-related-card__banner"
-              style="background-image: url('../../images/case-studies/betatrends-hero-workspace.png')"
-              role="img"
-              aria-label="Betatrends connected workspace redesign"
-            ></div>
-            <div class="cs-related-card__body">
-              <p class="cs-related-card__meta">Case study</p>
-              <h3 class="cs-related-card__title">Connecting a Fragmented Interaction Creation Flow</h3>
-              <p class="cs-related-card__deck">How post-launch behaviour turned a step-based setup into one connected workspace.</p>
-              <div class="cs-related-card__tags">
-                <span class="cs-related-card__tag">Product design</span>
-                <span class="cs-related-card__tag">SaaS</span>
-              </div>
-              <span class="cs-related-card__cta">Read the Betatrends case study</span>
-            </div>
-          </a>
-          <a
-            class="article-card"
-            href="https://www.designsystemscollective.com/designing-a-custom-book-card-that-still-plays-nice-with-the-system-6de33455bd61"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="article-card__cover" style="background-image: url('../../images/articles/book-card.png')"></div>
-            <div class="article-card__body">
-              <p class="article-card__source">Design Systems Collective on Medium</p>
-              <h3 class="article-card__title">Designing a Custom Book Card That Still Plays Nice With the System</h3>
-              <p class="article-card__excerpt">Expressive, context-specific components that feel bespoke without breaking system consistency.</p>
-              <div class="article-card__tags">
-                <span class="article-tag article-tag--meta">Article</span>
-                <span class="article-tag">Design Systems</span>
-              </div>
-              <span class="article-card__cta">Read the article on Medium</span>
-            </div>
-          </a>
-        </div>
-      </section>
+<p class="cse-prose" data-arium-source="7"><a href="/projects/gamers_compete_with_ease/refined-assets/product.mp4" target="_blank" rel="noopener" data-arium-link="2">Watch Arium’s product introduction · 92 seconds</a></p>
+<dl class="cse-facts">
+<div>
+<dt data-arium-source="8">My role</dt>
+<dd data-arium-source="9">UX/UI Designer</dd>
+</div>
+<div>
+<dt data-arium-source="10">Team</dt>
+<dd data-arium-source="11">Three designers, with product and engineering</dd>
+</div>
+<div>
+<dt data-arium-source="12">Scope</dt>
+<dd data-arium-source="13">Tournament journeys across desktop and mobile</dd>
+</div>
+<div>
+<dt data-arium-source="14">Delivery</dt>
+<dd data-arium-source="15">Implemented and released.</dd>
+</div>
+</dl>
+
+</header><section id="context" class="cse-section" aria-labelledby="context-title">
+<div class="cse-prose"><h2 id="context-title" data-arium-source="16" class="cse-heading">The experience had to stay clear as the competition changed</h2></div>
+<div class="cse-prose">
+<p data-arium-source="17">We were rebuilding much of the tournament feature and designing many features from scratch. It needed to support players and viewers from registration through final results.</p>
+<p data-arium-source="18">Eligibility, available places and deadlines determined whether someone could join. After joining, match progress changed what they needed to see and do. Our challenge was to organise the information and make the next action clear at each stage.</p>
+</div>
+
+
+<div class="cse-prose">
+<h3 id="checklist-title" data-arium-source="19" class="cse-subheading">I created a checklist to choose UX methods</h3>
+<p data-arium-source="20">To work within tight deadlines, I created a UX-method checklist. For each feature, we selected the methods we needed and estimated the time together. This helped us plan the work and move faster.</p>
+</div>
+</section>
+<section id="discovery" class="cse-section" aria-labelledby="discovery-title">
+<div class="cse-prose"><h2 id="discovery-title" data-arium-source="21" class="cse-heading">Players and viewers needed different information</h2></div>
+
+<div class="cse-prose"><p data-arium-source="22">I proposed journey mapping to understand what different users needed throughout a competition. I facilitated a workshop with the designers and Product Manager. We created a separate journey for each of four user types. I created one of the maps, and we reviewed them together.</p></div>
+<figure class="cse-figure" data-media="journeys">
+<a class="cse-media" href="/projects/gamers_compete_with_ease/refined-assets/originals/journeys.png" target="_blank" rel="noopener" aria-label="View full-size image: Four collaboratively reviewed Tournament journey maps" data-arium-link="5">
+<img src="/projects/gamers_compete_with_ease/refined-assets/journeys.jpg" width="2000" height="1602" alt="Four collaboratively reviewed Tournament journey maps" loading="lazy" decoding="async" data-arium-media="3">
+</a>
+<figcaption data-arium-source="38" class="cse-caption">Each map follows one user type through the competition, helping us compare their needs at different stages. <a href="/projects/gamers_compete_with_ease/refined-assets/originals/journeys.png" target="_blank" rel="noopener" data-arium-link="6">View full-size board</a>.</figcaption>
+</figure>
+<div class="cse-prose arium-user-groups" role="group" aria-labelledby="user-types-title">
+<h3 id="user-types-title" class="cse-subheading" data-arium-source="23">Four user groups, different needs</h3>
+<div>
+<h4 data-arium-source="24" class="cse-subheading">Viewers</h4>
+<p data-arium-source="25">Schedules, results, player details and streams.</p>
+</div>
+<div>
+<h4 data-arium-source="26" class="cse-subheading">Players seeking enjoyment</h4>
+<p data-arium-source="27">Joining, match timing and progress.</p>
+</div>
+<div>
+<h4 data-arium-source="28" class="cse-subheading">Players seeking recognition</h4>
+<p data-arium-source="29">Opponents, rankings and position.</p>
+</div>
+<div>
+<h4 data-arium-source="30" class="cse-subheading">Players seeking rewards</h4>
+<p data-arium-source="31">Prizes, eligibility and entry requirements.</p>
+</div>
+</div>
+<div class="cse-prose">
+<p data-arium-source="32">I analysed the competing platforms assigned to me as part of our team comparison. Dense text and weak grouping made important details difficult to scan. Clear schedules, rules and rankings offered useful references.</p>
+</div>
+<div class="cse-prose">
+<h3 id="findings-title" data-arium-source="33" class="cse-subheading">Viewer needs and early ideas</h3>
+<p data-arium-source="34">We used affinity mapping to group related needs, challenges and ideas from the discovery work. Across the four journeys, we distinguished the information needed to assess a competition from the information needed while playing or watching.</p>
+<p data-arium-source="35">Viewers needed up-to-date schedules and results, clearer participant information, and ways to follow their favourite players or teams.</p>
+</div>
+<figure class="cse-figure" data-media="research-synthesis">
+<a class="cse-media" href="/projects/gamers_compete_with_ease/refined-assets/originals/research-synthesis-updated-2026-10-05.png" target="_blank" rel="noopener" aria-label="View full-size image: Affinity map grouping user needs, current challenges and proposed improvements" data-arium-link="3">
+<img src="/projects/gamers_compete_with_ease/refined-assets/research-synthesis-updated-2026-10-05.jpg" width="2200" height="1537" alt="Affinity map grouping user needs, current challenges and proposed improvements" loading="lazy" decoding="async" data-arium-media="2">
+</a>
+<figcaption data-arium-source="36" class="cse-caption">The viewer example groups needs and challenges alongside early proposals. <a href="/projects/gamers_compete_with_ease/refined-assets/originals/research-synthesis-updated-2026-10-05.png" target="_blank" rel="noopener" data-arium-link="4">View full-size board</a>.</figcaption>
+</figure>
+
+<details class="arium-support-disclosure" id="discovery-support"><summary data-arium-source="37" id="discovery-support-title" class="arium-support-summary"><span>Research evidence: competitor comparisons</span></summary>
+<div class="arium-support-content"><div class="arium-support-gallery">
+
+<figure class="cse-figure" data-media="competitor-patterns">
+<a class="cse-media" href="/projects/gamers_compete_with_ease/refined-assets/originals/competitor-patterns.jpg" target="_blank" rel="noopener" aria-label="View full-size image: Competitor interface patterns grouped by information and competition views" data-arium-link="7">
+<img src="/projects/gamers_compete_with_ease/refined-assets/competitor-patterns.jpg" width="2000" height="804" alt="Competitor interface patterns grouped by information and competition views" loading="lazy" decoding="async" data-arium-media="4">
+</a>
+<figcaption data-arium-source="39" class="cse-caption">The board gathers examples of schedules, ranking tables, brackets and card structures. <a href="/projects/gamers_compete_with_ease/refined-assets/originals/competitor-patterns.jpg" target="_blank" rel="noopener" data-arium-link="8">View full-size board</a>.</figcaption>
+</figure>
+<figure class="cse-figure" data-media="competitor-comparison">
+<a class="cse-media" href="/projects/gamers_compete_with_ease/refined-assets/originals/competitor-comparison.jpg" target="_blank" rel="noopener" aria-label="View full-size image: Competitor comparisons with strengths, weaknesses and interface references" data-arium-link="9">
+<img src="/projects/gamers_compete_with_ease/refined-assets/competitor-comparison.jpg" width="2000" height="1001" alt="Competitor comparisons with strengths, weaknesses and interface references" loading="lazy" decoding="async" data-arium-media="5">
+</a>
+<figcaption data-arium-source="40" class="cse-caption">We compared competitors’ strengths and weaknesses to discuss what could inform our design. <a href="/projects/gamers_compete_with_ease/refined-assets/originals/competitor-comparison.jpg" target="_blank" rel="noopener" data-arium-link="10">View full-size board</a>.</figcaption>
+</figure>
+</div></div></details>
+</section>
+<section id="structure" class="cse-section" aria-labelledby="structure-title">
+<div class="cse-prose"><h2 id="structure-title" data-arium-source="41" class="cse-heading">I separated entry information from match progress</h2></div>
+<div class="cse-prose">
+<p data-arium-source="42">Using those different needs as a starting point, I proposed organising the content with sticky notes and created the initial information architecture in FigJam. We reviewed the groups together before developing sketches and interface designs.</p>
+<p data-arium-source="43">Players deciding whether to join needed timing, eligibility, rules and prizes. People already participating—or watching—needed schedules, results, rankings and streams. Separating these tasks gave us a structure to build on.</p>
+</div>
+<figure class="cse-figure" data-media="architecture">
+<div class="cse-media">
+<video id="video-architecture" data-arium-autoplay loop width="1538" height="1080" poster="/projects/gamers_compete_with_ease/refined-assets/architecture-poster.jpg" preload="none" controls="" playsinline="" muted aria-label="Sticky-note structure becoming an interface" aria-describedby="caption-architecture" data-arium-media="6">
+<source src="/projects/gamers_compete_with_ease/refined-assets/architecture.mp4" type="video/mp4">
+<a href="/projects/gamers_compete_with_ease/refined-assets/architecture.mp4" data-arium-link="11">Open sticky-note structure becoming an interface</a>.</video>
+</div>
+<p data-arium-source="44" class="cse-caption arium-video-cue">30 seconds</p>
+<figcaption id="caption-architecture" data-arium-source="45" class="cse-caption">The content groups become separate interface sections for deciding whether to enter and following the competition.</figcaption>
+<p class="cse-caption"><a href="/projects/gamers_compete_with_ease/refined-assets/architecture.mp4" data-arium-added-link="">Open sticky-note structure becoming an interface</a>.</p></figure>
+<div class="cse-prose">
+<h3 data-arium-source="46" class="cse-subheading">The content groups became page layouts</h3>
+<p data-arium-source="47">Paper sketches explored how to arrange the content on a tournament page. Low-fidelity wireframes developed layouts for information, match progress, rankings, rules and streams before detailed interface design.</p>
+</div>
+<figure class="cse-figure" data-media="paper-sketch">
+<a class="cse-media" href="/projects/gamers_compete_with_ease/refined-assets/originals/paper-sketch.jpg" target="_blank" rel="noopener" aria-label="View full-size image: Paper layout sketch with a title, button and content regions" data-arium-link="12">
+<img src="/projects/gamers_compete_with_ease/refined-assets/paper-sketch.jpg" width="1896" height="2000" alt="Paper layout sketch with a title, button and content regions" loading="lazy" decoding="async" data-arium-media="7">
+</a>
+<figcaption data-arium-source="48" class="cse-caption">The sketch explores where to place the title, primary action, screenshots and streams. <a href="/projects/gamers_compete_with_ease/refined-assets/originals/paper-sketch.jpg" target="_blank" rel="noopener" data-arium-link="13">View full-size sketch</a>.</figcaption>
+</figure>
+
+<div class="cse-prose">
+<h3 data-arium-source="49" class="cse-subheading">The screens also needed to follow competition rules</h3>
+<p data-arium-source="50">I helped the Product Manager refine registration and match flows. These connected the interface to capacity checks, match timing and progression through the competition.</p>
+</div>
+<figure class="cse-figure" data-media="tournament-flow">
+<a class="cse-media" href="/projects/gamers_compete_with_ease/refined-assets/originals/tournament-flow.png" target="_blank" rel="noopener" aria-label="View the complete tournament flowchart" data-arium-link="14">
+<img src="/projects/gamers_compete_with_ease/refined-assets/tournament-flow.jpg" width="2200" height="486" alt="Tournament flow from registration and capacity checks through match rounds, rewards and the end of the competition." loading="lazy" decoding="async" data-arium-media="8">
+</a>
+<figcaption data-arium-source="51" class="cse-caption">The capacity check branches the registration route before the flow continues through match rounds and rewards. <a href="/projects/gamers_compete_with_ease/refined-assets/originals/tournament-flow.png" target="_blank" rel="noopener" data-arium-link="15">View the complete flowchart</a>.</figcaption>
+</figure>
+
+<details class="arium-support-disclosure" id="structure-support"><summary data-arium-source="52" id="structure-support-title" class="arium-support-summary"><span>Supporting design exploration: wireframes and information architecture</span></summary>
+<div class="arium-support-content"><div class="arium-support-gallery">
+<figure class="cse-figure" data-media="wireframes">
+<div class="cse-media">
+<video id="video-wireframes" width="1600" height="1046" poster="/projects/gamers_compete_with_ease/refined-assets/wireframes-poster.jpg" preload="none" controls="" playsinline="" muted aria-label="Early tournament wireframe walkthrough" aria-describedby="caption-wireframes" data-arium-media="9">
+<source src="/projects/gamers_compete_with_ease/refined-assets/wireframes.mp4" type="video/mp4">
+<a href="/projects/gamers_compete_with_ease/refined-assets/wireframes.mp4" data-arium-link="16">Open early tournament wireframe walkthrough</a>.</video>
+</div>
+<p data-arium-source="53" class="cse-caption arium-video-cue">14 seconds</p>
+<figcaption id="caption-wireframes" data-arium-source="54" class="cse-caption">These low-fidelity wireframes explored layouts for information, match progress, rankings, rules and streams.</figcaption>
+<p class="cse-caption"><a href="/projects/gamers_compete_with_ease/refined-assets/wireframes.mp4" data-arium-added-link="">Open early tournament wireframe walkthrough</a>.</p></figure>
+
+<figure class="cse-figure" data-media="architecture-board">
+<a class="cse-media" href="/projects/gamers_compete_with_ease/refined-assets/originals/architecture-board.png" target="_blank" rel="noopener" aria-label="View full-size image: Sticky-note information architecture with overview, information, results, rules and streams" data-arium-link="17">
+<img src="/projects/gamers_compete_with_ease/refined-assets/architecture-board.jpg" width="2000" height="1474" alt="Sticky-note information architecture with overview, information, results, rules and streams" loading="lazy" decoding="async" data-arium-media="10">
+</a>
+<figcaption data-arium-source="55" class="cse-caption">The sticky notes let us review content groups and navigation before designing the screens. <a href="/projects/gamers_compete_with_ease/refined-assets/originals/architecture-board.png" target="_blank" rel="noopener" data-arium-link="18">View full-size board</a>.</figcaption>
+</figure>
+</div></div></details>
+</section>
+<section id="refinement" class="cse-section" aria-labelledby="refinement-title">
+<div class="cse-prose">
+<h2 id="refinement-title" data-arium-source="56" class="cse-heading">Testing showed where the designs needed to change</h2>
+<p data-arium-source="57">Stakeholder review established requirements for different game formats, mobile participation and exceptions such as disconnections.</p>
+<p data-arium-source="58">I created interactive Figma prototypes, and we asked gamer colleagues to complete specific tasks. Observing their actions and gathering feedback revealed unclear information and interactions. The four examples below show the findings and design responses.</p>
+</div></section>
+<section id="finding" class="cse-section" aria-labelledby="finding-title">
+<div class="cse-prose">
+<h3 id="finding-title" class="cse-subheading" data-arium-source="59">Rules and rewards were hard to find</h3>
+<p data-arium-source="60">Users struggled to find key tournament details, making rules and rewards difficult to understand when deciding whether to join.</p>
+<p data-arium-source="61">We revised the Info view to bring timing, prizes and registration details together, with rewards broken down by finishing position.</p>
+</div>
+<figure class="cse-figure" data-media="information">
+<div class="cse-media">
+<video id="video-information" data-arium-autoplay loop width="1600" height="1478" poster="/projects/gamers_compete_with_ease/refined-assets/information-decision-poster-2026-10-11.jpg" preload="none" controls="" playsinline="" muted aria-label="Essential tournament information" aria-describedby="caption-information" data-arium-media="11">
+<source src="/projects/gamers_compete_with_ease/refined-assets/information.mp4" type="video/mp4">
+<a href="/projects/gamers_compete_with_ease/refined-assets/information.mp4" data-arium-link="19">Open essential tournament information</a>.</video>
+</div>
+<p data-arium-source="62" class="cse-caption arium-video-cue">13 seconds · silent demonstration</p>
+<figcaption id="caption-information" data-arium-source="63" class="cse-caption">The prize breakdown connects each finishing position to its reward.</figcaption>
+<p class="cse-caption"><a href="/projects/gamers_compete_with_ease/refined-assets/information.mp4" data-arium-added-link="">Open essential tournament information</a>.</p></figure></section>
+<section id="participation" class="cse-section" aria-labelledby="participation-title">
+<div class="cse-prose">
+<h3 id="participation-title" class="cse-subheading" data-arium-source="64">Players needed to know whether to join, wait or start</h3>
+<p data-arium-source="65">Users found actions and supporting information unclear after joining or when a tournament’s status changed.</p>
+<p data-arium-source="66">I designed participation states and checked them against the requirements. Buttons and messages reflected both tournament stage and whether the player had joined.</p>
+<p id="registration-states" data-arium-source="67">Closed registration prevented new entries, but registered players still needed their next action. Opponent details and countdowns showed when their next match could start.</p>
+</div>
+<figure class="cse-figure" data-media="actions">
+<div class="cse-media arium-portrait">
+<video id="video-actions" data-arium-autoplay loop width="778" height="1686" poster="/projects/gamers_compete_with_ease/refined-assets/actions-poster.jpg" preload="none" controls="" playsinline="" muted aria-label="Participation actions and countdowns" aria-describedby="caption-actions" data-arium-media="12">
+<source src="/projects/gamers_compete_with_ease/refined-assets/actions.mp4" type="video/mp4">
+<a href="/projects/gamers_compete_with_ease/refined-assets/actions.mp4" data-arium-link="20">Open participation actions and countdowns</a>.</video>
+</div>
+<p data-arium-source="68" class="cse-caption arium-video-cue">24 seconds · silent demonstration</p>
+<figcaption id="caption-actions" data-arium-source="69" class="cse-caption">Buttons and messages change from joining to starting a match.</figcaption>
+<p class="cse-caption"><a href="/projects/gamers_compete_with_ease/refined-assets/actions.mp4" data-arium-added-link="">Open participation actions and countdowns</a>.</p></figure></section>
+<section id="matches" class="cse-section" aria-labelledby="matches-title">
+<div class="cse-prose">
+<h3 id="matches-title" class="cse-subheading" data-arium-source="70">Match summaries and streams belonged beside results</h3>
+<p data-arium-source="71">Users wanted easier access to match summaries and live streams from Results and Schedule.</p>
+<p data-arium-source="72">We added expandable summaries and stream access within each match row, so users could open those details alongside the score.</p>
+</div>
+<figure class="cse-figure" data-media="matches">
+<div class="cse-media">
+<video id="video-matches" data-arium-autoplay loop width="1346" height="1026" poster="/projects/gamers_compete_with_ease/refined-assets/matches-decision-poster-2026-10-11.jpg" preload="none" controls="" playsinline="" muted aria-label="Match summaries and stream access" aria-describedby="caption-matches" data-arium-media="13">
+<source src="/projects/gamers_compete_with_ease/refined-assets/matches.mp4" type="video/mp4">
+<a href="/projects/gamers_compete_with_ease/refined-assets/matches.mp4" data-arium-link="21">Open match summaries and stream access</a>.</video>
+</div>
+<p data-arium-source="73" class="cse-caption arium-video-cue">9 seconds · silent demonstration</p>
+<figcaption id="caption-matches" data-arium-source="74" class="cse-caption">Expanded match rows place statistics and stream access beside the score.</figcaption>
+<p class="cse-caption"><a href="/projects/gamers_compete_with_ease/refined-assets/matches.mp4" data-arium-added-link="">Open match summaries and stream access</a>.</p></figure><div class="cse-prose">
+<h3 id="rankings-title" class="cse-subheading" data-arium-source="75">Different formats needed different ranking views</h3>
+<p data-arium-source="76">Testing revealed unclear rankings across competition formats and a need for more player information.</p>
+<p data-arium-source="77">We revised the views: tables showed standings, brackets showed progression, and expandable rows provided player details. A highlight marked the current player’s position.</p>
+<p id="mobile" data-arium-source="78">On mobile, players could navigate rounds and return to their latest match.</p>
+</div>
+<figure class="cse-figure" data-media="rankings">
+<div class="cse-media">
+<video id="video-rankings" data-arium-autoplay loop width="1600" height="1478" poster="/projects/gamers_compete_with_ease/refined-assets/rankings-decision-poster-2026-10-11.jpg" preload="none" controls="" playsinline="" muted aria-label="Rankings and competition brackets" aria-describedby="caption-rankings" data-arium-media="14">
+<source src="/projects/gamers_compete_with_ease/refined-assets/rankings.mp4" type="video/mp4">
+<a href="/projects/gamers_compete_with_ease/refined-assets/rankings.mp4" data-arium-link="22">Open rankings and competition brackets</a>.</video>
+</div>
+<p data-arium-source="79" class="cse-caption arium-video-cue">19 seconds · silent demonstration</p>
+<figcaption id="caption-rankings" data-arium-source="80" class="cse-caption">Table and bracket views include player details and a current-player highlight.</figcaption>
+<p class="cse-caption" data-arium-source="81"><a href="/projects/gamers_compete_with_ease/refined-assets/mobile.mp4" data-arium-link="23">Watch the full mobile walkthrough · 64 seconds</a></p>
+<p class="cse-caption"><a href="/projects/gamers_compete_with_ease/refined-assets/rankings.mp4" data-arium-added-link="">Open rankings and competition brackets</a>.</p></figure><div class="cse-prose"><p data-arium-source="82">We repeated prototyping, testing and refinement across the feature, then gathered stakeholder feedback and made final adjustments before developer handoff.</p></div></section>
+
+<section id="handoff" class="cse-section" aria-labelledby="handoff-title">
+<div class="cse-prose">
+<h2 id="handoff-title" data-arium-source="83" class="cse-heading">I prepared the designs for development</h2>
+<p data-arium-source="84">Handoff discussions often required repeated explanations of the designs. I proposed documenting components and features alongside the screens, and the team asked me to prepare the Figma documentation.</p>
+<p data-arium-source="85">I brought together the designs, interactive prototypes and written explanations developers needed. The documentation covered components and individual interface elements, including their information, interactions and behaviour in different conditions.</p>
+<h3 data-arium-source="86" class="cse-subheading">Component details and controls</h3>
+<p data-arium-source="87">The ranking specification describes the information shown, the controls for switching views and the different row states. It gives developers a reference for both the component’s parts and how they work together.</p>
+</div>
+<figure class="cse-figure" data-media="handoff-component-excerpt">
+<a class="cse-media" href="/projects/gamers_compete_with_ease/refined-assets/originals/handoff-table.png" target="_blank" rel="noopener" aria-label="View complete ranking component specification" data-arium-link="24">
+<img src="/projects/gamers_compete_with_ease/refined-assets/handoff-table.jpg" width="2200" height="2082" alt="Original ranking specification excerpt showing the displayed player information, table and bracket controls, and ranked rows with explanatory notes" loading="lazy" decoding="async" data-arium-media="15">
+</a><figcaption data-arium-source="88" class="cse-caption">Notes identify the view controls and explain the ranked row. <a href="/projects/gamers_compete_with_ease/refined-assets/originals/handoff-table.png" target="_blank" rel="noopener" data-arium-link="25">View the complete component specification</a>.</figcaption></figure>
+<div class="cse-prose">
+<h3 data-arium-source="89" class="cse-subheading">Match states and countdown rules</h3>
+<p data-arium-source="90">For a registered player waiting for a match, I documented the conditions behind the countdown, match time and opponent information.</p>
+</div>
+<figure class="cse-figure" data-media="handoff-state">
+<div class="arium-specification-guide" aria-label="What to notice in the specification">
+<span data-arium-source="91"><strong>Conditions</strong> Player and match status</span><span data-arium-source="92"><strong>Design</strong> Countdown and match details</span><span data-arium-source="93"><strong>Explanation</strong> What each element shows</span>
+</div>
+<a class="cse-media" href="/projects/gamers_compete_with_ease/refined-assets/originals/handoff-match-countdown.png" target="_blank" rel="noopener" aria-label="View complete countdown specification" data-arium-link="26">
+<img src="/projects/gamers_compete_with_ease/refined-assets/originals/handoff-match-countdown.png" width="2006" height="2648" alt="Original specification pairing registered-player and match conditions with countdown, match time and opponent information, plus written explanations" loading="lazy" decoding="async" data-arium-media="16">
+</a><figcaption data-arium-source="94" class="cse-caption">Conditions and explanations sit beside the countdown and match details. <a href="/projects/gamers_compete_with_ease/refined-assets/originals/handoff-match-countdown.png" target="_blank" rel="noopener" data-arium-link="27">View the complete state specification</a>.</figcaption></figure>
+<div class="cse-prose">
+<p data-arium-source="95">I checked the Product Manager’s user stories against the designs and tracked requirement changes. I also proposed an “update in handoff” step to keep the developer reference aligned with design changes.</p>
+<p data-arium-source="96">I created and refined components in our shared Figma library. We held developer review sessions to discuss implementation questions.</p>
+<p id="reporting" data-arium-source="97">The documentation also covered the cancellation, reporting and result-objection flows I designed.</p>
+</div>
+<details class="arium-support-disclosure" id="handoff-support"><summary data-arium-source="98" id="handoff-support-title" class="arium-support-summary"><span>Explore the full documentation walkthrough and specifications</span></summary>
+<div class="arium-support-content"><div class="arium-support-gallery">
+<figure class="cse-figure" data-media="handoff">
+<div class="cse-media">
+<video id="video-handoff" width="1600" height="1238" poster="/projects/gamers_compete_with_ease/refined-assets/handoff-poster.jpg" preload="none" controls="" playsinline="" aria-label="Developer documentation walkthrough" aria-describedby="caption-handoff" data-arium-media="17">
+<source src="/projects/gamers_compete_with_ease/refined-assets/handoff.mp4" type="video/mp4">
+<a href="/projects/gamers_compete_with_ease/refined-assets/handoff.mp4" data-arium-link="28">Open developer documentation walkthrough</a>.</video>
+</div>
+<p data-arium-source="99" class="cse-caption arium-video-cue">98 seconds</p>
+<figcaption id="caption-handoff" data-arium-source="100" class="cse-caption">Explore the component and screen explanations, including interactions, states and exceptions.</figcaption>
+<p class="cse-caption"><a href="/projects/gamers_compete_with_ease/refined-assets/handoff.mp4" data-arium-added-link="">Open developer documentation walkthrough</a>.</p></figure>
+
+<figure class="cse-figure" data-media="handoff-table">
+<a class="cse-media" href="/projects/gamers_compete_with_ease/refined-assets/originals/handoff-table.png" target="_blank" rel="noopener" aria-label="View full-size image: Ranking-table documentation showing standings, expanded player details and current-player highlight" data-arium-link="29">
+<img src="/projects/gamers_compete_with_ease/refined-assets/handoff-table.jpg" width="2200" height="2082" alt="Ranking-table documentation showing standings, expanded player details and current-player highlight" loading="lazy" decoding="async" data-arium-media="18">
+</a>
+<figcaption data-arium-source="101" class="cse-caption">The table specification describes standings, expanded player details and how to highlight the current player. <a href="/projects/gamers_compete_with_ease/refined-assets/originals/handoff-table.png" target="_blank" rel="noopener" data-arium-link="30">View complete specification</a>.</figcaption>
+</figure>
+<figure class="cse-figure" data-media="handoff-bracket">
+<a class="cse-media" href="/projects/gamers_compete_with_ease/refined-assets/originals/handoff-bracket.png" target="_blank" rel="noopener" aria-label="View full-size image: Bracket documentation showing view switching, round navigation and match spacing" data-arium-link="31">
+<img src="/projects/gamers_compete_with_ease/refined-assets/handoff-bracket.jpg" width="2200" height="1415" alt="Bracket documentation showing view switching, round navigation and match spacing" loading="lazy" decoding="async" data-arium-media="19">
+</a>
+<figcaption data-arium-source="102" class="cse-caption">The bracket notes pair interface examples with rules for view switching, round navigation and match spacing. <a href="/projects/gamers_compete_with_ease/refined-assets/originals/handoff-bracket.png" target="_blank" rel="noopener" data-arium-link="32">View complete specification</a>.</figcaption>
+</figure>
+</div></div></details>
+
+</section>
+<section id="outcomes" class="cse-section" aria-labelledby="outcomes-title">
+<div class="cse-prose"><h2 id="outcomes-title" data-arium-source="103" class="cse-heading">The redesigned tournament experience went live</h2></div>
+<div class="cse-prose"><p data-arium-source="104">The designs I worked on were implemented and released, supporting players as they assessed competitions, joined and followed matches across desktop and mobile.</p></div>
+<div role="group" aria-labelledby="arium-reported-results" class="cse-result">
+<h3 data-arium-source="105" class="cse-result-title" id="arium-reported-results">Arium’s reported results</h3>
+<dl class="cse-results-grid">
+<div>
+<dt>Monthly active users</dt>
+<dd data-arium-source="106" class="cse-result-value">40,000</dd>
+<dd data-arium-source="107" class="cse-result-source">Monthly active users reported in Arium’s <a href="https://www.linkedin.com/posts/cloudgaming-p2e-web3gaming-share-7265222562249383936-0tdr/" target="_blank" rel="noopener" data-arium-link="33">month-two update</a>
+</dd>
+</div>
+<div>
+<dt>Monthly return rate</dt>
+<dd data-arium-source="108" class="cse-result-value">35%</dd>
+<dd data-arium-source="109" class="cse-result-source">Monthly return rate reported in Arium’s <a href="https://www.linkedin.com/posts/cloudgaming-p2e-web3gaming-share-7281328740503048192-t8kJ/" target="_blank" rel="noopener" data-arium-link="34">December update</a>
+</dd>
+</div>
+</dl>
+</div>
+<div class="cse-prose">
+<h3 data-arium-source="110" class="cse-subheading">What I learned</h3>
+<p data-arium-source="111"><strong>Organise around different needs.</strong> Players deciding whether to join needed different information from people already playing or watching. Mapping those journeys helped me establish the information architecture before refining the screens.</p>
+<p data-arium-source="112"><strong>Define states alongside screens.</strong> Competition availability and individual participation status needed separate rules. I carried that distinction through the interface and developer documentation to explain what each player could do next.</p>
+</div>
+<div class="cse-prose arium-closing">
+<p><span>Morty Akard · Arium</span>
+</p>
+<p><a href="#opening">Back to the beginning</a>
+</p>
+</div></section>
+</article>
     </main>
-
     <footer id="footer" class="site-footer">
-      <h2 class="site-footer__title">Let&#x27;s work together</h2>
+      <h2 class="site-footer__title">Let’s work together</h2>
       <a class="site-footer__email" href="mailto:Morty.akard@gmail.com">Morty.akard@gmail.com</a>
       <ul class="site-footer__social">
-        <li><a href="https://www.linkedin.com/in/morty-akard/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li class="site-footer__dot" aria-hidden="true"></li>
-        <li><a href="https://medium.com/@morty.akard" target="_blank" rel="noopener noreferrer">Medium</a></li>
-        <li class="site-footer__dot" aria-hidden="true"></li>
-        <li><a href="https://github.com/morty-akard" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/morty-akard/">LinkedIn</a></li>
+        <li><a href="https://medium.com/@morty.akard">Medium</a></li>
+        <li><a href="https://github.com/morty-akard">GitHub</a></li>
       </ul>
-      <hr class="site-footer__rule" />
-      <p class="site-footer__copy">&copy; 2026 Morty Akard</p>
+      <hr class="site-footer__rule">
+      <p class="site-footer__copy">© 2026 Morty Akard</p>
     </footer>
-    <script src="../../js/site-chrome.js" type="text/javascript"></script>
+    <script src="/js/site-chrome.js"></script>
+    <script src="/js/case-study-editorial.js"></script>
+    <script src="/js/arium-previews.js"></script>
   </body>
 </html>
