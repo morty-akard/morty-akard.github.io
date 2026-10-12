@@ -1,6 +1,8 @@
 /* About reading layout; retain the shared page chrome and illustration. */
-.about-page .about-story__copy {
+.about-page .about-story__copy,
+.about-page .about-life__header {
   max-width: var(--content-reading);
+  margin-inline: auto;
 }
 
 .about-page .about-story__copy,
