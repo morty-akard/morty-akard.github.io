@@ -102,7 +102,7 @@ for (const route of routes) {
     const target = match[1];
     if (/^(?:https?:|data:|\/\/)/.test(target)) continue;
     const clean = target.split(/[?#]/)[0];
-    if (!fs.existsSync(path.resolve(base, clean))) {
+    if (!fs.existsSync(clean.startsWith("/") ? path.join(root, clean) : path.resolve(base, clean))) {
       report("error", route, `broken local asset: ${target}`);
     }
   }

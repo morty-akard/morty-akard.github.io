@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { chromium } from "playwright";
+import { auditSectionAlignment } from "./section-layout-check.mjs";
 
 const BASE = process.env.SITE_BASE || "http://127.0.0.1:8080";
 const PAGES = [
@@ -10,35 +11,13 @@ const PAGES = [
   "/projects/gamers_compete_with_ease/full/",
   "/projects/game-room-ownership-transfer/",
 ];
-const WIDTHS = [1440, 2008];
+const WIDTHS = [390, 768, 1440, 2008];
 
 let failures = 0;
 
 function fail(path, message) {
   console.error(`ERROR ${path}: ${message}`);
   failures += 1;
-}
-
-function auditSectionAlignment() {
-  const issues = [];
-  document.querySelectorAll("section.cs-section").forEach((sec) => {
-    const kids = [...sec.children].filter((el) => !el.classList.contains("cs-media--bleed"));
-    if (kids.length < 2) return;
-    const lefts = kids.map((el) => Math.round(el.getBoundingClientRect().left));
-    const uniq = [...new Set(lefts)];
-    if (uniq.length > 1) {
-      issues.push({ lefts: uniq, count: kids.length });
-    }
-  });
-  return issues;
-}
-
-function auditRelatedCards() {
-  const cards = [...document.querySelectorAll(".cs-related .cs-related-card, .cs-related .article-card")];
-  return cards.map((el) => ({
-    flexDir: getComputedStyle(el).flexDirection,
-    ok: getComputedStyle(el).flexDirection === "column",
-  }));
 }
 
 const browser = await chromium.launch({ headless: true });
@@ -48,30 +27,37 @@ for (const width of WIDTHS) {
   for (const path of PAGES) {
     const page = await context.newPage();
     try {
-      await page.goto(BASE + path, { waitUntil: "networkidle", timeout: 60000 });
+      // Video players can keep the network active indefinitely. Layout depends on
+      // fonts and local images, so wait for those rather than third-party traffic.
+      await page.goto(BASE + path, { waitUntil: "domcontentloaded", timeout: 30000 });
+      await page.evaluate(() => {
+        window.__layoutAssetsReady = false;
+        Promise.all([
+          document.fonts.ready,
+          ...[...document.images]
+            .filter(image => new URL(image.src, location.href).origin === location.origin)
+            .map(image => {
+              image.loading = 'eager';
+              return image.decode().catch(() => {});
+            }),
+        ]).then(() => { window.__layoutAssetsReady = true; });
+      });
+      await page.waitForFunction(() => window.__layoutAssetsReady, null, { timeout: 30000 });
+      await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
       const data = await page.evaluate(() => {
         const hero = document.querySelector(".cs-section--hero");
         const overflow = document.documentElement.scrollWidth > innerWidth;
-        const sectionIssues = (() => {
-          const issues = [];
-          document.querySelectorAll("section.cs-section").forEach((sec) => {
-            const kids = [...sec.children].filter((el) => !el.classList.contains("cs-media--bleed"));
-            if (kids.length < 2) return;
-            const lefts = [...new Set(kids.map((el) => Math.round(el.getBoundingClientRect().left)))];
-            if (lefts.length > 1) issues.push(lefts);
-          });
-          return issues;
-        })();
         const related = [...document.querySelectorAll(".cs-related .cs-related-card, .cs-related .article-card")].map(
           (el) => getComputedStyle(el).flexDirection
         );
         return {
           overflow,
-          sectionIssues,
           related,
           hasHero: !!hero,
         };
       });
+
+      data.sectionIssues = await page.evaluate(auditSectionAlignment);
 
       if (data.overflow) fail(path, `horizontal overflow at ${width}px`);
       if (data.sectionIssues.length) fail(path, `misaligned section columns at ${width}px: ${JSON.stringify(data.sectionIssues)}`);
