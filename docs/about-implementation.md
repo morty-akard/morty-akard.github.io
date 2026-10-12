@@ -2,8 +2,10 @@
 
 The original paragraph wording and order are retained. Two h3 subheadings
 within the opening story identify the transition into product design and
-the present-day approach. The story uses the existing 760px reading token;
-other About sections retain their existing layouts.
+the present-day approach. The story and “Away from the screen” introduction
+share the existing centred 760px reading width. The photo gallery retains
+the wider content width, and the final image-and-text section retains its
+existing responsive layout.
 
 Page-specific styles live in `css/about.css` under `.about-page`. Typography,
 spacing, reading width, and text colours reuse foundation tokens. Primary
