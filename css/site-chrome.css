@@ -534,6 +534,15 @@ body .w-container {
   border: 1px solid var(--border-subtle);
 }
 
+/* Keep source-image dimensions from determining the card's layout height. */
+.casestudy-card .casetudy-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+}
+
 .tile-blog.dark-tile.recommendation-card {
   border: 1px solid var(--border-subtle);
 }

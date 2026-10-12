@@ -48,6 +48,7 @@ Check computed paragraph colours at mobile and desktop sizes. A declared token c
 - Use `floating-nav__cta` for the current outlined contact action. Preserve its real hover and keyboard focus rules.
 - Centre all mobile menu link text, including the contact action inside its full-width button. The reference uses the same shared navigation styles.
 - Use `project-story` for compact project rows, or the existing case-study card pattern where that page already uses it. Use a specific title and evidence-based summary.
+- Case-study card images use `width: 100%`, `height: auto`, and zero minimum dimensions so intrinsic HTML image dimensions cannot enlarge the card. Preserve source width/height attributes for aspect-ratio information; the existing card variant controls the displayed aspect ratio.
 - Use the complete `article-card` structure for published writing. Preserve externally published titles and working destinations.
 - Use `cs-facts` and `cs-fact` for quiet project metadata; apply the appropriate existing column variant.
 - Use `cs-media` with `cs-caption` for images and evidence. Include accurate alternative text and a descriptive caption when useful.
