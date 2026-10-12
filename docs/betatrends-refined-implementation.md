@@ -10,7 +10,7 @@ The source file and external media directories were left unchanged. Forty-eight 
 
 ## Deliberate layout choices
 
-- Main figures and comparisons default to the centred reading width. The standalone staged interface and selected workspace deliberately use `cse-wide` to make interface relationships easier to inspect; these are the only width exceptions. Full-size links preserve access to dense evidence.
+- All main figures and comparisons use the centred reading width, including the staged interface and selected workspace screenshots. No width exception remains. Full-size links preserve access to dense evidence.
 - Original side narratives follow their section's last related fragment in DOM order and use `cse-pair` / `cse-note`; the testing illustration remains immediately after the findings it explains. On smaller screens notes follow their fragments.
 - The overview uses verified facts and preserves contribution scope and joint-decision attribution. Its four facts and small wording adaptations are documented below; the period comes from the existing project Markdown.
 - Native disclosures retain the exact source summaries and optional supporting content. Their surface and spacing reuse shared tokens.
@@ -94,3 +94,11 @@ The first full audit encountered an unrelated Arium source-link contract mismatc
 Following the browser comment, the audience recording's `.bt-portrait` wrapper clips its outer corners at the existing 64px spacing token, matching the supplied phone silhouette at its 320px display width. This page-specific radius deliberately differs from the shared card radius; the wrapper's extra border and surface are removed. The video inherits the curve without changing aspect ratio, cropping the interface viewport, or editing the media file. Chrome captures at 390 and 1096px confirmed the appearance, visible native playback controls, working playback, and no horizontal overflow. The design-foundation audit passed.
 
 The user's in-app browser was subsequently found to be holding an older stylesheet (14px radius, 360px wrapper). The page-specific stylesheet link now carries `v=20261012-phone-corners` to fetch the current file. After reloading the actual user tab, computed styles confirmed a 64px radius, 320px video width and hidden corner overflow; a browser screenshot verified the result.
+
+## Screenshot width refinement
+
+Following the two browser comments, `cse-wide` was removed from the staged interface and selected workspace figures. Both now align with the standard centred reading column and surrounding narrative. Images, intrinsic proportions, captions and full-size links remain unchanged. This supersedes the earlier wide-figure decision.
+
+## Case-study card image
+
+The opening transformation image, `refined-assets/banner-for-all-simple.png`, is now used for every Betatrends case-study card: one on Home and three card representations on Projects, including the project-selector story. Old thumbnail `srcset` entries were removed so responsive selection cannot restore the previous visual. The supplied image is reused with its intrinsic 3038×2160 dimensions, lazy loading and descriptive alt text. Company banners remain company-level visuals. The foundation and site-consistency audits passed; local browser checks confirmed all card images load at mobile and desktop widths.
