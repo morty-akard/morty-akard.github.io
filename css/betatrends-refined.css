@@ -6,8 +6,8 @@
   border-radius: var(--ds-radius-control);
   background: var(--cse-surface);
 }
-.betatrends-refined .bt-disclosure summary { cursor: pointer; color: var(--cse-accent); }
-.betatrends-refined .bt-disclosure[open] summary { margin-bottom: var(--ds-space-24); }
+.betatrends-refined .bt-disclosure[open] > summary { margin-bottom: var(--ds-space-24); }
+.betatrends-refined .bt-disclosure[open] > .cse-support-summary .cse-support-chevron { transform: rotate(225deg); }
 .betatrends-refined .bt-disclosure > :not(summary) { margin-top: var(--ds-space-24); }
 .betatrends-refined .bt-video video { width: 100%; height: auto; display: block; }
 .betatrends-refined .bt-portrait {
