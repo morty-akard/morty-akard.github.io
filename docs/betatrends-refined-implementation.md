@@ -102,3 +102,17 @@ Following the two browser comments, `cse-wide` was removed from the staged inter
 ## Case-study card image
 
 The opening transformation image, `refined-assets/banner-for-all-simple.png`, is now used for every Betatrends case-study card: one on Home and three card representations on Projects, including the project-selector story. Old thumbnail `srcset` entries were removed so responsive selection cannot restore the previous visual. The supplied image is reused with its intrinsic 3038×2160 dimensions, lazy loading and descriptive alt text. Company banners remain company-level visuals. The foundation and site-consistency audits passed; local browser checks confirmed all card images load at mobile and desktop widths.
+
+## Main-story testing videos
+
+Following all five browser comments, the six recordings (Maze task, first Maze results, question management, action refinements, completion feedback and second Maze results) are visible inline at their existing narrative positions. Their native disclosure wrappers were replaced with ordinary `cse-prose bt-video-evidence` blocks; the first two retain the responsive comparison layout. Playback labels, cues, source emphasis, posters, native controls, proportions and original-video links are unchanged. This supersedes the previous decision to make these six recordings optional. Illustrated supporting explanations retain their separate disclosure treatment.
+
+Verification: approved story text, ordering and emphasis remain unchanged; the design-foundation audit passed. Local Chrome checks at 390, 960 and 1728px confirmed all six videos are visible without disclosure interaction, with posters and controls intact and no horizontal overflow.
+
+## Expandable-block affordances
+
+All four remaining inline evidence disclosures now reuse `cse-support-summary`, `cse-note-title` and the decorative `cse-support-chevron` from the template. The chevron points down when closed and rotates up when open through a scoped page rule. Shared summary typography, hover, minimum target size, marker suppression and reduced-motion behavior apply; the existing documented evidence surface remains page-specific. A small page script closes these inline disclosures on Escape and returns focus to their summaries, while preserving their authored collapsed defaults and leaving the desktop margin-note behavior unchanged. The stylesheet version was updated to avoid the earlier cache issue.
+
+Story wording/order is unchanged. Keyboard Enter/Space, Escape/focus return, icon rotation and overflow checks passed at 390, 854 and 1440px; native expansion also passed without JavaScript. The six requested testing/refinement recordings remain outside disclosures.
+
+The final publish audit passed. An initial run hit a transient reference-page note-removal geometry assertion; the full recheck passed without modifying shared styles or the reference page.

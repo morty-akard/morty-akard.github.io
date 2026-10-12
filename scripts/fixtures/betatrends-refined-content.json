@@ -462,6 +462,10 @@
     {
       "component": "Reduced-motion evidence",
       "change": "Two supplied animated GIFs retain full-size links and normal playback; reduced-motion readers receive static first-frame PNG derivatives through picture media sources. No story wording changes."
+    },
+    {
+      "component": "Inline testing and refinement videos",
+      "change": "All six testing, refinement and second-round report recordings are visible in the main story at their existing positions, as requested. Native disclosure wrappers become normal prose/video blocks; wording, emphasis, posters, controls, dimensions and download links remain unchanged."
     }
   ]
 }
