@@ -7,12 +7,19 @@ import { createHash } from 'node:crypto';
 
 const root = path.resolve(import.meta.dirname, '..');
 const BASE = process.env.SITE_BASE || 'http://127.0.0.1:8080';
-const ROUTES = ['/design-system/case-study.html', '/projects/creator-delight/'];
+const ROUTES = ['/design-system/case-study.html', '/projects/creator-delight/', '/projects/gamers_compete_with_ease/'];
 const WIDTHS = [390, 479, 480, 767, 768, 988, 1023, 1024, 1075, 1439, 1440, 2008];
 const css = fs.readFileSync(path.join(root, 'css/case-study-editorial.css'), 'utf8');
 const declared = new Set([...css.matchAll(/(--cse-[\w-]+)\s*:/g)].map(m => m[1]));
 const failures = [];
 const betatrendsContract = JSON.parse(fs.readFileSync(path.join(root, 'scripts/fixtures/betatrends-refined-content.json'), 'utf8'));
+const ariumContract = JSON.parse(fs.readFileSync(path.join(root, 'scripts/fixtures/arium-refined-content.json'), 'utf8'));
+for (const asset of ariumContract.assets) {
+  const file = path.join(root, 'projects/gamers_compete_with_ease/refined-assets', asset.asset);
+  if (!fs.existsSync(file) || createHash('sha256').update(fs.readFileSync(file)).digest('hex') !== asset.sha256) {
+    failures.push(`Arium source asset missing or changed: ${asset.asset}`);
+  }
+}
 for (const asset of betatrendsContract.assets) {
   const file = path.join(root, 'projects/creator-delight/refined-assets', asset.asset);
   if (!fs.existsSync(file) || createHash('sha256').update(fs.readFileSync(file)).digest('hex') !== asset.sha256) {
@@ -132,6 +139,24 @@ for (const route of ROUTES) {
     page.on('pageerror', error => errors.push(error.message));
     try {
       await ready(page, route);
+      if (route === '/projects/gamers_compete_with_ease/' && width === WIDTHS[0]) {
+        const content = await page.locator('.cse-article').evaluate(article => {
+          const normalise = text => text.replace(/\s+/g, ' ').trim();
+          return {
+            blocks: [...article.querySelectorAll('[data-arium-source]')].map(el => ({ id: el.dataset.ariumSource, text: normalise(el.textContent) })),
+            emphasis: [...article.querySelectorAll('strong, em')].map(el => [el.tagName.toLowerCase(), normalise(el.textContent)]),
+            links: [...article.querySelectorAll('[data-arium-link]')].map(el => ({ id: el.dataset.ariumLink, text: normalise(el.textContent), href: el.getAttribute('href') })),
+            media: [...article.querySelectorAll('[data-arium-media]')].map(el => ({ id: el.dataset.ariumMedia, tag: el.tagName.toLowerCase(), attributes: Object.fromEntries(['width', 'height', 'alt', 'aria-label', 'aria-describedby', 'src', 'poster'].filter(key => el.hasAttribute(key)).map(key => [key, el.getAttribute(key)])) })),
+            sections: [...article.querySelectorAll('.cse-section')].map(el => el.id),
+            facts: [...article.querySelectorAll('[data-cse-opening] > .cse-facts > div')].map(el => normalise(el.textContent)),
+            videos: [...article.querySelectorAll('video')].every(el => el.controls && el.hasAttribute('playsinline') && el.preload === 'none' && !el.autoplay && el.loop === el.hasAttribute('data-arium-autoplay') && el.poster && (el.closest('.arium-previews') ? el.querySelector('a[href]') : el.closest('figure').querySelector('[data-arium-added-link]'))),
+          };
+        });
+        for (const key of ['blocks', 'emphasis', 'links', 'media', 'sections']) {
+          check(JSON.stringify(content[key]) === JSON.stringify(ariumContract[key]), `Arium approved source ${key} changed or moved`);
+        }
+        check(content.facts.length === 4 && content.videos, 'Arium opening facts or reader-controlled video access is missing');
+      }
       if (route === '/projects/creator-delight/' && width === WIDTHS[0]) {
         const content = await page.locator('.cse-article').evaluate(article => {
           const normalise = text => text.replace(/\s+/g, ' ').trim();
@@ -201,6 +226,25 @@ for (const route of ROUTES) {
         check((device.composite || Math.abs(device.box.x + device.box.width / 2 - width / 2) <= 1) && (!device.phone || device.box.width <= 321), 'device frame is not centred or phone exceeds its cap');
         check(device.screen.x > device.shell.x && device.screen.right < device.shell.right && Math.abs(device.screen.width / device.height - device.ratio) < .01, 'device clips or stretches its screen');
         check(device.captionOutside && device.naturalSizing && device.playable, 'device caption, natural media sizing, or reader-controlled playback is missing');
+      }
+      if (route === '/projects/gamers_compete_with_ease/') {
+        const previews = await page.locator('.arium-previews > .cse-device').evaluateAll(devices => devices.map(el => {
+          const r = el.getBoundingClientRect(); return { x: r.x, right: r.right, y: r.y, width: r.width };
+        }));
+        check(previews.length === 2 && previews.every(p => p.width > 0) && Math.abs(previews[0].y - previews[1].y) < 1 && previews[0].right < previews[1].x, 'Arium devices must remain side by side at every width');
+        check(await page.locator('[data-arium-fullscreen]:visible').count() === (width < 768 ? 2 : 0), 'Arium tap-to-fullscreen must be available only on mobile');
+        const supporting = page.locator('.arium-support-disclosure');
+        check(await supporting.count() === 3 && await supporting.evaluateAll(elements => elements.every(el => !el.open && el.parentElement.classList.contains('cse-section'))), 'Arium evidence must start collapsed in the reading flow at every width');
+        check(await page.locator('.cse-note, .cse-support, .cse-pair').count() === 0, 'Arium must not place supporting evidence in the side rail');
+        for (const disclosure of await supporting.all()) {
+          await disclosure.locator('summary').evaluate(el => el.click());
+          const geometry = await disclosure.evaluate(el => {
+            const r = el.getBoundingClientRect();
+            return { open: el.open, centre: r.x + r.width / 2, width: r.width, figures: [...el.querySelectorAll('figure')].every(figure => figure.getBoundingClientRect().width > 0) };
+          });
+          check(geometry.open && geometry.figures && geometry.width <= 761 && Math.abs(geometry.centre - width / 2) < 1, 'Arium disclosure or expanded evidence leaves the centred reading flow');
+          await disclosure.locator('summary').evaluate(el => el.click());
+        }
       }
       if (route === '/design-system/case-study.html' && width === WIDTHS[0]) {
         const video = page.locator('.cse-device video');

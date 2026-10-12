@@ -5,8 +5,6 @@ import { auditSectionAlignment } from "./section-layout-check.mjs";
 
 const BASE = process.env.SITE_BASE || "http://127.0.0.1:8080";
 const PAGES = [
-  "/projects/gamers_compete_with_ease/",
-  "/projects/gamers_compete_with_ease/full/",
   "/projects/game-room-ownership-transfer/",
 ];
 const WIDTHS = [390, 768, 1440, 2008];

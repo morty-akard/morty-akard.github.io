@@ -7,7 +7,6 @@ const routes = [
   '/design-system/case-study.html',
   '/projects/creator-delight/',
   '/projects/gamers_compete_with_ease/',
-  '/projects/gamers_compete_with_ease/full/',
   '/projects/game-room-ownership-transfer/',
 ];
 const browser = await chromium.launch();
