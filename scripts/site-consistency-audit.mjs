@@ -11,7 +11,6 @@ const routes = [
   "contact.html",
   "design-system/case-study.html",
   "projects/creator-delight/index.html",
-  "projects/creator-delight/full/index.html",
   "projects/gamers_compete_with_ease/index.html",
   "projects/gamers_compete_with_ease/full/index.html",
   "projects/game-room-ownership-transfer/index.html",
@@ -137,6 +136,18 @@ for (const route of routes) {
   );
   if (inlineLayouts.length) {
     report("warning", route, `${inlineLayouts.length} deprecated inline layout declaration(s) remain`);
+  }
+}
+
+// Retired full routes preserve existing links to each single main study.
+for (const project of ["creator-delight"]) {
+  const route = `projects/${project}/full/index.html`;
+  const retired = fs.readFileSync(path.join(root, route), "utf8");
+  const destination = `/projects/${project}/`;
+  if (!retired.includes(`<meta http-equiv="refresh" content="0; url=${destination}">`)
+      || !retired.includes(`href="https://morty-akard.github.io${destination}"`)
+      || !retired.includes(`<a href="${destination}">`)) {
+    report("error", route, "expected redirect, canonical URL, and fallback link to the single study");
   }
 }
 

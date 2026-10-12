@@ -3,14 +3,22 @@
 import { chromium } from 'playwright';
 import fs from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 
 const root = path.resolve(import.meta.dirname, '..');
 const BASE = process.env.SITE_BASE || 'http://127.0.0.1:8080';
-const ROUTES = ['/design-system/case-study.html'];
+const ROUTES = ['/design-system/case-study.html', '/projects/creator-delight/'];
 const WIDTHS = [390, 479, 480, 767, 768, 988, 1023, 1024, 1075, 1439, 1440, 2008];
 const css = fs.readFileSync(path.join(root, 'css/case-study-editorial.css'), 'utf8');
 const declared = new Set([...css.matchAll(/(--cse-[\w-]+)\s*:/g)].map(m => m[1]));
 const failures = [];
+const betatrendsContract = JSON.parse(fs.readFileSync(path.join(root, 'scripts/fixtures/betatrends-refined-content.json'), 'utf8'));
+for (const asset of betatrendsContract.assets) {
+  const file = path.join(root, 'projects/creator-delight/refined-assets', asset.asset);
+  if (!fs.existsSync(file) || createHash('sha256').update(fs.readFileSync(file)).digest('hex') !== asset.sha256) {
+    failures.push(`Betatrends source asset missing or changed: ${asset.asset}`);
+  }
+}
 function check(ok, message) { if (!ok) throw new Error(message); }
 for (const match of css.matchAll(/var\(\s*(--cse-[\w-]+)/g)) {
   if (!declared.has(match[1])) failures.push(`Undefined editorial role: ${match[1]}`);
@@ -124,6 +132,17 @@ for (const route of ROUTES) {
     page.on('pageerror', error => errors.push(error.message));
     try {
       await ready(page, route);
+      if (route === '/projects/creator-delight/' && width === WIDTHS[0]) {
+        const content = await page.locator('.cse-article').evaluate(article => {
+          const normalise = text => text.replace(/\s+/g, ' ').trim();
+          const walker = document.createTreeWalker(article, NodeFilter.SHOW_TEXT);
+          const textNodes = []; let node;
+          while ((node = walker.nextNode())) { const value = normalise(node.textContent); if (value) textNodes.push(value); }
+          return { textNodes, emphasis: [...article.querySelectorAll('strong, em')].map(el => [el.tagName.toLowerCase(), normalise(el.textContent)]) };
+        });
+        check(JSON.stringify(content.textNodes) === JSON.stringify(betatrendsContract.textNodes), 'Betatrends exact story wording/order differs from the approved v5 source');
+        check(JSON.stringify(content.emphasis) === JSON.stringify(betatrendsContract.emphasis), 'Betatrends source emphasis changed');
+      }
       const data = await page.evaluate(() => {
         const box = el => { const r = el.getBoundingClientRect(); return { x: r.x, right: r.right, y: r.y, width: r.width }; };
         const links = [...document.querySelectorAll('.cse-toc a')];
