@@ -9,6 +9,7 @@ const routes = [
   "projects.html",
   "about.html",
   "contact.html",
+  "design-system/case-study.html",
   "projects/creator-delight/index.html",
   "projects/creator-delight/full/index.html",
   "projects/gamers_compete_with_ease/index.html",

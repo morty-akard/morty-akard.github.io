@@ -25,5 +25,6 @@ run("Site consistency", "node", ["scripts/site-consistency-audit.mjs"]);
 const base = process.env.SITE_BASE || "http://127.0.0.1:8080";
 run("Primary text colours", "node", ["scripts/text-colour-audit.mjs"], { SITE_BASE: base });
 run("Case study layout", "node", ["scripts/cs-layout-audit.mjs"], { SITE_BASE: base });
+run("Editorial case-study template", "node", ["scripts/editorial-template-audit.mjs"], { SITE_BASE: base });
 
 console.log("\nPublish audit: all checks passed.");

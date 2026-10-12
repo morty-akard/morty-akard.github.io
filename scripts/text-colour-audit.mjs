@@ -4,6 +4,7 @@ import { chromium } from 'playwright';
 const base = process.env.SITE_BASE || 'http://127.0.0.1:8080';
 const routes = [
   '/design-system/',
+  '/design-system/case-study.html',
   '/projects/creator-delight/',
   '/projects/creator-delight/full/',
   '/projects/gamers_compete_with_ease/',

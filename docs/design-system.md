@@ -4,7 +4,7 @@ The foundation centralises existing styling while preserving the website’s cur
 
 ## Where to edit
 
-Load styles in this order: exported Webflow CSS, design tokens, shared site chrome, case-study CSS when needed, then page-specific styles. Relative paths must match the page’s depth. Redirect-only pages need no styles.
+Load styles in this order: exported Webflow CSS, design tokens, shared site chrome, case-study CSS when needed, then page-specific styles. New editorial case studies use their dedicated opt-in stylesheet instead of legacy case-study CSS (see below). Relative paths must match the page’s depth. Redirect-only pages need no styles.
 
 `css/design-tokens.css` owns new `--ds-` values. Existing variables remain compatibility aliases. Shared root aliases and component base rules are consolidated; responsive and case-study overrides retain their scope and effective behaviour. Do not move aliases into a global reset or merge similar colours just because they look close.
 
@@ -36,9 +36,9 @@ Exact matching pixel spacing and 8px/14px radii in shared styles now reference f
 
 ## Applying text colours
 
-Primary narrative paragraphs and lists use `--ds-text` (`#d5d9dd`), via `--color-copy` in shared components. Headlines and titles use `--ds-text-heading` (`#fff1df`), via `--color-heading`. Captions, source notes, and secondary metadata use `--ds-text-muted`. Accent evidence copy retains its documented teal treatment.
+Primary narrative paragraphs and lists use `--ds-text` (`#d5d9dd`), via `--color-copy` in shared/legacy components or `--cse-text` in editorial studies. Headlines and titles use `--ds-text-heading` (`#fff1df`), via `--color-heading` or `--cse-heading`. Captions, source notes, and secondary metadata use `--ds-text-muted`. Accent evidence copy retains its documented teal treatment.
 
-Use `.cs-body` for case-study narrative paragraphs. Do not add `.cs-body--muted` to main story paragraphs or copy fixed cream/white body colours from older components. Preserve geometry exceptions without preserving obsolete narrative colours. New custom prose must explicitly use the shared body role if an existing selector overrides inheritance.
+Use `.cs-body` for legacy narrative paragraphs and `.cse-prose` for editorial narrative containers. Do not add `.cs-body--muted` to main story paragraphs or copy fixed cream/white body colours from older components. Preserve geometry exceptions without preserving obsolete narrative colours. New custom prose must explicitly use the shared body role if an existing selector overrides inheritance.
 
 Check computed paragraph colours at mobile and desktop sizes. A declared token can be overridden by a class, inline style, or page stylesheet. `scripts/text-colour-audit.mjs`, included in the publish audit, checks primary prose separately from headings and secondary text. Add new narrative components and public routes to that check.
 
@@ -89,3 +89,21 @@ Legacy dim text (`#666666`) on the page background measures 3.24:1 and falls bel
 Run `node scripts/design-foundation-audit.mjs` for token references, missing stylesheet files, and stylesheet order, and `node --test scripts/design-foundation-audit.test.mjs` for its guard tests. The foundation check also runs as part of the publish audit. The case-study audit checks centred content and containment at 390, 768, 1440, and 2008px, allowing narrower centred headings and portrait media.
 
 See `docs/design-foundation-verification.md` for the implementation baseline, comparison results, and resolved audit findings. Baseline screenshots and computed-style captures are local verification artifacts rather than a permanent snapshot-test dependency.
+
+## Page families and future case studies
+
+General pages keep their current shared styling and `templates/page.html.template`. That existing starter retains its historical case-study stylesheet dependency; it is not the new editorial case-study template. Existing project pages retain their legacy `cs-*` layout, project exceptions, and `case-study.css`.
+
+For new article-style case studies, use `templates/case-study.html.template` and read [the case-study template guide](case-study-template.md). Its `case-study-editorial` root and `cse-*` components deliberately avoid legacy layout selectors. Shared colours, font, and foundational spacing remain one design system; editorial reading geometry and heading roles are scoped to the new family. Future migration of an existing study requires a separate explicit task.
+
+Open `/design-system/case-study.html` for production component examples of the future template. This reference stays unlisted and noindex, and existing case studies remain unchanged. New public editorial studies must join both the site-consistency and editorial audit route lists; do not put them in the legacy geometry checker.
+
+Editorial results use one shared `cse-result` block for before/after evaluations or source-attributed metrics. Use the recipes and evidence checklist in [case-study-template.md](case-study-template.md); keep results at text width unless a wider presentation has a documented reason.
+
+Editorial device figures reuse `cse-device` with phone or desktop modifiers. Frames inherit the shared palette and keep media at its natural proportions; figures and captions still default to text width. Use the starter and recipes in [case-study-template.md](case-study-template.md). Device silhouettes are decorative, and existing screenshots containing hardware should stay unwrapped.
+
+Optional editorial supporting content uses the opt-in `cse-support` disclosure inside a `cse-note`. It defaults open in the desktop margin (1024px+) and collapsed inline on smaller screens when enhanced. Short notes stay near their related fragment; illustrated stories use a `cse-support-main` group so the single disclosure follows the complete section story. Essential evidence and limitations stay visible. Existing `cse-note` consumers retain their previous behaviour; see [the supporting-content recipes](case-study-template.md#responsive-supporting-content).
+
+Illustrated editorial support uses `cse-support-gallery` to keep images compact, with two columns at 480–1023px and one column on phones or in the desktop margin. Its documented 280px image cap is specific to supporting illustrations; primary evidence retains the normal reading-width default.
+
+The editorial opening requires `dl.cse-facts`, retained when creating or explicitly rebuilding a study. The starter and reference share the project/role/period/collaborator pattern. Use verified entries, omit unknown individual fields, and keep the component visible in the opening. See the introduction recipe and checklist in [case-study-template.md](case-study-template.md).

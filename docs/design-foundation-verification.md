@@ -89,6 +89,6 @@ Rendered a substituted copy through a temporary browser response at 390px and 14
 
 ## Primary narrative colour follow-up
 
-The shared body token alone did not update paragraphs with older muted modifiers or page overrides. Arium short/full narrative paragraphs now use plain `cs-body`; shared card prose and Game Room narrative use `--color-copy`. Secondary captions, metadata, video cues, side notes, and documented teal evidence remain distinct. Old cream fallbacks for primary copy were updated to neutral grey.
+The shared body token alone did not update paragraphs with older muted modifiers or page overrides. Arium short/full narrative paragraphs now use plain `cs-body`; shared card prose and Game Room narrative use `--color-copy`. Editorial `cse-prose` and callout narrative explicitly use `--cse-text`. Secondary captions, metadata, video cues, side notes, and documented teal evidence remain distinct. Old cream fallbacks for primary copy were updated to neutral grey.
 
 The publish audit now runs `scripts/text-colour-audit.mjs` at 390px and 1440px over the visual references and all current public project studies. It checks computed primary prose and heading colours against their semantic tokens so muted modifiers and page overrides cannot silently replace the narrative role. New routes and narrative components need to join its coverage.

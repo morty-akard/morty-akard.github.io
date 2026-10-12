@@ -25,11 +25,21 @@ export function checkFoundation(tokens, styles, pages) {
   }
   for (const name of names) visit(name);
   for (const [file, html] of Object.entries(pages)) {
+    if (file.replaceAll('\\', '/').endsWith('templates/case-study.html.template')) {
+      const source = html.replace(/<!--[^]*?-->/g, '');
+      const opening = [...source.matchAll(/<header\b[^>]*\bdata-cse-opening\b[^>]*>([^]*?)<\/header>/gi)][0]?.[1] || '';
+      const facts = [...opening.matchAll(/<dl\b[^>]*\bclass=["'][^"']*\bcse-facts\b[^"']*["'][^>]*>([^]*?)<\/dl>/gi)];
+      if (facts.length !== 1) issues.push(`${file}: retain exactly one opening dl.cse-facts component`);
+      for (const field of ['PROJECT_NAME', 'ROLE', 'PERIOD', 'COLLABORATORS']) {
+        if (!facts[0]?.[1].includes(`{{${field}}}`)) issues.push(`${file}: facts starter missing ${field} placeholder`);
+      }
+    }
     const links = [...html.matchAll(/<link\b[^>]*>/gi)].map(m => m[0]).filter(tag => /\brel=["']stylesheet["']/i.test(tag)).map(tag => tag.match(/\bhref=["']([^"']+)["']/i)?.[1] || '');
     const index = name => links.findIndex(href => href.split(/[?#]/)[0].endsWith(`/css/${name}`) || href.split(/[?#]/)[0] === `css/${name}`);
     if (index('site-chrome.css') < 0 && index('case-study.css') < 0) continue;
-    const webflow = index('webflow-style.css'), foundation = index('design-tokens.css'), chrome = index('site-chrome.css'), study = index('case-study.css');
+    const webflow = index('webflow-style.css'), foundation = index('design-tokens.css'), chrome = index('site-chrome.css'), study = index('case-study.css'), editorial = index('case-study-editorial.css');
     if (!(webflow >= 0 && foundation > webflow && chrome > foundation && (study < 0 || study > chrome))) issues.push(`${file}: expected Webflow → tokens → shared chrome → optional case-study styles`);
+    if (editorial >= 0 && (editorial <= chrome || study >= 0)) issues.push(`${file}: editorial styles must follow shared chrome and remain independent of legacy case-study.css`);
     if (links.filter(href => /(?:^|\/)css\/design-tokens\.css(?:\?|$)/.test(href)).length !== 1) issues.push(`${file}: expected exactly one token stylesheet`);
   }
   return [...new Set(issues)];

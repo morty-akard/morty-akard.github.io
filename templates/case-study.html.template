@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{PAGE_TITLE}} | Morty Akard</title>
+    <meta name="description" content="{{PAGE_DESCRIPTION}}">
+    <!-- Keep draft pages out of search. Remove this only when the page is ready to publish. -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{PAGE_TITLE}} | Morty Akard">
+    <meta property="og:description" content="{{PAGE_DESCRIPTION}}">
+    <meta property="og:url" content="{{CANONICAL_URL}}">
+    <!-- Paths assume deployment at the site root, matching the current portfolio. -->
+    <link rel="stylesheet" href="/css/webflow-style.css">
+    <link rel="stylesheet" href="/css/design-tokens.css">
+    <link rel="stylesheet" href="/css/site-chrome.css">
+    <link rel="stylesheet" href="/css/case-study-editorial.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+    <link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">
+  </head>
+  <body class="body case-study-editorial">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-nav-section">
+      <nav class="floating-nav" aria-label="Primary">
+        <a href="/" class="floating-nav__brand"><span class="floating-nav__logo">Morty Akard</span></a>
+        <!-- Add is-active and aria-current="page" only to an actual current-page link. -->
+        <div class="floating-nav__links">
+          <a href="/" class="floating-nav__link">Home</a>
+          <a href="/projects.html" class="floating-nav__link">Projects</a>
+          <a href="/articles.html" class="floating-nav__link">Articles</a>
+          <a href="/about.html" class="floating-nav__link">About</a>
+        </div>
+        <a href="/contact.html" class="floating-nav__cta">Get in touch</a>
+        <button class="floating-nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span class="floating-nav__toggle-bars" aria-hidden="true"></span>
+        </button>
+        <div class="floating-nav__mobile-panel">
+          <a href="/" class="floating-nav__link">Home</a>
+          <a href="/projects.html" class="floating-nav__link">Projects</a>
+          <a href="/articles.html" class="floating-nav__link">Articles</a>
+          <a href="/about.html" class="floating-nav__link">About</a>
+          <a href="/contact.html" class="floating-nav__cta">Get in touch</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content" class="cse-layout">
+      <!-- Keep links and section IDs paired. Labels may be shorter than headings. -->
+      <details class="cse-toc" open>
+        <summary aria-label="Case study sections"><span class="cse-toc-current" aria-hidden="true">Explore this study</span><span class="cse-toc-chevron" aria-hidden="true"></span><span class="cse-toc-progress" aria-hidden="true"></span></summary>
+        <nav aria-label="Case study sections"><ul>
+          <li><a href="#overview"><span class="cse-nav-marker" aria-hidden="true"></span><span class="cse-nav-label">Overview</span></a></li>
+          <li><a href="#decision"><span class="cse-nav-marker" aria-hidden="true"></span><span class="cse-nav-label">{{SECTION_NAV_LABEL}}</span></a></li>
+          <li><a href="#results"><span class="cse-nav-marker" aria-hidden="true"></span><span class="cse-nav-label">{{RESULTS_NAV_LABEL}}</span></a></li>
+        </ul></nav>
+      </details>
+      <article class="cse-article" aria-labelledby="page-title">
+        <header class="cse-section" data-cse-opening id="overview" aria-labelledby="page-title">
+          <h1 class="cse-title" id="page-title">{{PAGE_TITLE}}</h1>
+          <div class="cse-prose cse-lede"><p>{{PAGE_INTRO}}</p></div>
+          <div class="cse-prose"><p>{{CONTRIBUTION_CONTEXT}}</p></div>
+          <!-- Required opening component: retain cse-facts when creating or rebuilding
+               an editorial study. Fill entries with verified project information;
+               remove only individual unknown/inapplicable fields. Never replace this
+               component with ordinary paragraphs or put it in a supporting disclosure.
+               Keep contribution prose for responsibilities/decisions, without repeating facts. -->
+          <dl class="cse-facts">
+            <div><dt>Project</dt><dd>{{PROJECT_NAME}}</dd></div>
+            <div><dt>Role</dt><dd>{{ROLE}}</dd></div>
+            <div><dt>Period</dt><dd>{{PERIOD}}</dd></div>
+            <div><dt>Collaborators</dt><dd>{{COLLABORATORS}}</dd></div>
+          </dl>
+        </header>
+        <!-- Duplicate/adapt sections to the actual story, rather than a fixed process. -->
+        <section class="cse-section" id="decision" aria-labelledby="decision-title">
+          <h2 class="cse-heading" id="decision-title">{{SECTION_HEADING}}</h2>
+          <div class="cse-prose"><p>{{BODY_COPY}}</p></div>
+          <!-- Pair optional notes with their relevant fragment. Remove the aside when unnecessary.
+               For a section without notes, use cse-prose/cse-figure directly instead. -->
+          <div class="cse-pair">
+            <!-- Figures match the text width by default. Add cse-wide only for a deliberate wider evidence example. -->
+            <figure class="cse-figure">
+              <a class="cse-media" href="{{MEDIA_URL}}" target="_blank" rel="noopener noreferrer" aria-label="{{MEDIA_LINK_LABEL}}">
+                <img src="{{MEDIA_URL}}" width="{{MEDIA_WIDTH}}" height="{{MEDIA_HEIGHT}}" loading="lazy" alt="{{MEDIA_ALT}}">
+              </a>
+              <figcaption class="cse-caption">{{MEDIA_CAPTION}}</figcaption>
+            </figure>
+            <aside class="cse-note cse-support" id="decision-support" aria-labelledby="note-title">
+              <!-- Keep open in source for a readable no-JavaScript fallback.
+                   Enhancement opens the margin note at 1024px+ and collapses it below. -->
+              <details class="cse-support-disclosure" open>
+                <summary class="cse-support-summary" id="note-title"><span class="cse-note-title">{{NOTE_TITLE}}</span><span class="cse-support-chevron" aria-hidden="true"></span></summary>
+                <div class="cse-support-content"><p>{{NOTE_COPY}}</p></div>
+              </details>
+            </aside>
+          </div>
+        </section>
+        <!-- Optional illustrated-story recipe: use inside the relevant cse-section.
+             cse-support-main groups ALL remaining main fragments in the section;
+             the single aside follows the complete group on smaller screens.
+             Keep essential decisions/findings/limitations outside the disclosure.
+             Replace illustration labels and alt text accurately; never imply recorded dialogue. -->
+        <!--
+        <div class="cse-pair">
+          <div class="cse-support-main">
+            <div class="cse-prose"><p>{{MAIN_STORY_COPY}}</p></div>
+            <figure class="cse-figure"><a class="cse-media" href="{{EVIDENCE_IMAGE_URL}}" target="_blank" rel="noopener noreferrer" aria-label="{{EVIDENCE_LINK_LABEL}}"><img src="{{EVIDENCE_IMAGE_URL}}" width="{{EVIDENCE_WIDTH}}" height="{{EVIDENCE_HEIGHT}}" loading="lazy" alt="{{EVIDENCE_ALT}}"></a><figcaption class="cse-caption">{{EVIDENCE_CAPTION}}</figcaption></figure>
+          </div>
+          <aside class="cse-note cse-support" id="story-support" aria-labelledby="story-support-title">
+            <details class="cse-support-disclosure" open>
+              <summary class="cse-support-summary" id="story-support-title"><span class="cse-note-title">{{ILLUSTRATED_STORY_LABEL}}</span><span class="cse-support-chevron" aria-hidden="true"></span></summary>
+              <div class="cse-support-content">
+                <p>{{ILLUSTRATION_STATUS}}</p>
+                <div class="cse-support-gallery">
+                <figure class="cse-figure"><a class="cse-media" href="{{ILLUSTRATION_URL}}" target="_blank" rel="noopener noreferrer" aria-label="{{ILLUSTRATION_LINK_LABEL}}"><img src="{{ILLUSTRATION_URL}}" width="{{ILLUSTRATION_WIDTH}}" height="{{ILLUSTRATION_HEIGHT}}" loading="lazy" alt="{{ILLUSTRATION_ALT}}"></a><figcaption class="cse-caption">{{ILLUSTRATION_CAPTION}}</figcaption></figure>
+                </div>
+              </div>
+            </details>
+          </aside>
+        </div>
+        -->
+        <!-- Optional device figures: keep only the pattern needed by the story.
+             Frames are decorative. Never wrap screenshots already containing a device.
+             Replace all media placeholders, retain intrinsic dimensions, and do not crop.
+             Captions stay outside the device. cse-wide belongs on the figure, never the device. -->
+        <!-- Add these figures inside the relevant cse-section, rather than inventing a new story section. -->
+        <!--
+        <figure class="cse-figure">
+          <div class="cse-device cse-device--phone"><div class="cse-device-shell">
+            <a class="cse-media" href="{{PHONE_IMAGE_URL}}" target="_blank" rel="noopener noreferrer" aria-label="{{PHONE_LINK_LABEL}}">
+              <img src="{{PHONE_IMAGE_URL}}" width="{{PHONE_IMAGE_WIDTH}}" height="{{PHONE_IMAGE_HEIGHT}}" loading="lazy" alt="{{PHONE_IMAGE_ALT}}">
+            </a>
+          </div></div>
+          <figcaption class="cse-caption">{{PHONE_CAPTION}}</figcaption>
+        </figure>
+        <figure class="cse-figure">
+          <div class="cse-device cse-device--desktop"><div class="cse-device-shell">
+            <div class="cse-media"><video controls playsinline preload="none" width="{{VIDEO_WIDTH}}" height="{{VIDEO_HEIGHT}}" poster="{{VIDEO_POSTER_URL}}" aria-label="{{VIDEO_LABEL}}">
+              <source src="{{VIDEO_URL}}" type="{{VIDEO_MIME_TYPE}}">
+              <a href="{{VIDEO_URL}}">{{VIDEO_LINK_LABEL}}</a>
+            </video></div>
+          </div></div>
+          <figcaption class="cse-caption">{{VIDEO_CAPTION}} <a href="{{VIDEO_URL}}">{{VIDEO_LINK_LABEL}}</a></figcaption>
+        </figure>
+        -->
+        <!-- Optional: remove this section AND its navigation link if results are unavailable.
+             Replace every placeholder with sourced evidence, including units, reporting
+             period, method, source links, and limitations. Never invent an outcome.
+             Use one flexible result block; repeat it only for a distinct result.
+             The headline is optional. Rename the value labels for measured changes
+             or reported metrics, and include each metric’s source and period. -->
+        <section class="cse-section" id="results" aria-labelledby="results-title">
+          <h2 class="cse-heading" id="results-title">{{RESULTS_HEADING}}</h2>
+          <div class="cse-prose"><p>{{RESULTS_CONTEXT}}</p></div>
+          <div class="cse-result" role="group" aria-labelledby="evaluation-title">
+            <h3 class="cse-result-title" id="evaluation-title">{{RESULT_BLOCK_TITLE}}</h3>
+            <!-- Remove the headline if the result is better explained by the values alone. -->
+            <p class="cse-result-headline">{{RESULT_HEADLINE}}</p>
+            <dl class="cse-results-grid">
+              <div><dt>{{RESULT_ONE_LABEL}}</dt><dd class="cse-result-value">{{RESULT_ONE_VALUE_WITH_UNIT}}</dd><dd class="cse-result-source">{{RESULT_ONE_SOURCE_AND_PERIOD}}</dd></div>
+              <div><dt>{{RESULT_TWO_LABEL}}</dt><dd class="cse-result-value">{{RESULT_TWO_VALUE_WITH_UNIT}}</dd><dd class="cse-result-source">{{RESULT_TWO_SOURCE_AND_PERIOD}}</dd></div>
+            </dl>
+            <p class="cse-result-source">{{METHOD_PERIOD_AND_LIMITATIONS}} <a href="{{RESULT_SOURCE_URL}}">{{RESULT_SOURCE_LABEL}}</a></p>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer id="footer" class="site-footer">
+      <h2 class="site-footer__title">Let’s work together</h2>
+      <a class="site-footer__email" href="mailto:Morty.akard@gmail.com">Morty.akard@gmail.com</a>
+      <ul class="site-footer__social">
+        <li><a href="https://www.linkedin.com/in/morty-akard/">LinkedIn</a></li>
+        <li><a href="https://medium.com/@morty.akard">Medium</a></li>
+        <li><a href="https://github.com/morty-akard">GitHub</a></li>
+      </ul>
+      <hr class="site-footer__rule">
+      <p class="site-footer__copy">© {{YEAR}} Morty Akard</p>
+    </footer>
+    <script src="/js/site-chrome.js"></script>
+    <script src="/js/case-study-editorial.js"></script>
+  </body>
+</html>
