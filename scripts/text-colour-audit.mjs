@@ -3,6 +3,7 @@ import { chromium } from 'playwright';
 
 const base = process.env.SITE_BASE || 'http://127.0.0.1:8080';
 const routes = [
+  '/about.html',
   '/design-system/',
   '/design-system/case-study.html',
   '/projects/creator-delight/',
@@ -30,14 +31,15 @@ try {
         const body = expected('--ds-text');
         const heading = expected('--ds-text-heading');
         const issues = [];
-        const prose = [...document.querySelectorAll('.cs-lede, .cs-body, .cs-card p, .cs-decision-demo__copy p, .cse-prose p, .cse-prose li, p.cse-prose')]
+        const prose = [...document.querySelectorAll('.cs-lede, .cs-body, .cs-card p, .cs-decision-demo__copy p, .cse-prose p, .cse-prose li, p.cse-prose, .about-page .about-story__copy p, .about-page .about-life__header p, .about-page .about-idea__content p')]
           .filter(el => !el.matches('.cs-title, .cs-h2, .cs-h3, .cs-h4, .cs-teal, .cs-subtitle, .bt-subtitle, .cs-caption, .cs-decision-demo__caption, .cs-callout__label, .cs-summary-list__label, .cs-fact__label, .cs-evidence-card__label, .cse-caption, .cse-heading, .cse-subheading, .cse-result-headline, .cse-result-title, .cse-result-value, .scenario-label, .video-cue') && !el.closest('.cse-note'));
         for (const el of prose) {
           // A documented evidence accent is separate from primary narrative copy.
           if (el.matches('[style*="--cs-teal"]')) continue;
           if (getComputedStyle(el).color !== body) issues.push(`Primary prose uses ${getComputedStyle(el).color}: ${el.textContent.trim().slice(0, 70)}`);
         }
-        for (const el of document.querySelectorAll('.cs-title, .cs-h2, .cs-h3, .cs-h4, .cse-title, .cse-heading, .cse-subheading')) {
+        // The About opening question keeps its documented orange accent.
+        for (const el of document.querySelectorAll('.cs-title, .cs-h2, .cs-h3, .cs-h4, .cse-title, .cse-heading, .cse-subheading, .about-page .about-story__subheading, .about-page .about-life h2, .about-page .about-idea h2')) {
           if (getComputedStyle(el).color !== heading) issues.push(`Heading uses ${getComputedStyle(el).color}: ${el.textContent.trim().slice(0, 70)}`);
         }
         if (!prose.length) issues.push('No primary prose found; check route and component coverage');
