@@ -46,6 +46,7 @@ Check computed paragraph colours at mobile and desktop sizes. A declared token c
 
 - Reuse the complete floating navigation markup and `js/site-chrome.js`; the script controls mobile menu opening, Escape, and ARIA state. Set `aria-current="page"` only on the actual current destination.
 - Use `floating-nav__cta` for the current outlined contact action. Preserve its real hover and keyboard focus rules.
+- Centre all mobile menu link text, including the contact action inside its full-width button. The reference uses the same shared navigation styles.
 - Use `project-story` for compact project rows, or the existing case-study card pattern where that page already uses it. Use a specific title and evidence-based summary.
 - Use the complete `article-card` structure for published writing. Preserve externally published titles and working destinations.
 - Use `cs-facts` and `cs-fact` for quiet project metadata; apply the appropriate existing column variant.
